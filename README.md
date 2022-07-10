@@ -1,9 +1,9 @@
 # Getflix Project
 
-Team collaborators: 
+### Team collaborators: 
 - Sophie Cheng
-- Bhama
-- Jilani 
+- Bhama Guruswami
+- Jilani N
 - Arianna Telesca
 
 ## The mission:
@@ -16,6 +16,11 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 #### Technologies used: HTML/CSS/Javascript/PHP
 
 ### Must-have features:
+- A session system: registration, connection / disconnection.
+- Different rights: registrants have the right to comment on the content. You can add other rights depending on the different types of users.
+- Include a search bar and sort by filters. 
+- Make a secure code. 
+- Deploy the site. PHP is not supported by github, find free alternatives.
 
 
 
