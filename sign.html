@@ -1,139 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signup</title>
-    <link rel="stylesheet" href="home.css">
-    <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
+
 <body>
 
-    <div class = "container-fluid">
-        <ul class="nav justify-content-end">
-          <div class="logo ">
-            <img src="https://bootstrapious.com/i/snippets/sn-nav-logo/logo.png" width="45" alt="" class="d-inline-block align-middle mr-2">
-    
-        </div>
-    
-            <li class="nav-item">
-                <a class="nav-link" href="home.html">Home</a>
-              </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">English</a></li>
-                  <li><a class="dropdown-item" href="#">Nederlands</a></li>
-                  <li><a class="dropdown-item" href="#">Francais</a></li>
-                </ul>
-              </li>
-      
-              <form class="d-flex" role="search">
-                <a class="btn btn-danger" href="sign.html" role="button" type="submit">Sign In</a>
-    
-              </form>
-        
-          </ul>
-        </div>
-        <section class="vh-50 ">
-            <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-              <div class="container h-100">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                    <div class="card" style="border-radius: 15px;">
-                      <div class="card-body p-5">
-                        <h2 class="text-uppercase text-center mb-5">Sign In</h2>
-          
-          
-    <form>
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" class="form-control" />
-          <label class="form-label" for="form2Example1">Email address</label>
-        </div>
-      
-        <!-- Password input -->
-        <div class="form-outline mb-4"> 
-          <input type="password" id="form2Example2" class="form-control" />
-          <label class="form-label" for="form2Example2">Password</label>
-        </div>
-      
-        <!-- 2 column grid layout for inline styling -->
-        <div class="row mb-4">
-          <div class="col d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-              <label class="form-check-label" for="form2Example31"> Remember me </label>
+  <div class="container-fluid">
+    <ul class="nav justify-content-end">
+      <div class="logo ">
+        <img src="https://bootstrapious.com/i/snippets/sn-nav-logo/logo.png" width="45" alt=""
+          class="d-inline-block align-middle mr-2">
+
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Nederlands</a></li>
+          <li><a class="dropdown-item" href="#">Francais</a></li>
+        </ul>
+      </li>
+
+      <form class="d-flex" role="search">
+        <a class="btn btn-danger" href="sign.html" role="button" type="submit">Sign In</a>
+
+      </form>
+
+    </ul>
+  </div>
+  <section class="vh-50 ">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Sign In</h2>
+
+
+                <form action="" method="post">
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" name="email " class="form-control" />
+                    <label class="form-label" for="form2Example1">Email address</label>
+                  </div>
+
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form2Example2" name="Pswd" class="form-control" />
+                    <label class="form-label" for="form2Example2">Password</label>
+                  </div>
+
+                  <!-- 2 column grid layout for inline styling -->
+                  <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" name="rmbme" type="checkbox" value="" id="form2Example31"
+                          checked />
+                        <label class="form-check-label" for="form2Example31"> Remember me </label>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <!-- Simple link -->
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+
+                  <!-- Submit button -->
+                  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                    <p>Not a member? <a href="#!">Register</a></p>
+                    <p>or sign up with:</p>
+
+                  </div>
+                </form>
+              </div>
+
+
             </div>
           </div>
-      
-          <div class="col">
-            <!-- Simple link -->
-            <a href="#!">Forgot password?</a>
-          </div>
         </div>
-      
-        <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-      
-        <!-- Register buttons -->
-        <div class="text-center">
-          <p>Not a member? <a href="#!">Register</a></p>
-          <p>or sign up with:</p>
-          
-        </div>
-      </form>
-          </div>
-
-
-        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>
 
-<footer class="footer">
-  <p>Questions? Call 1-866-579-7172</p>
-  <div class="footer-cols">
-    <ul>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Investor Relations</a></li>
-      <li><a href="#">Ways To Watch</a></li>
-      <li><a href="#">Corporate Information</a></li>
-      <li><a href="#">Netflix Originals</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Help Center</a></li>
-      <li><a href="#">Jobs</a></li>
-      <li><a href="#">Terms Of Use</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Account</a></li>
-      <li><a href="#">Redeem Gift Cards</a></li>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Speed Test</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Media Center</a></li>
-      <li><a href="#">Buy Gift Cards</a></li>
-      <li><a href="#">Cookie Preferences</a></li>
-      <li><a href="#">Legal Notices</a></li>
-    </ul>
-  </div>
+  <footer class="footer">
+    <p>Questions? Call 1-866-579-7172</p>
+    <div class="footer-cols">
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Ways To Watch</a></li>
+        <li><a href="#">Corporate Information</a></li>
+        <li><a href="#">Netflix Originals</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Terms Of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Redeem Gift Cards</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Speed Test</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Buy Gift Cards</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+        <li><a href="#">Legal Notices</a></li>
+      </ul>
+    </div>
 
-</footer>
+  </footer>
 
-    <script src="myscripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="myscripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
