@@ -32,7 +32,6 @@ if(isset($_POST['submit']))
 
 //Check email and password to log in :
 
-//change variables name 
 
 if(isset($_POST['login']))
 {
