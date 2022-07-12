@@ -5,26 +5,34 @@ include_once 'db.php';
 
 // registration form :
 
-// submit, name, email and password -> names tag of form on html page
-
 if(isset($_POST['submit']))
 {    
-     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+     $name = filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
+     $email = filter_var($_POST['Email'], FILTER_SANITIZE_STRING);
      $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-         
+     $repeatPassword = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
+    
+     //check passwords match:
+
+     if($password == $repeatPassword ){
+
      $sql = "INSERT INTO users (name, email, password)
      VALUES ('$name', '$email', '$password')";
 
-     if (mysqli_query($conn, $sql)) {
+        if (mysqli_query($conn, $sql)) {
+
         echo "New record has been added successfully !";
         
-      // Change location with the registration form html page.
-      //  header("location:test.php"); 
-   
-     } else {
-        echo "Error: " . $sql . ":-" . mysqli_error($conn);
-     }
+        // Change location with the registration form html page.
+        //  header("location:test.php"); 
+        }
+        else {
+            echo "Error: " . $sql . ":-" . mysqli_error($conn);
+        }
+    }
+    else{
+        echo "Passwords do not match. Try again!";
+    }
      mysqli_close($conn);
 
 }
@@ -35,13 +43,13 @@ if(isset($_POST['submit']))
 
 if(isset($_POST['login']))
 {
-    if(isset($_POST['username'])  && isset($_POST['passwordLog']))
+    if(isset($_POST['email'])  && isset($_POST['Pswd']))
     {
 
-    $name = filter_var($_POST['username'], FILTER_SANITIZE_STRING);   
-    $password = filter_var($_POST['passwordLog'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);   
+    $password = filter_var($_POST['Pswd'], FILTER_SANITIZE_STRING);
 
-    $sqlCheck = "SELECT * FROM users WHERE name='$name' AND password='$password'";
+    $sqlCheck = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 
     $result = mysqli_query($conn, $sqlCheck);   
 
