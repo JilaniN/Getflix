@@ -12,19 +12,20 @@ if(isset($_POST['submit']))
      $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
      $repeatPassword = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
     
-     //check passwords match:
+     //check if passwords match:
 
      if($password == $repeatPassword ){
 
      $sql = "INSERT INTO users (name, email, password)
      VALUES ('$name', '$email', '$password')";
 
+    //add user in the database:
         if (mysqli_query($conn, $sql)) {
 
         echo "New record has been added successfully !";
         
-        // Change location with the registration form html page.
-        //  header("location:test.php"); 
+        //after registration connect to main page
+        header("location:index.html"); 
         }
         else {
             echo "Error: " . $sql . ":-" . mysqli_error($conn);
@@ -39,7 +40,6 @@ if(isset($_POST['submit']))
 
 
 //Check email and password to log in :
-
 
 if(isset($_POST['login']))
 {
@@ -58,8 +58,8 @@ if(isset($_POST['login']))
         if($num > 0) {
              echo "You are connected";
 
-            //location name of main page
-            //  header("location:testForm.php");
+            //after login in conncect to main page
+            header("location:index.html");
             }
 
             else{
@@ -70,4 +70,23 @@ if(isset($_POST['login']))
     }
 
 }
+
+
+//Button to disconnect:
+//Work in progress
+//change the name of button when we have it on html
+
+if(isset($_POST['disconnect'])){
+    header("location:home.html");
+}
+
+
+
+
+//For the remember me:
+//Work in progress
+//if(isset($_COOKIE["username"])) { echo $_COOKIE["username"];}
+
+
+
 ?>
