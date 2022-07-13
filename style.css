@@ -18,9 +18,10 @@ body {
   transform: translate(-50%, -50%);
 } */
 .main{
-  opacity: 0.9;
+  opacity: 0.8;
   width: 100%;
 }
+
 
 .topnav a {
   float: left;
@@ -32,14 +33,31 @@ body {
   font-size: 17px;
 }
 
-.topnav input[type=text], .topnav input[type=submit] {
+.topnav .search-container {
   float: right;
+}
+
+.topnav input[type=text]{
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
   border: none;
   border-radius: 6px;
+  /* font-size: 17px; */
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: transparent;
   font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .search-container button:hover {
+  background: #ccc;
+  border-radius: 4px;
 }
 
 /* profile dropdown button */
