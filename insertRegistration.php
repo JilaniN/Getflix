@@ -19,13 +19,13 @@ if(isset($_POST['submit']))
      $sql = "INSERT INTO users (name, email, password)
      VALUES ('$name', '$email', '$password')";
 
-
+    //add user in the database:
         if (mysqli_query($conn, $sql)) {
 
         echo "New record has been added successfully !";
         
-        // Change location with the registration form html page.
-        //  header("location:test.php"); 
+        //after registration connect to main page
+        header("location:index.html"); 
         }
         else {
             echo "Error: " . $sql . ":-" . mysqli_error($conn);
@@ -40,7 +40,6 @@ if(isset($_POST['submit']))
 
 
 //Check email and password to log in :
-
 
 if(isset($_POST['login']))
 {
@@ -59,8 +58,8 @@ if(isset($_POST['login']))
         if($num > 0) {
              echo "You are connected";
 
-            //location name of main page
-            //  header("location:testForm.php");
+            //after login in conncect to main page
+            header("location:index.html");
             }
 
             else{
