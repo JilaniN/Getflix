@@ -60,7 +60,7 @@ h2{
 	max-width: 100%;
 	margin: 1rem auto;
 	overflow: auto;
-	background-color: #0d2757;
+	background-color: #0c1a35;
 
 }
 
@@ -86,7 +86,7 @@ h2{
 .footer .lang-select {
 	margin-top: 2rem;
 	color: #999;
-	background-color: #000;
+	background-color: #0c1a35;
 	background-image: none;
 	border: 1px solid #333;
 	padding: 1rem 1.2rem;
@@ -95,7 +95,7 @@ h2{
 .container1 {
 	width: 100%;
 	min-height: 460px;
-	background-color: black;
+	background-color: #0c1a35;
 	margin-top: 10px;
 	display: flex;
 	flex-direction: row;
