@@ -12,12 +12,13 @@ if(isset($_POST['submit']))
      $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
      $repeatPassword = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
     
-     //check passwords match:
+     //check if passwords match:
 
      if($password == $repeatPassword ){
 
      $sql = "INSERT INTO users (name, email, password)
      VALUES ('$name', '$email', '$password')";
+
 
         if (mysqli_query($conn, $sql)) {
 
@@ -70,4 +71,23 @@ if(isset($_POST['login']))
     }
 
 }
+
+
+//Button to disconnect:
+//Work in progress
+//change the name of button when we have it on html
+
+if(isset($_POST['disconnect'])){
+    header("location:home.html");
+}
+
+
+
+
+//For the remember me:
+//Work in progress
+//if(isset($_COOKIE["username"])) { echo $_COOKIE["username"];}
+
+
+
 ?>
