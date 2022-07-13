@@ -1,5 +1,6 @@
 body{
-	
+	background-color:royalblue;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -71,6 +72,7 @@ body{
 	align-items: center;
 	align-self: center;
 	object-fit: contain;
+	opacity: 0.8;
   }
   
   .text {
