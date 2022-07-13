@@ -1,0 +1,7 @@
+.btnpwd:link, .btnpwd:visited{
+    text-decoration: none;
+}
+.btnpwd:hover{
+    text-decoration: none;
+    color: #198754;
+}

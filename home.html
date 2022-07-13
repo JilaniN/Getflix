@@ -8,7 +8,8 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- link css -->
     <link rel="stylesheet" href="home.css">
     <!-- link -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
@@ -17,30 +18,15 @@
 </head>
 <body>
     <div class = "container-fluid p-2">
+  <!-- navbar -->
+  <div class="topnav">
+    <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
+    <a href="#">Home</a>
+    <a href="#" class="split">Log in</a>
+    
+  </div>
+</div>
 
-      <!-- navbar -->
-    <ul class="nav navbar-expand-lg justify-content-end">
-      <div class="logo ">
-        <img src="https://bootstrapious.com/i/snippets/sn-nav-logo/logo.png" width="45" alt="logo" class="d-inline-block align-middle mr-2 mt-3">
-        <a class="navbar-brand text-light align-middle" href="#"><b>Getflix</b></a>
-      </div>
-      <li class="nav-item mt-3">
-        <a class="nav-link" href="home.html">Home</a>
-      </li>
-      <li class="nav-item dropdown mt-3">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Languages
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">English</a></li>
-          <li><a class="dropdown-item" href="#">Nederlands</a></li>
-          <li><a class="dropdown-item" href="#">Français</a></li>
-        </ul>
-      </li>
-        <form class="d-flex" role="search">
-          <a class="btn btn-outline-danger mt-3 btnsign" href="sign.html" role="button" type="submit">Sign In</a>
-        </form>
-    </ul>
-    </div>
     
 <section class="vh-50 mt-3 mb-4">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -70,7 +56,7 @@
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example4cdg">Confirm your password</label>
-                  <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm your password" class="form-control form-control-md" />
+                  <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm" class="form-control form-control-md" />
                 </div>
 
                 <div class="form-check d-flex mb-5">
@@ -82,7 +68,7 @@
 
                 <div class="d-flex justify-content-center">
                   <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
+                    class="btnsign btn btn-success btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
                 </div>
               </form>
 
