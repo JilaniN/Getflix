@@ -5,10 +5,10 @@ body {
   margin: 0;
   background-color: #000;
 }
-h1 {
-  font-family: Arial;
-  color: red;
-  text-align: center;
+
+.navbar
+{
+    border-bottom:10px solid rgb(246, 242, 242);
 }
 .wrapper {
   display: grid;
@@ -54,8 +54,8 @@ h1 {
   right: 0;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   a.arrow__btn {
     display: none;
   }
-}
+} */
