@@ -96,9 +96,9 @@
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
-      <a href="#">My page</a>
+      <a href="sign.php">Log in</a>
       <a href="#">Log out</a>
-      <a href="#">Link 3</a>
+      <a href="#"></a>
     </div>
   </div>
   <div class="search-container">

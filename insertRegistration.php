@@ -59,7 +59,7 @@ if(isset($_POST['login']))
              echo "You are connected";
 
             //after login in conncect to main page
-            header("location:index.html");
+            header("location:index.php");
             }
 
             else{

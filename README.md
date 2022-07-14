@@ -23,4 +23,6 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Deploy the site. PHP is not supported by github, find free alternatives.
 
 
+##### Images from Unsplash
+##### Icons from Flaticons 
 

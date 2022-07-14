@@ -25,7 +25,7 @@
   <div class="topnav">
     <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
     <a href="#">Home</a>
-    <a href="#" class="split">Log in</a>
+    <a href="#login.php" class="split">Log in</a>
     
   </div>
 </div>

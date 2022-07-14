@@ -66,7 +66,8 @@
                   </div>
                   <!-- Submit button -->
                   <div class="text-center">
-                  <button type="button" class="btnlogin btn btn-success btn-block mb-4">Log in</button>
+                    <a href="index.php">
+                  <button type="button" class="btnlogin btn btn-success btn-block mb-4">Log in</button></a>
                   </div>
                   <!-- Register buttons -->
                   <div class="text-center">
