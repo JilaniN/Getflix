@@ -44,5 +44,15 @@ To do it we use the **Youtube Data api** using PHP language.
 ### Sign in page
 ![Sign in page](imagesReadme/signIn.png)
 
+### Pending:
+    - Deploy the site
+    - Search bar by filters
+    - Optional features
+    - Connect different databases
+
+
+Images from Unsplash
+Icons from Flaticons
+
 
 
