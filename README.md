@@ -23,23 +23,23 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Deploy the site. PHP is not supported by github, find free alternatives.
 
 ## The project: BesToBe
-We decide to create a platform to watch the best videos on youtube. The name is **BesToBe**. 
-We would create a easier way to find only the best of youtube with a good catalog and functionals filters.
-The videos are divided in categories (as playlist) and only registered users can comments.  
+We decided to create a platform which will catalogu what we find to be the best videos on youtube. The name is **BesToBe**, which came from Bestube, but sound better and even rhymes with "place to be".
 
-To do it we use the **Youtube Data api** connect with php language.
+The point is therefor to have diffent categories of must watch Youtube videos, from youtube classics to the best cooking videos that we know of.  
 
-### Team roles:
+To do it we use the **Youtube Data api** using PHP language.
+
+### Team roles*:
 - Backend: Sophie and Arianna
 - Frontend: Bhama
 - Project manager: Jilani
 
+*Note that the roles where define to have some structure at the start of the project but that each person had to work on both front and back end tasks.
+
+
 ### Preview of the project
 #### Main Page
 ![Main page](imagesReadme/mainpage.png)  
-
-### Comments section
-![Comments section](imagesReadme/comments.png)  
 
 ### Sign in page
 ![Sign in page](imagesReadme/signIn.png)
