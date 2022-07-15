@@ -32,9 +32,9 @@ The videos are divided in categories (as playlist) and only registered users can
 - Frontend: Bhama
 - Project manager: Jilani
 
-### Prevu of the project
+### Preview of the project
 #### Main Page
-![Main page!](imagesReadme/mainpage.png)
+![Main page](imagesReadme/mainpage.png)
 
 
 
