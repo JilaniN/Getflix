@@ -10,7 +10,7 @@ body {
   margin: 0;
   background-color:#2f5294;
 }
-
+/* container center text on image */
 .welcome{
   color:#fff !important;
 }
@@ -26,11 +26,11 @@ body {
   transform: translate(-50%, -50%) !important;
   color:rgb(246, 242, 242);
 } 
+
 .main{
   opacity: 0.8;
   width: 100%;
 }
-
 
 .topnav a {
   float: left;

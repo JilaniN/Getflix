@@ -42,7 +42,7 @@ if(!empty($_SESSION['id'])){
     <!-- link css -->
     <link rel="stylesheet" href="style.css">
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
 <body>
@@ -50,16 +50,16 @@ if(!empty($_SESSION['id'])){
 <!-- navbar -->
 <div class="topnav">
   <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
-  <a href="#home">Home</a>
-  <a href="#contact">Movies</a>
-  <a href="#">TV Shows</a>
+  <a href="index.php">Home</a>
+  <a href="./shows/movies.php">Movies</a>
+  <a href="./shows/tvshows.php">TV Shows</a>
   <a href="#">Categories</a>
   
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
       <!-- <a href="sign.php">Log in</a> -->
-      <a href="logout.php">Log out</a>
+      <a href="../logout.php">Log out</a>
     </div>
   </div>
   <div class="search-container">
