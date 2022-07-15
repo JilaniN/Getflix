@@ -2,32 +2,31 @@
 <?php
 require_once "config.php";
 
-// if(!empty($_SESSION['id'])){
-//     header("Location: index.php");
-// }
+if(!empty($_SESSION['id'])){
+    header("Location: index.php");
+}
 
-// if(isset($_POST['submit'])){
-//     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-//     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-//     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-//     $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
+if(isset($_POST['submit'])){
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
 
-//     $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-//     if(mysqli_num_rows($duplicate) > 0){
-//         echo "<hr><h6>Email already exists.</h6>";
-//     }  else{
-//         if($password == $confirm){
-//             $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
-//             mysqli_query($conn, $sql);
-//             echo "<hr><h6>Registration successful.</h6>";
-//             // var_dump ($name, $email, $password);
+    $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    if(mysqli_num_rows($duplicate) > 0){
+        echo "<hr><h6>Email already exists.</h6>";
+    }  else{
+        if($password == $confirm){
+            $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
+            mysqli_query($conn, $sql);
+            echo "<h6>Registration successful.</h6><hr>";
+            // var_dump ($name, $email, $password);
 
-//         } else{
-//             echo "<hr><h6>Passwords do not match.</h6>";
-//         }
-//     }
-// }
-
+        } else{
+            echo "<hr><h6>Passwords do not match.</h6>";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +54,8 @@ require_once "config.php";
     <div class = "container-fluid p-2">
   <!-- navbar -->
   <div class="topnav">
-    <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
-    <a href="#">Home</a>
+    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
+    <!-- <a href="index.php">Home</a> -->
     <a href="sign.php" class="split">Log in</a>
     
   </div>
@@ -114,35 +113,6 @@ require_once "config.php";
                 </div>
               </form>
 
-              <?php
-              if(!empty($_SESSION['id'])){
-                header("Location: index.php");
-            }
-            
-            if(isset($_POST['submit'])){
-                $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-                $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-                $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-                $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
-            
-                $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-                if(mysqli_num_rows($duplicate) > 0){
-                    echo "<hr><h6>Email already exists.</h6>";
-                }  else{
-                    if($password == $confirm){
-                        $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
-                        mysqli_query($conn, $sql);
-                        echo "<hr><h6>Registration successful.</h6>";
-                        // var_dump ($name, $email, $password);
-            
-                    } else{
-                        echo "<hr><h6>Passwords do not match.</h6>";
-                    }
-                }
-            }
-              
-              ?>
-
             </div>
           </div>
         </div>
@@ -198,7 +168,6 @@ require_once "config.php";
   <div class="footer-cols">
     <ul>
       <li><a href="#">FAQ</a></li>
-      <li><a href="#">Investor Relations</a></li>
       <li><a href="#">Ways To Watch</a></li>
       <li><a href="#">Corporate Information</a></li>
       <li><a href="#">Getflix Originals</a></li>

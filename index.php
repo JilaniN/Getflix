@@ -1,3 +1,30 @@
+<?php
+require_once "config.php";
+if(!empty($_SESSION['id'])){
+    $id = $_SESSION['id'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+    $row = mysqli_fetch_assoc($result);
+} else{
+    header("Location: sign.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<body>
+    <!-- <h1 class="welcome text-light text-center">Welcome <?php // echo $row['name']; ?> </h1> -->
+    <!-- <a href="logout.php">Log out</a> -->
+</body>
+</html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,71 +46,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
 <body>
-<!-- Navbar  -->
-<!-- <nav class="navbar navbar-expand-md"> -->
-
-    <div class="container-fluid">
-        <!-- Example Logo Image -->
-        <!-- <img src="./assets/harvest.png" width="30" alt="logo" class="d-inline-block align-middle me-1 mr-2"> -->
-  
-        <!-- Name of the site and home link -->
-        <!-- <a class="navbar-brand text-light" href="index.html"><b>BesToBe</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button> -->
-
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link text-light" href="index.html"> Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="categories.html"> Categories</a>
-            </li>
-            <li class="nav-item op">
-            <a class="nav-link text-light" href="movies.html"> Movies</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="tv.html"> TV Shows</a>
-            </li>
-
-            <div class="navbar-collapse dual-collapse2 me-auto"> -->
-              
-              <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Languages
-                  </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">French</a>
-                          <a class="dropdown-item" href="#">Dutch</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-              </li> -->
-              
-              
-              <!-- <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-              </form>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Profile
-                  </a>
-                      <div class="dropdown-menu split" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">XXX</a>
-                          <a class="dropdown-item" href="#">XXX</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Settings</a>
-                      </div>
-              </li> -->
-            </div>
-            
-        <!-- </ul> -->
-        <!-- </div> -->
-        
-    </div>
-</nav>
 
 <!-- navbar -->
 <div class="topnav">
@@ -96,14 +58,13 @@
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
-      <a href="sign.php">Log in</a>
-      <a href="#">Log out</a>
-      <a href="#"></a>
+      <!-- <a href="sign.php">Log in</a> -->
+      <a href="logout.php">Log out</a>
     </div>
   </div>
   <div class="search-container">
     <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
+      <input type="text" placeholder="Search..." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
@@ -113,6 +74,7 @@
 <!-- PROMO IMG -->
 <div class="container1">
 <img src="./assets/main.jpg" class="main img-fluid" alt="Responsive image">
+<div class="centered carousel-caption"><h1 class="welcome text-light text-center"><u>Welcome <?php echo $row['name']; ?> </u></h1></div>
 </div>
 
 <!-- CAROUSEL 1  -->

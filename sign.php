@@ -1,27 +1,27 @@
 <?php
 require_once "config.php";
 
-// if(!empty($_SESSION['id'])){
-//     header("Location: index.php");
-// }
+if(!empty($_SESSION['id'])){
+    header("Location: index.php");
+}
 
-// if(isset($_POST['submit'])){
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-//     $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-//     $row = mysqli_fetch_assoc($result);
-//     if(mysqli_num_rows($result) > 0){
-//         if($password == $row['password']){
-//             $_SESSION['login'] = true;
-//             $_SESSION['id'] = $row['id'];
-//             header("Location: index.php");
-//         } else{
-//             echo "<h6>Wrong password.</h6>";
-//         }
-//     } else{
-//         echo "<h6>User not registered.</h6>";
-//     }
-// }
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    $row = mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result) > 0){
+        if($password == $row['password']){
+            $_SESSION['login'] = true;
+            $_SESSION['id'] = $row['id'];
+            header("Location: index.php");
+        } else{
+            echo "<h6>Wrong password.</h6><hr>";
+        }
+    } else{
+        echo "<h6>User not registered.</h6><hr>";
+    }
+}
 
 ?>
 
@@ -127,29 +127,8 @@ require_once "config.php";
                     <p>Not a member? <a class="btnpwd" href="home.php">Sign up here</a></p>
                   </div>
                 </form>
-<?php
-                if(!empty($_SESSION['id'])){
-    header("Location: index.php");
-}
 
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-    $row = mysqli_fetch_assoc($result);
-    if(mysqli_num_rows($result) > 0){
-        if($password == $row['password']){
-            $_SESSION['login'] = true;
-            $_SESSION['id'] = $row['id'];
-            header("Location: index.php");
-        } else{
-            echo "<hr><h6>Wrong password.</h6>";
-        }
-    } else{
-        echo "<hr><h6>User not registered.</h6>";
-    }
-}
-?>
+ 
               </div>
             </div>
           </div>
@@ -159,23 +138,31 @@ if(isset($_POST['submit'])){
     </div>
   </section>
 
-              <footer class="my-3">
-                <div class="footer-cols">
-                <nav class="footer1 navbar-expand navbar-expand-lg bg-primary">
-                  <div class="container-fluid">
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                      <div class="navbar-nav">
-                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-facebook fa-fade"></i></a>
-                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-instagram"></i></a>
-                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-twitter"></i></a>
-                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-cc-apple-pay fa-flip"></i></a>
-                      </div>
-                    </div>
-                    <a class="navbar-brand"><i class="fa-solid fa-copyright fa-2xs"></i></a>
-                  </div>
-                </nav>
-</div>
-              </footer>
+  <footer class="footer p-2">
+  <p>Any questions? Contact us 1-866-579-7172</p>
+  <div class="footer-cols">
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Ways To Watch</a></li>
+      <li><a href="#">Getflix Originals</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Terms Of Use</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Speed Test</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Media Center</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+      <li><a href="#">Legal Notices</a></li>
+    </ul>
+  </div>
+</footer>
 
   <script src="myscripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

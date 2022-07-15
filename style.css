@@ -11,12 +11,21 @@ body {
   background-color:#2f5294;
 }
 
-/* .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+.welcome{
+  color:#fff !important;
+}
+.container1{
+  position: relative !important;
+  text-align: center;
+  color:#fff;
+}
+.centered {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color:rgb(246, 242, 242);
+} 
 .main{
   opacity: 0.8;
   width: 100%;
