@@ -14,16 +14,16 @@ if(isset($_POST['submit'])){
 
     $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
     if(mysqli_num_rows($duplicate) > 0){
-        echo "<hr><h6>Email already exists.</h6>";
+        echo "<h6 class='text-light m-1'>Email already exists.</h6><hr>";
     }  else{
         if($password == $confirm){
             $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
             mysqli_query($conn, $sql);
-            echo "<h6>Registration successful.</h6><hr>";
+            echo "<h6 class='text-light m-1'>Registration successful.</h6><hr>";
             // var_dump ($name, $email, $password);
 
         } else{
-            echo "<hr><h6>Passwords do not match.</h6>";
+            echo "<h6 class='text-light m-1'>Passwords do not match.</h6><hr>";
         }
     }
 }

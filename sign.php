@@ -16,10 +16,10 @@ if(isset($_POST['submit'])){
             $_SESSION['id'] = $row['id'];
             header("Location: index.php");
         } else{
-            echo "<h6>Wrong password.</h6><hr>";
+            echo "<h6 class='text-light m-1'>Wrong password.</h6><hr>";
         }
     } else{
-        echo "<h6>User not registered.</h6><hr>";
+        echo "<h6 class='text-light m-1'>User not registered.</h6><hr>";
     }
 }
 

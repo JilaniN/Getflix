@@ -22,6 +22,10 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Make a secure code. 
 - Deploy the site. PHP is not supported by github, find free alternatives.
 
+### Pending:
+    - Deploy the site
+    - Optional features
+    - Connect different databases
 
 ##### Images from Unsplash
 ##### Icons from Flaticons 
