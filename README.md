@@ -24,6 +24,7 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 
 ### Pending:
     - Deploy the site
+    - Search bar by filters
     - Optional features
     - Connect different databases
 
