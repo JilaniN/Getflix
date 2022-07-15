@@ -3,7 +3,7 @@
 ### Team collaborators: 
 - Sophie Cheng
 - Bhama Guruswami
-- Jilani N
+- Jilani Nezroug
 - Arianna Telesca
 
 ## The mission:
@@ -21,6 +21,21 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Include a search bar and sort by filters. 
 - Make a secure code. 
 - Deploy the site. PHP is not supported by github, find free alternatives.
+
+## The project:
+We decide to create a platform to watch the best videos on youtube. The name is * BestToBe *. 
+We would create a easier way to find only the best of youtube with a good catalog and functionals filters.
+The videos are divided in categories (as playlist) and only registered users can comments.
+
+### Team roles:
+- Backend: Sophie and Arianna
+- Frontend: Bhama
+- Project manager: Jilani
+
+### Prevu of the project
+#### Main Page
+![Main page!](imagesReadme/mainpage.png)
+
 
 
 
