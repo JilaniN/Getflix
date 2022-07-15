@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
 </div>
 
     
-<section class="vh-50 mt-3 mb-4">
+<section class="vh-50 mt-3 mb-5">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -96,7 +96,7 @@ if(isset($_POST['submit'])){
                 <div class="form-outline mb-4">
                   <!-- <label class="form-label" for="rptpassword">Confirm your password</label>
                   <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm" class="form-control form-control-md" /> -->
-                  <label for="rptpassword">Choose a password </label>
+                  <label for="rptpassword">Confirm password </label>
                   <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
                 </div>
 
@@ -112,7 +112,6 @@ if(isset($_POST['submit'])){
                     class="btnsign btn btn-success btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
                 </div>
               </form>
-
             </div>
           </div>
         </div>
@@ -131,31 +130,26 @@ if(isset($_POST['submit'])){
       </p>
   </div>
   <div class="image">
-<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
+  <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
   </div>
 </div>
-<div class="container1">
-    
+<div class="container2">
     <div class="image">
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile.png">
     </div>
-    <div class="text p-3">
+    <div class="text px-3">
         <h1>Download your shows to watch on the go.
           </h1>
           <p>
               Save your data and watch all your favourites offline.
           </p>
       </div>
-      
   </div>
   <div class="container1">
       <div class="text">
-        <h1>Watch everywhere.
-
-          </h1>
+        <h1>Watch everywhere.</h1>
           <p>
               Stream unlimited movies and TV shows on <br>your phone, tablet, laptop,  and TV without paying more.
-
           </p>
       </div>
       <div class="image">
@@ -193,9 +187,8 @@ if(isset($_POST['submit'])){
   </div>
 </footer>
 
-
-    <script src="myscripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="myscripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 </html>

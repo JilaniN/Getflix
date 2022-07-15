@@ -90,7 +90,7 @@ h2{
 	padding: 1rem 1.2rem;
 	border-radius: 5px;
 }
-.container1 {
+.container1, .container2 {
 	width: 100%;
 	min-height: 460px;
 	background-color: #0c1a35;
@@ -100,9 +100,15 @@ h2{
 	align-items: center;
 	justify-content: space-evenly;
 	text-align: left;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+  }
+  .container1, .container2{
+	padding-left: 8%;
+	padding-right: 8%;
   }
   
-  .container1 img {
+  .container1 img, .container2 img{
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
@@ -114,7 +120,7 @@ h2{
 	height: 350px;
   }
   
-  .container1 .image {
+  .container1 .image, .container2 .image {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
