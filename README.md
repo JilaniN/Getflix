@@ -25,7 +25,9 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 ## The project: BesToBe
 We decide to create a platform to watch the best videos on youtube. The name is **BesToBe**. 
 We would create a easier way to find only the best of youtube with a good catalog and functionals filters.
-The videos are divided in categories (as playlist) and only registered users can comments.
+The videos are divided in categories (as playlist) and only registered users can comments.  
+
+To do it we use the **Youtube Data api** connect with php language.
 
 ### Team roles:
 - Backend: Sophie and Arianna
