@@ -22,8 +22,8 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Make a secure code. 
 - Deploy the site. PHP is not supported by github, find free alternatives.
 
-## The project:
-We decide to create a platform to watch the best videos on youtube. The name is * BestToBe *. 
+## The project: BesToBe
+We decide to create a platform to watch the best videos on youtube. The name is **BesToBe**. 
 We would create a easier way to find only the best of youtube with a good catalog and functionals filters.
 The videos are divided in categories (as playlist) and only registered users can comments.
 
@@ -34,8 +34,13 @@ The videos are divided in categories (as playlist) and only registered users can
 
 ### Preview of the project
 #### Main Page
-![Main page](imagesReadme/mainpage.png)
+![Main page](imagesReadme/mainpage.png)  
 
+### Comments section
+![Comments section](imagesReadme/comments.png)  
+
+### Sign in page
+![Sign in page](imagesReadme/signIn.png)
 
 
 
