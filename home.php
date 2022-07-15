@@ -1,3 +1,35 @@
+<!-- registration.php form -->
+<?php
+require_once "config.php";
+
+// if(!empty($_SESSION['id'])){
+//     header("Location: index.php");
+// }
+
+// if(isset($_POST['submit'])){
+//     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+//     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+//     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+//     $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
+
+//     $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+//     if(mysqli_num_rows($duplicate) > 0){
+//         echo "<hr><h6>Email already exists.</h6>";
+//     }  else{
+//         if($password == $confirm){
+//             $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
+//             mysqli_query($conn, $sql);
+//             echo "<hr><h6>Registration successful.</h6>";
+//             // var_dump ($name, $email, $password);
+
+//         } else{
+//             echo "<hr><h6>Passwords do not match.</h6>";
+//         }
+//     }
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +57,7 @@
   <div class="topnav">
     <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
     <a href="#">Home</a>
-    <a href="#login.php" class="split">Log in</a>
+    <a href="sign.php" class="split">Log in</a>
     
   </div>
 </div>
@@ -41,25 +73,32 @@
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
 
               <form action="" method="post">
-
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example1cg">Enter your name</label>
-                  <input type="text" id="form3Example1cg"  name ="Name" placeholder="Name" class="form-control form-control-md" />
+                  <!-- <label class="form-label" for="name">Enter your name</label>
+                  <input type="text" id="form3Example1cg"  name ="name" placeholder="Name" class="form-control form-control-md" /> -->
+                  <label for="name">Enter your name </label>
+                  <input type="text" name="name" id="name" required value="" placeholder="Name" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3cg">Enter your email address</label>
-                  <input type="email" id="form3Example3cg"  name ="Email" placeholder="Email address" class="form-control form-control-md" />
+                  <!-- <label class="form-label" for="email">Enter your email address</label>
+                  <input type="email" id="form3Example3cg"  name ="email" placeholder="Email address" class="form-control form-control-md" /> -->
+                  <label for="email">Enter your email address</label>
+                  <input type="text" name="email" id="email" required value="" placeholder="Email address" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4cg">Choose a password</label>
-                  <input type="password" id="form3Example4cg"  name ="password" placeholder="Password" class="form-control form-control-md" />
+                  <!-- <label class="form-label" for="password">Choose a password</label>
+                  <input type="password" id="form3Example4cg"  name ="password" placeholder="Password" class="form-control form-control-md" /> -->
+                  <label for="password">Choose a password </label>
+                  <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4cdg">Confirm your password</label>
-                  <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm" class="form-control form-control-md" />
+                  <!-- <label class="form-label" for="rptpassword">Confirm your password</label>
+                  <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm" class="form-control form-control-md" /> -->
+                  <label for="rptpassword">Choose a password </label>
+                  <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
                 </div>
 
                 <div class="form-check d-flex mb-5">
@@ -70,11 +109,39 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button type="submit" name="submit"
                     class="btnsign btn btn-success btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
                 </div>
               </form>
 
+              <?php
+              if(!empty($_SESSION['id'])){
+                header("Location: index.php");
+            }
+            
+            if(isset($_POST['submit'])){
+                $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+                $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+                $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+                $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
+            
+                $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+                if(mysqli_num_rows($duplicate) > 0){
+                    echo "<hr><h6>Email already exists.</h6>";
+                }  else{
+                    if($password == $confirm){
+                        $sql = "INSERT INTO users (name, email, password) VALUES('$name', '$email', '$password')";
+                        mysqli_query($conn, $sql);
+                        echo "<hr><h6>Registration successful.</h6>";
+                        // var_dump ($name, $email, $password);
+            
+                    } else{
+                        echo "<hr><h6>Passwords do not match.</h6>";
+                    }
+                }
+            }
+              
+              ?>
 
             </div>
           </div>

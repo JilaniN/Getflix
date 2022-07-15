@@ -1,6 +1,55 @@
+<?php
+require_once "config.php";
+
+// if(!empty($_SESSION['id'])){
+//     header("Location: index.php");
+// }
+
+// if(isset($_POST['submit'])){
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+//     $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+//     $row = mysqli_fetch_assoc($result);
+//     if(mysqli_num_rows($result) > 0){
+//         if($password == $row['password']){
+//             $_SESSION['login'] = true;
+//             $_SESSION['id'] = $row['id'];
+//             header("Location: index.php");
+//         } else{
+//             echo "<h6>Wrong password.</h6>";
+//         }
+//     } else{
+//         echo "<h6>User not registered.</h6>";
+//     }
+// }
+
+?>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="" method="post">
+        <label for="email">Email </label>
+        <input type="text" name="email" id="email" required value=""><br>
+        <label for="password">Password </label>
+        <input type="password" name="password" id="password" required value=""><br>
+        <button type="submit" name="submit">Log in</button>
+    </form>
+    <br>
+    <a href="registration.php">Register here</a>
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,12 +68,10 @@
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
-
 <body>
   <!-- navbar -->
   <div class="topnav">
-    <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
-    <!-- <a href="#" class="split">Log in</a> -->
+    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
   </div>
 </div>
 
@@ -41,13 +88,18 @@
                 <form action="" method="post">
                   <!-- Email input -->
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example1"></label>
-                    <input type="email" id="form2Example1" name="email" placeholder="Email address" class="form-control" />
+                    <!-- <label class="form-label" for="form2Example1"></label>
+                    <input type="email" id="form2Example1" name="email" placeholder="Email address" class="form-control" /> -->
+                    <label for="email"></label>
+                    <input type="text" name="email" id="email" placeholder="Email address" required value="" class=form-control>
                   </div>
+
                   <!-- Password input -->
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example2"></label>
-                    <input type="password" id="form2Example2" name="Pswd" placeholder="Password" class="form-control" />
+                    <!-- <label class="form-label" for="form2Example2"></label>
+                    <input type="password" id="form2Example2" name="Pswd" placeholder="Password" class="form-control" /> -->
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control">
                   </div>
                   <!-- 2 column grid layout for inline styling -->
                   <div class="row mb-4">
@@ -67,50 +119,63 @@
                   <!-- Submit button -->
                   <div class="text-center">
                     <a href="index.php">
-                  <button type="button" class="btnlogin btn btn-success btn-block mb-4">Log in</button></a>
+                      <!--  -->
+                  <button type="submit" name="submit" class="btnlogin btn btn-success btn-block mb-4">Log in</button></a>
                   </div>
                   <!-- Register buttons -->
                   <div class="text-center">
-                    <p>Not a member? <a class="btnpwd" href="#!">Sign up here</a></p>
+                    <p>Not a member? <a class="btnpwd" href="home.php">Sign up here</a></p>
                   </div>
                 </form>
+<?php
+                if(!empty($_SESSION['id'])){
+    header("Location: index.php");
+}
+
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+    $row = mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result) > 0){
+        if($password == $row['password']){
+            $_SESSION['login'] = true;
+            $_SESSION['id'] = $row['id'];
+            header("Location: index.php");
+        } else{
+            echo "<hr><h6>Wrong password.</h6>";
+        }
+    } else{
+        echo "<hr><h6>User not registered.</h6>";
+    }
+}
+?>
               </div>
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
     </div>
-
   </section>
 
-
-  <footer class="footer">
-    <p>Questions? Call 1-866-579-7172</p>
-    <div class="footer-cols">
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Investor Relations</a></li>
-        
-      </ul>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Jobs</a></li>
-        
-      </ul>
-      <ul>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Speed Test</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Cookie Preferences</a></li>
-        <li><a href="#">Legal Notices</a></li>
-      </ul>
-    </div>
-
-  </footer>
+              <footer class="my-3">
+                <div class="footer-cols">
+                <nav class="footer1 navbar-expand navbar-expand-lg bg-primary">
+                  <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-facebook fa-fade"></i></a>
+                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="nav-link mx-4" href="https://ch-sophie.github.io/restaurant-css-framework/Welcome"><i class="fa-brands fa-cc-apple-pay fa-flip"></i></a>
+                      </div>
+                    </div>
+                    <a class="navbar-brand"><i class="fa-solid fa-copyright fa-2xs"></i></a>
+                  </div>
+                </nav>
+</div>
+              </footer>
 
   <script src="myscripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

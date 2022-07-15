@@ -4,7 +4,6 @@
 include_once 'db.php';
 
 // registration form :
-
 if(isset($_POST['submit']))
 {    
      $name = filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
@@ -25,7 +24,7 @@ if(isset($_POST['submit']))
         echo "New record has been added successfully !";
         
         //after registration connect to main page
-        header("location:index.html"); 
+        header("location:index.php"); 
         }
         else {
             echo "Error: " . $sql . ":-" . mysqli_error($conn);
