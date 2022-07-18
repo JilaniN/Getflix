@@ -74,7 +74,7 @@ if(isset($_POST['submit'])){
     <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
-
+<!-- background image -->
   <section class="vh-50 mt-5 mb-5">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
       <div class="container h-100">
