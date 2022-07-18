@@ -5,3 +5,18 @@
     text-decoration: none;
     color: #198754;
 }
+
+body{
+    background-image: url(./assets/home.jpg) !important;
+    opacity: 0.9;
+}
+.card{
+    box-shadow: 5px 5px 8px rgb(69, 73, 91);
+}
+.card:hover{
+    opacity: 1;
+}
+.topnav .logo{
+	background-color: #ddd;
+	color: #000000;
+}

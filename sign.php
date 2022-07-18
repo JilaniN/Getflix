@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
 <body>
   <!-- navbar -->
   <div class="topnav">
-    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
 
