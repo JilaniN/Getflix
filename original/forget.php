@@ -42,7 +42,7 @@
                 <form action="recovery.php" method="POST">
                 <h2 class="text-uppercase text-center mb-5">Recover your password</h2>
                 <p>
-                  Please enter your Email address tp reset your password
+                  Please enter your Email address to reset your password
                 </p>
 
                   <!-- Email input -->
