@@ -99,21 +99,6 @@ body {
 .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
 
 
-@media screen and (max-width: 700px) {
-  .topnav a, .topnav input[type=text], .topnav input[type=submit] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
-
 .navbar
 {
     border-bottom:10px solid rgb(246, 242, 242);
@@ -172,4 +157,172 @@ body {
   margin-top: 15px;
   margin-left: 10px;
   color: #fff;
+}
+
+.footer {
+	max-width: 100%;
+	overflow: auto;
+	background-color: #0c1a35;
+
+}
+
+.footer, .footer a {
+	color: #999;
+	font-size: 0.9rem;
+}
+
+.footer p {
+	margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.footer li {
+	line-height: 1.9;
+}
+
+.footer .lang-select {
+	margin-top: 2rem;
+	color: #999;
+	background-color: #0c1a35;
+	background-image: none;
+	border: 1px solid #333;
+	padding: 1rem 1.2rem;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 350px){
+  .topnav .search-container {
+    float: left;
+    margin-left: 3%;
+  }
+  .topnav a, .topnav input[type=text], .topnav input[type=submit] {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    width: 70%;
+    padding: 10px;
+  }
+  .topnav input[type=text]{
+    font-size: 0.9em;
+    margin-bottom: 3%;
+  }
+  .welcome{
+    font-size: 0.8em;
+  }
+  
+}
+
+@media screen and (min-width: 351px) and (max-width: 500px){
+  .topnav .search-container {
+    float: left;
+    margin-left: 2%;
+  }
+  .topnav input[type=text], .topnav input[type=submit]{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 3%;
+    padding: 10px;
+    text-align: left;
+  }
+  .topnav .search-container button{
+    padding: 6px 2px;
+    margin-top: 10px;
+  }
+  .topnav a{
+    text-align: left;
+  }
+  .dropdown{
+    display: block;
+  }
+  .welcome{
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topnav a, .topnav input[type=text], .topnav input[type=submit] {
+    float: none;
+    /* display: block; */
+    /* text-align: left; */
+    /* width: 100%; */
+    /* margin: 0; */
+    /* padding: 14px; */
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px) {
+  .welcome{
+    font-size: 1.5em;
+  }
+  .topnav a{
+    float:left;
+    font-size: 0.9em;
+  }
+  .topnav input[type=text]{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    width: 60%;
+    font-size: 0.8em;
+  }
+  .topnav .search-container button{
+    padding: 5px 5px;
+    margin-top: 5px;
+    float: none;
+  }
+  .dropbtn{
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 604px) and (max-width: 750px){
+  .topnav .search-container{
+    float: none;
+    margin-bottom: 6px;
+  }
+
+}
+@media screen and (min-width: 750px) and (max-width: 885px){
+  .topnav .search-container{
+    float: right;
+    margin-bottom: 6px;
+    width: 30%;
+    font-size: 0.8em;
+  }
+  .topnav .search-container button{
+    padding: 5px 5px;
+    margin-top: 5px;
+    float: none;
+  }
+  .topnav a{
+    padding: 8px;
+    padding-top: 11px;
+  }
+  .dropbtn{
+    padding-top: 11px;
+    padding-left: 7px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width:910px){
+  .topnav input[type=text]{
+    width: 50%;
+  }
+  .topnav .search-container button{
+    /* padding: 5px 5px; */
+    margin-top: 5px;
+    float: none;
+  }
+  .topnav a{
+    float:left;
+    font-size: 0.9em;
+  }
+  .dropbtn{
+    font-size: 0.9em;
+  }
 }

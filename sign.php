@@ -71,14 +71,15 @@ if(isset($_POST['submit'])){
 <body>
   <!-- navbar -->
   <div class="topnav">
-    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
+    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
 
   <section class="vh-50 mt-5 mb-5">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
       <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <!-- update h-85 when user not registered less space -->
+        <div class="row d-flex justify-content-center align-items-center h-85">
           <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5">
@@ -138,7 +139,7 @@ if(isset($_POST['submit'])){
     </div>
   </section>
 
-  <footer class="footer p-2">
+<footer class="footer p-2">
   <p>Any questions? Contact us 1-866-579-7172</p>
   <div class="footer-cols">
     <ul>
