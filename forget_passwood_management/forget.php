@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forget password</title>
+  <title>Signup</title>
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,17 +16,16 @@
   <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
 </head>
-
 <body>
   <!-- navbar -->
-  <div class="topnav">
-    <a href="#home"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
-    <!-- <a href="#" class="split">Log in</a> -->
+  <div class="forgetnav topnav container-fluid p-2">
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
+<!-- background image -->
 
   <section class="vh-50 mt-5 mb-5">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -42,17 +40,17 @@
                 <form action="recovery.php" method="POST">
                 <h2 class="text-uppercase text-center mb-5">Recover your password</h2>
                 <p>
-                  Please enter your Email address to reset your password
+                  Please enter your email address to reset your password
                 </p>
 
                   <!-- Email input -->
                   <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example1">Email address</label>
-                    <input type="email" id="form2Example1" name="email_forget" class="form-control" />
+                    <label class="form-label" for="form2Example1"></label>
+                    <input type="email" id="form2Example1" name="email_forget" placeholder="Email address" class="form-control" />
                   </div>
                   <!-- Submit button -->
                   <div class="text-center">
-                  <button type="submit" class="btnlogin btn btn-success btn-block mb-4" name ="forget-btn">Recovery your passwood</button>
+                  <button type="submit" class="btnlogin btn btn-success btn-block mb-4" name ="forget-btn">Recover your passwood</button>
                   </div>
 </form>
 <?php
@@ -62,13 +60,8 @@ if(isset($_GET["reset"])){
   }
 }
 
-
-
-
-
 ?>
               </div>
-
 
             </div>
           </div>
@@ -76,34 +69,34 @@ if(isset($_GET["reset"])){
       </div>
     </div>
     </div>
-
   </section>
 
 
-  <footer class="footer">
-    <p>Questions? Call 1-866-579-7172</p>
-    <div class="footer-cols">
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Investor Relations</a></li>
-        
-      </ul>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Jobs</a></li>
-        
-      </ul>
-      <ul>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Speed Test</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Cookie Preferences</a></li>
-        <li><a href="#">Legal Notices</a></li>
-      </ul>
-    </div>
-
-  </footer>
+  <footer class="forgetfooter footer p-2">
+  <p>Any questions? Contact us 1-866-579-7172</p>
+  <div class="footer-cols">
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Ways To Watch</a></li>
+      <li><a href="#">Getflix Originals</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Terms Of Use</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Speed Test</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Media Center</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+      <li><a href="#">Legal Notices</a></li>
+    </ul>
+  </div>
+</footer>
 
   <!-- <script src="myscripts.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

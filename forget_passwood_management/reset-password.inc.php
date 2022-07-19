@@ -87,7 +87,7 @@ if (isset($_post["reset-password-submit"])){
     }
 }
  }
-
+}
 else{
     header('location:forgetmessage.php?');
 

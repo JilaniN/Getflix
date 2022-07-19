@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="col">
                       <!-- Simple link -->
-                      <a class="btnpwd" href="#!">Forgot password?</a>
+                      <a class="btnpwd" href="./forget_passwood_management/forget.php">Forgot password?</a>
                     </div>
                   </div>
                   <!-- Submit button -->
