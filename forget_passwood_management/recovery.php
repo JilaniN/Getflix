@@ -1,6 +1,4 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 if(isset($_POST['forget-btn'])){
 
@@ -69,42 +67,38 @@ $headers = "From: website name <bhamaguruswami@gmail.com>\r\n";
 $headers .= "Reply-To: bhamaguruswami@gmail.com>\r\n";
 $headers .= "Content-type:text/html\r\n";
 
-//$res = mail($to,$subject,$message,$headers);
- 
-//header ("Location:forget.php?reset =success");
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-// if ($res == true) {
-//   echo "Message sent successfully...";
-// }else {
-//   echo "Message could not be sent...";
-// }
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-//require 'PHPMailerAutoload.php';
-//Uncomment the below code
-// require_once '../vendor/autoload.php';
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-// $developmentMode = true;
-// $mail = PHPMailer($developmentMode);
+$mail->isSMTP();                    
+$mail->SMTPAuth = true;   
+//$mail->SMTPSecure = 'ssl'; 
+//$mail->SMTPDebug = 3;
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = '465';
+$mail->isHTML();
+$mail->Username = 'bhamakaruppasamy@gmail.com';   //enter our team email address       
+$mail->Password = '';                      //enter our team email password
+$mail->setFrom('bhamakaruppasamy@gmail.com');
+$mail->Subject = $subject;
+$mail->Body    = $message;
+$mail->AltBody = 'Body in plain text for non-HTML mail clients';
+$mail->addAddress($to);
 
-// $mail->isSMTP();                    
-// $mail->SMTPAuth   = true;   
-// $mail->SMTPSecure = 'ssl'; 
-// $mail->Host = 'smtp.gmail.com';
-// $mail->Port = '465';
-// $mail->Username = 'bhamaguruswami@gmail.com';             
-// $mail->Password = '<password>';                      //enter our team email password
-// $mail->setFrom('bhamaguruswami@gmail.com', 'Bhama');
-// $mail->Subject = 'Here is the subject';
-// $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-// $mail->AltBody = 'Body in plain text for non-HTML mail clients';
-// $mail->addAddress('karuppasamy.qa@gmail.com');
-
-// if(!$mail->send()) {
-//   echo 'Message could not be sent.';
-//   echo 'Mailer Error: ' . $mail->ErrorInfo;
-// } else {
-//   echo 'Message has been sent';
-// }
+if(!$mail->send()) {
+  echo 'Message could not be sent.';
+  echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+  echo 'Message has been sent';
+}
 
 header ("Location:forget.php?reset =success");
 ?>
