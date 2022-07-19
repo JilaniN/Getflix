@@ -13,6 +13,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link to css -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../home.css">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,16 +29,11 @@ session_start();
 </head>
 <body>
     <!-- navbar -->
-  <div class="topnav">
-    <a class="logo"  href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <div class="topnav p-2">
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
-<video width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support the video.
-    </video>
-    <br>
+
     
 <?php
     echo "<form method='POST' action='".getLogin($pdo)."'>
@@ -56,14 +52,19 @@ session_start();
     }
 
 ?>
-<br>
+<!-- <br>
 
-    <!-- <video width="320" height="240" controls>
+    <video width="420" height="400" controls>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
         Your browser does not support.
     </video>
     <br> -->
+    
+    <div class="ratio ratio-16x9" id="player">
+        <!-- <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video" allowfullscreen></iframe> -->
+            <iframe width="400" height="400" src="https://www.youtube.com/embed/f6kzypYDLRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
 <?php
     if(isset($_SESSION['id'])){
