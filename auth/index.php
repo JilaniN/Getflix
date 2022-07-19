@@ -11,14 +11,38 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to css -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- link -->
+    <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- link icon image -->
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    
+    <title>Play</title>
 </head>
 <body>
+    <!-- navbar -->
+  <div class="topnav">
+    <a class="logo"  href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  </div>
+</div>
+<video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video.
+    </video>
+    <br>
+    
 <?php
     echo "<form method='POST' action='".getLogin($pdo)."'>
-        Username: <input type='text' name='uid'>
-        Password: <input type='password' name='pwd'><br>
+        Username: <input type='text' name='name'>
+        Password: <input type='password' name='password'><br>
         <button type='submit' name='loginSubmit'>Log in</button>
     </form>";
     echo "<form method='POST' action='".userLogout()."'>
@@ -34,17 +58,18 @@ session_start();
 ?>
 <br>
 
-    <video width="320" height="240" controls>
+    <!-- <video width="320" height="240" controls>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
         Your browser does not support.
     </video>
-    <br>
+    <br> -->
+
 <?php
     if(isset($_SESSION['id'])){
         echo "You are logged in";
         echo "<form method='POST' action='".setComments($pdo)."'>
-        <input type='hidden' name='uid' value='".$_SESSION['id']."'>
+        <input type='hidden' name='name' value='".$_SESSION['id']."'>
         <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
         <textarea name='message' id='message'></textarea><br>
         <button type='submit' name='commentSubmit'>Comment</button>

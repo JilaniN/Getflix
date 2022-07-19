@@ -27,7 +27,8 @@ function getComments($pdo){
             echo nl2br ($row['message']);
             if(isset($_SESSION['id'])){
                 if($_SESSION['id'] == $row2['id']){
-                    // edit comment 
+
+            // edit comment 
             echo "<form class='edit' method='POST' action='editcomment.php'>
             <input type='hidden' name='cid' value='".$row['cid']."'>
             <input type='hidden' name='uid' value='".$row['uid']."'>
@@ -35,19 +36,23 @@ function getComments($pdo){
             <input type='hidden' name='message' value='".$row['message']."'>
             <button>Edit</button>
             </form>";
+
             // delete comment
             echo "<form class='deleteform' method='POST' action='".deleteComments($pdo)."'>
                 <input type='hidden' name='cid' value='".$row['cid']."'>
-                <button type='submit' name='commentDelete'>Delete</button>
-             </form>";
+                <button type='submit' name='commentDelete'>Delete</button>";
+
+                // delete page not working
+                // echo '<a href="delete.php?cid='. $row['cid'] .'" title="Delete" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+
+             echo "</form>";
+             
                 }
             }
 
-            
             echo "</div>";
             
         }
-
     }
 }
 

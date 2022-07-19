@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GetFlix</title>
+    <title>BesToBe</title>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,23 +51,22 @@ if(isset($_POST['submit'])){
     
 </head>
 <body>
+  <!-- <div class="imagehome"> -->
     <div class = "container-fluid p-2">
   <!-- navbar -->
   <div class="topnav">
     <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
-    <!-- <a href="index.php">Home</a> -->
+    <a href="./auth/index.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
-    
   </div>
 </div>
-
     
 <section class="vh-50 mt-3 mb-5">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div class="card" style="border-radius: 15px;">
+          <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #203056;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
 
@@ -75,28 +74,28 @@ if(isset($_POST['submit'])){
                 <div class="form-outline mb-4">
                   <!-- <label class="form-label" for="name">Enter your name</label>
                   <input type="text" id="form3Example1cg"  name ="name" placeholder="Name" class="form-control form-control-md" /> -->
-                  <label for="name">Enter your name </label>
+                  <label for="name" style="font-weight: 600;">Enter your name </label>
                   <input type="text" name="name" id="name" required value="" placeholder="Name" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
                   <!-- <label class="form-label" for="email">Enter your email address</label>
                   <input type="email" id="form3Example3cg"  name ="email" placeholder="Email address" class="form-control form-control-md" /> -->
-                  <label for="email">Enter your email address</label>
+                  <label for="email" style="font-weight: 600;">Enter your email address</label>
                   <input type="text" name="email" id="email" required value="" placeholder="Email address" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
                   <!-- <label class="form-label" for="password">Choose a password</label>
                   <input type="password" id="form3Example4cg"  name ="password" placeholder="Password" class="form-control form-control-md" /> -->
-                  <label for="password">Choose a password </label>
+                  <label for="password" style="font-weight: 600;">Choose a password </label>
                   <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control form-control-md">
                 </div>
 
                 <div class="form-outline mb-4">
                   <!-- <label class="form-label" for="rptpassword">Confirm your password</label>
                   <input type="password" id="form3Example4cdg"  name ="rptpassword" placeholder="Confirm" class="form-control form-control-md" /> -->
-                  <label for="rptpassword">Confirm password </label>
+                  <label for="rptpassword" style="font-weight: 600;">Confirm password </label>
                   <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
                 </div>
 
@@ -119,6 +118,10 @@ if(isset($_POST['submit'])){
     </div>
   </div>
 </section>
+<!-- image home container -->
+<!-- </div> -->
+
+<!-- container -->
 <div class="container1">
   <div class="text">
     <h1>Enjoy on your TV.
@@ -157,7 +160,7 @@ if(isset($_POST['submit'])){
       </div>
     </div>
 
-    <footer class="footer p-2">
+    <footer class="footer p-2 footer-container">
   <p>Any questions? Contact us 1-866-579-7172</p>
   <div class="footer-cols">
     <ul>

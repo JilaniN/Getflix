@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
   <!-- navbar -->
-  <div class="topnav">
+  <div class="topnav container-fluid p-2">
     <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
@@ -125,7 +125,7 @@ if(isset($_POST['submit'])){
                   </div>
                   <!-- Register buttons -->
                   <div class="text-center">
-                    <p>Not a member? <a class="btnpwd" href="home.php">Sign up here</a></p>
+                    <p class="signup">New to BesToBe? <a class="btnpwd" href="home.php">Sign up here</a>.</p>
                   </div>
                 </form>
 

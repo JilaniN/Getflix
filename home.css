@@ -24,14 +24,14 @@ h2{
   
 .topnav {
   overflow: hidden;
-  background-color: #2f5294;
+  /* background-color: #2f5294; */
   font-weight: 400;
   margin-bottom: 15px;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -41,18 +41,21 @@ h2{
 .topnav a:hover {
   background-color: #ddd;
   color: #000000;
+  border-radius: 2px;
 }
 
 /* Create a right-aligned (split) link inside the navigation bar */
 .topnav a.split {
   float: right;
   background-color: #2f5294;
-  color: white;
+  color: #ffffff;
   padding: 15px;
+  border-radius: 2px;
 }
 .topnav a.split:hover{
 	background-color: #ddd;
 	color: #000000;
+	border-radius: 2px;
 }
 
 .footer {
@@ -75,6 +78,31 @@ h2{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 2rem;
+}
+
+@media screen and (max-width: 350px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0;
+	}
+	.text h1{
+		font-size: 2rem !important;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
+}
+@media screen and (min-width: 351px) and (max-width: 530px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	}
+	.text h1{
+		font-size: 2rem !important;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
 }
 
 .footer li {
@@ -147,3 +175,9 @@ h2{
   .text h1 {
 	font-size: 3.125rem;
   }
+
+  /* .imagehome{
+	background-image: url(./assets/home.jpg);
+	background-position: center;
+  } */
+

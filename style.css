@@ -180,6 +180,30 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 2rem;
 }
+@media screen and (max-width: 350px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0;
+	}
+	.text h1{
+		font-size: 2rem !important;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
+}
+@media screen and (min-width: 351px) and (max-width: 530px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	}
+	.text h1{
+		font-size: 2rem !important;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
+}
 
 .footer li {
 	line-height: 1.9;

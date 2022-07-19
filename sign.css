@@ -8,10 +8,11 @@
 
 body{
     background-image: url(./assets/home.jpg) !important;
+    background-repeat: no-repeat;
     opacity: 0.9;
 }
 .card{
-    box-shadow: 5px 5px 8px rgb(69, 73, 91);
+    box-shadow: 5px 5px 8px #192350;
 }
 .card:hover{
     opacity: 1;
@@ -19,4 +20,15 @@ body{
 .topnav .logo{
 	background-color: #ddd;
 	color: #000000;
+    border-radius: 3px;
+}
+.topnav{
+    background-color: transparent !important;
+    opacity: 0.9;
+}
+.topnav:hover{
+    opacity: 1;
+}
+.signup{
+    font-weight: 500;
 }
