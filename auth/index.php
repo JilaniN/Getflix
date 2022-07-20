@@ -47,14 +47,14 @@ session_start();
 <!-- login logout -->
 <?php
     echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
-        <span> Log in here</span><br>
+        <span class='mx-1'> Log in here</span><br>
         <label for='username'></label>
         <input type='text' name='name' required value='' placeholder='Name'>
         <label for='password'></label>
         <input type='password' name='password' required value='' placeholder='Password'><br>
-        <button type='submit' name='loginSubmit'>Log in</button>
+        <button class='mx-1' type='submit' name='loginSubmit'>Log in</button>
     </form>";
-    echo "<form method='POST' action='".userLogout()."'>
+    echo "<form class='mx-1' method='POST' action='".userLogout()."'>
         <button type='submit' name='logoutSubmit' class='mx-5'>Log out</button>
     </form>";
 
@@ -72,7 +72,7 @@ session_start();
         <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
         <input type='hidden' name='name' value='".$_SESSION['id']."'>
         <textarea name='message' id='message' placeholder='Comment'></textarea><br>
-        <button type='submit' name='commentSubmit' class='mx-5'>Comment</button>
+        <button type='submit' name='commentSubmit' class='commentbutton'>Comment</button>
     </form>";
     } else{
         echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='mx-5 text-light' style='font-weight: 500;'>Messages</span>";

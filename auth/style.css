@@ -77,3 +77,6 @@ button{
     flex-direction: column;
     flex-wrap: wrap;
 }
+button.commentbutton{
+    margin-left: 20rem !important;
+}
