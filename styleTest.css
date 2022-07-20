@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+    /* this code allow to have some space on the top when click on the arrow in the carousel*/
+    scroll-padding-top: 300px;
+  }
+  body {
+    margin: 0;
+    background-color:#2f5294;
+  }
+  
+  /* .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
+  .main{
+    opacity: 0.8;
+    width: 100%;
+  }
+  
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    border-radius: 6px;
+    /* font-size: 17px; */
+  }
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: transparent;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  .topnav .search-container button:hover {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  /* profile dropdown button */
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 14px;
+    border: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: ; */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: #fff;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
+  
+  
+  @media screen and (max-width: 700px) {
+    .topnav a, .topnav input[type=text], .topnav input[type=submit] {
+      float: none;      overflow: hidden;
+      scroll-behavior: smooth;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+    
+    .wrapper section {
+      grid-template-columns: repeat(2, auto);
+      margin: 20px 0;
+    }
+
+    .wrapper {
+      grid-template-columns: repeat(3, 100%);
+
+    }
+
+    .wrapper section a {
+      font-size: 2px;
+      width: 20px;
+      padding-bottom: 20px;
+    }
+
+    #large {
+      display: none;
+    }
+  }
+  
+  .navbar
+  {
+    border-bottom:10px solid rgb(246, 242, 242);
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+  }
+  .wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+  }
+  .wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+  } 
+  
+   .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1; 
+  } 
+
+  #linkphp {
+    position: relative;
+    color: none;
+    background: none;
+    width: auto;
+    width: auto;
+    font-size: 0em;
+    z-index: 0;
+    padding: 0px;  
+   }
+  
+ .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  } 
+ .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+
+  .title1{
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  @media only screen and (min-width: 700px){
+    #small {
+      display: none;
+    }
+  }
