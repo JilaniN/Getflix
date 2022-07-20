@@ -1,11 +1,11 @@
 <?php 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-$channelID = 'UCJZv4d5rbIKd4QHMPkcABCw';
+$channelID = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
 $maxResults = '15';
 
 $apiError = 'Video not found';
 try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.'');
   if($apiData){
     $videolist = json_decode($apiData);
   } else {
@@ -80,12 +80,12 @@ try{
         
         for($x=0; $x<5; $x++){
         
-          if(isset($videolist->items[$x]->id->videoId)){
+          if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
       ?>
                 
         <div class="item">
-          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
           </a>
         </div>
       <?php
@@ -100,12 +100,12 @@ try{
       <a href="#section1" class="arrow__btn">‹</a>
       <?php 
         for($x=5; $x<10; $x++){
-          if(isset($videolist->items[$x]->id->videoId)){
+          if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
       ?>
                 
       <div class="item">
-        <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-        <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+        <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+        <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
         </a>
       </div>
   
@@ -120,12 +120,12 @@ try{
       <a href="#section2" class="arrow__btn">‹</a>
       <?php 
         for($x=10; $x<15; $x++){
-          if(isset($videolist->items[$x]->id->videoId)){
+          if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
       ?>
   
         <div class="item">
-          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
           </a>
         </div>
     
@@ -150,12 +150,12 @@ try{
        if(!empty($videolist->items)){
         
         for($x=0; $x<2; $x++){
-         if(isset($videolist->items[$x]->id->videoId)){
+         if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
       ?>
                 
         <div class="item">
-          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+          <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+          <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
           </a>
         </div>
   
@@ -171,12 +171,12 @@ try{
     
     <?php
       for($x=2; $x<4; $x++){
-        if(isset($videolist->items[$x]->id->videoId)){
+        if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
     ?>
 
       <div class="item">
-        <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-        <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+        <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+        <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
         </a>
       </div>
   
@@ -192,12 +192,12 @@ try{
   
     <?php
       for($x=4; $x<6; $x++){
-        if(isset($videolist->items[$x]->id->videoId)){
+        if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
     ?>
               
       <div class="item">
-         <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->id->videoId; ?>">
-         <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->id->videoId; ?>/maxresdefault.jpg" ></img>
+         <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+         <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
          </a>
       </div>
   
