@@ -231,7 +231,7 @@ body {
   }
   .topnav input[type=text], .topnav input[type=submit]{
     display: inline-block;
-    width: 80%;
+    width: 75%;
     margin-bottom: 3%;
     padding: 10px;
     text-align: left;
