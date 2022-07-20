@@ -34,7 +34,7 @@ if(!empty($_SESSION['id'])){
 
 <!-- navbar -->
 <div class="topnav">
-  <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
   <a href="./shows/tvshows.php">TV Shows</a>

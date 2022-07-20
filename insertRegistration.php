@@ -70,22 +70,4 @@ if(isset($_POST['login']))
 
 }
 
-
-//Button to disconnect:
-//Work in progress
-//change the name of button when we have it on html
-
-if(isset($_POST['disconnect'])){
-    header("location:home.html");
-}
-
-
-
-
-//For the remember me:
-//Work in progress
-//if(isset($_COOKIE["username"])) { echo $_COOKIE["username"];}
-
-
-
 ?>
