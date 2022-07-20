@@ -5,6 +5,7 @@ include_once('comments.inc.php');
 session_start();
 ?>
 
+<!-- video comments page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,62 +25,61 @@ session_start();
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    
     <title>Play</title>
 </head>
-<body>
+<body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
 </div>
-
-    
-<?php
-    echo "<form method='POST' action='".getLogin($pdo)."'>
-        Username: <input type='text' name='name'>
-        Password: <input type='password' name='password'><br>
-        <button type='submit' name='loginSubmit'>Log in</button>
-    </form>";
-    echo "<form method='POST' action='".userLogout()."'>
-        <button type='submit' name='logoutSubmit'>Log out</button>
-    </form>";
-
-    if(isset($_SESSION['id'])){
-        echo "You are logged in";
-    } else{
-        echo "You are not logged in";
-    }
-
-?>
-<!-- <br>
-
+   <!-- <br>
     <video width="420" height="400" controls>
         <source src="movie.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
         Your browser does not support.
     </video>
     <br> -->
-    
-    <div class="ratio ratio-16x9" id="player">
-        <!-- <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video" allowfullscreen></iframe> -->
-            <iframe width="400" height="400" src="https://www.youtube.com/embed/f6kzypYDLRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="video ratio ratio-16x9" id="player">
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/f6kzypYDLRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    <div class="containercomment">
+<!-- login logout -->
+<?php
+    echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
+        <span> Log in here</span><br>
+        <label for='username'></label>
+        <input type='text' name='name' required value='' placeholder='Name'>
+        <label for='password'></label>
+        <input type='password' name='password' required value='' placeholder='Password'><br>
+        <button type='submit' name='loginSubmit'>Log in</button>
+    </form>";
+    echo "<form method='POST' action='".userLogout()."'>
+        <button type='submit' name='logoutSubmit' class='mx-5'>Log out</button>
+    </form>";
 
+    if(isset($_SESSION['id'])){
+        echo "<br><span class='mx-5'>Leave your message here.</span>";
+    } else{
+        echo " ";
+    }
+?>
+<!-- comments section -->
 <?php
     if(isset($_SESSION['id'])){
-        echo "You are logged in";
+        echo " ";
         echo "<form method='POST' action='".setComments($pdo)."'>
-        <input type='hidden' name='name' value='".$_SESSION['id']."'>
         <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-        <textarea name='message' id='message'></textarea><br>
-        <button type='submit' name='commentSubmit'>Comment</button>
+        <input type='hidden' name='name' value='".$_SESSION['id']."'>
+        <textarea name='message' id='message' placeholder='Comment'></textarea><br>
+        <button type='submit' name='commentSubmit' class='mx-5'>Comment</button>
     </form>";
     } else{
-        echo "<br>" . "You need an account to comment!";
+        echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='mx-5 text-light' style='font-weight: 500;'>Messages</span>";
     }
 
     getComments($pdo);
 ?>
+</div>
 </body>
 </html>

@@ -3,32 +3,22 @@ body{
 	font-family: 'Poppins', sans-serif !important;
 	letter-spacing: -0.5px !important;
 }
-
 h2{
 	font-weight: 600 !important;
 }
 .btnsign{
 	font-weight: 500 !important;
 }
-
-/* .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .main{
 	opacity: 0.8;
 	width: 100%;
-  }
-  
+}  
 .topnav {
   overflow: hidden;
   /* background-color: #2f5294; */
   font-weight: 400;
   margin-bottom: 15px;
 }
-
 .topnav a {
   float: left;
   color: #ffffff;
@@ -37,13 +27,11 @@ h2{
   text-decoration: none;
   /* font-size: 17px; */
 }
-
 .topnav a:hover {
   background-color: #ddd;
   color: #000000;
   border-radius: 2px;
 }
-
 /* Create a right-aligned (split) link inside the navigation bar */
 .topnav a.split {
   float: right;
@@ -57,23 +45,18 @@ h2{
 	color: #000000;
 	border-radius: 2px;
 }
-
 .footer {
 	max-width: 100%;
 	overflow: auto;
 	background-color: #0c1a35;
-
 }
-
 .footer, .footer a {
 	color: #999;
 	font-size: 0.9rem;
 }
-
 .footer p {
 	margin-bottom: 1.5rem;
 }
-
 .footer .footer-cols {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -108,7 +91,6 @@ h2{
 .footer li {
 	line-height: 1.9;
 }
-
 .footer .lang-select {
 	margin-top: 2rem;
 	color: #999;
@@ -130,25 +112,22 @@ h2{
 	text-align: left;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
-  }
-  .container1, .container2{
+}
+.container1, .container2{
 	padding-left: 8%;
 	padding-right: 8%;
-  }
-  
-  .container1 img, .container2 img{
+}
+.container1 img, .container2 img{
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	object-fit: contain;
 	object-position: center;
 	align-self: center;
-  
 	max-width: 100%;
 	height: 350px;
-  }
-  
-  .container1 .image, .container2 .image {
+}
+.container1 .image, .container2 .image {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
@@ -156,9 +135,8 @@ h2{
 	align-self: center;
 	object-fit: contain;
 	opacity: 0.8;
-  }
-  
-  .text {
+}
+.text {
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -166,18 +144,17 @@ h2{
 	justify-content: flex-start;
 	align-self: center;
 	align-content: center;
-  }
-  .text p {
+}
+.text p {
 	font-size: 1.5rem;
 	margin-top: 5px;
-  }
-  
-  .text h1 {
+}
+.text h1 {
 	font-size: 3.125rem;
-  }
+}
 
-  /* .imagehome{
+/* .imagehome{
 	background-image: url(./assets/home.jpg);
 	background-position: center;
-  } */
+} */
 

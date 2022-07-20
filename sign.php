@@ -22,31 +22,7 @@ if(isset($_POST['submit'])){
         echo "<h6 class='text-light m-1'>User not registered.</h6><hr>";
     }
 }
-
 ?>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form action="" method="post">
-        <label for="email">Email </label>
-        <input type="text" name="email" id="email" required value=""><br>
-        <label for="password">Password </label>
-        <input type="password" name="password" id="password" required value=""><br>
-        <button type="submit" name="submit">Log in</button>
-    </form>
-    <br>
-    <a href="registration.php">Register here</a>
-</body>
-</html> -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,20 +62,14 @@ if(isset($_POST['submit'])){
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Sign In</h2>
 
-
                 <form action="" method="post">
                   <!-- Email input -->
                   <div class="form-outline mb-4">
-                    <!-- <label class="form-label" for="form2Example1"></label>
-                    <input type="email" id="form2Example1" name="email" placeholder="Email address" class="form-control" /> -->
                     <label for="email"></label>
                     <input type="text" name="email" id="email" placeholder="Email address" required value="" class=form-control>
                   </div>
-
                   <!-- Password input -->
                   <div class="form-outline mb-4">
-                    <!-- <label class="form-label" for="form2Example2"></label>
-                    <input type="password" id="form2Example2" name="Pswd" placeholder="Password" class="form-control" /> -->
                     <label for="password"></label>
                     <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control">
                   </div>
@@ -121,7 +91,6 @@ if(isset($_POST['submit'])){
                   <!-- Submit button -->
                   <div class="text-center">
                     <a href="index.php">
-                      <!--  -->
                   <button type="submit" name="submit" class="btnlogin btn btn-success btn-block mb-4">Log in</button></a>
                   </div>
                   <!-- Register buttons -->
@@ -129,8 +98,6 @@ if(isset($_POST['submit'])){
                     <p class="signup">New to BesToBe? <a class="btnpwd" href="home.php">Sign up here</a>.</p>
                   </div>
                 </form>
-
- 
               </div>
             </div>
           </div>
@@ -166,10 +133,10 @@ if(isset($_POST['submit'])){
   </div>
 </footer>
 
-  <script src="myscripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-
+<!-- link script js -->
+<script src="myscripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+crossorigin="anonymous"></script>
 </body>
 </html>

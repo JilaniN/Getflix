@@ -26,12 +26,10 @@ body {
   transform: translate(-50%, -50%) !important;
   color:rgb(246, 242, 242);
 } 
-
 .main{
   opacity: 0.8;
   width: 100%;
 }
-
 .topnav a {
   float: left;
   display: block;
@@ -41,18 +39,15 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav .search-container {
   float: right;
 }
-
 .topnav input[type=text]{
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
   border: none;
   border-radius: 6px;
-  /* font-size: 17px; */
 }
 .topnav .search-container button {
   float: right;
@@ -68,7 +63,6 @@ body {
   background: #ccc;
   border-radius: 4px;
 }
-
 /* profile dropdown button */
 .dropbtn {
   background-color: transparent;
@@ -97,7 +91,6 @@ body {
 .dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
-
 
 .navbar
 {
@@ -152,29 +145,24 @@ body {
     display: none;
   }
 } */
-
 .title1{
   margin-top: 15px;
   margin-left: 10px;
   color: #fff;
 }
-
 .footer {
 	max-width: 100%;
 	overflow: auto;
 	background-color: #0c1a35;
 
 }
-
 .footer, .footer a {
 	color: #999;
 	font-size: 0.9rem;
 }
-
 .footer p {
 	margin-bottom: 1.5rem;
 }
-
 .footer .footer-cols {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -204,11 +192,9 @@ body {
 		font-size: 1rem !important;
 	}
 }
-
 .footer li {
 	line-height: 1.9;
 }
-
 .footer .lang-select {
 	margin-top: 2rem;
 	color: #999;
@@ -218,7 +204,6 @@ body {
 	padding: 1rem 1.2rem;
 	border-radius: 5px;
 }
-
 @media screen and (max-width: 350px){
   .topnav .search-container {
     float: left;
@@ -238,9 +223,7 @@ body {
   .welcome{
     font-size: 0.8em;
   }
-  
 }
-
 @media screen and (min-width: 351px) and (max-width: 500px){
   .topnav .search-container {
     float: left;
@@ -267,7 +250,6 @@ body {
     font-size: 0.9em;
   }
 }
-
 @media screen and (max-width: 700px) {
   .topnav a, .topnav input[type=text], .topnav input[type=submit] {
     float: none;
@@ -278,7 +260,6 @@ body {
     /* padding: 14px; */
   }
 }
-
 @media screen and (min-width: 501px) and (max-width: 700px) {
   .welcome{
     font-size: 1.5em;
@@ -303,13 +284,11 @@ body {
     font-size: 0.9em;
   }
 }
-
 @media screen and (min-width: 604px) and (max-width: 750px){
   .topnav .search-container{
     float: none;
     margin-bottom: 6px;
   }
-
 }
 @media screen and (min-width: 750px) and (max-width: 885px){
   .topnav .search-container{
@@ -332,7 +311,6 @@ body {
     padding-left: 7px;
   }
 }
-
 @media screen and (min-width: 700px) and (max-width:910px){
   .topnav input[type=text]{
     width: 50%;
