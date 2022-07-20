@@ -5,6 +5,26 @@ include_once('comments.inc.php');
 session_start();
 ?>
 
+<!-- link youtube API -->
+<?php
+$item= $_GET['id'];
+
+$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
+
+$apiError = 'Video not found';
+try{
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$item.'&key='.$API_key.'&part=snippet');
+  if($apiData){
+    $videolist = json_decode($apiData);
+  } else {
+    throw new Exception('Invalid API key or channel ID.');
+  }
+} catch(Exception $e){
+    $apiError = $e->getMessage();
+  }
+
+?>
+
 <!-- video comments page -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,14 +45,28 @@ session_start();
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <title>Play</title>
+    <!-- <title>Play</title> -->
+    <title><?php //  echo $videolist->items[0]->snippet->title; ?></title>
+    <?php if(isset($_SESSION['id'])){
+        echo $videolist->items[0]->snippet->title;
+    } else{
+        echo "<title>Play</title";
+    }
+    ?>
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
-</div>
+<!-- </div> -->
+<h1 class="text-light">
+<?php if(isset($_SESSION['id'])){
+echo $videolist->items[0]->snippet->title; 
+} else{
+    echo " ";
+} ?>
+</h1>
    <!-- <br>
     <video width="420" height="400" controls>
         <source src="movie.mp4" type="video/mp4">
@@ -40,11 +74,27 @@ session_start();
         Your browser does not support.
     </video>
     <br> -->
-    <div class="video ratio ratio-16x9" id="player">
+    <!-- <div class="video ratio ratio-16x9" id="player">
         <iframe width="200" height="200" src="https://www.youtube.com/embed/f6kzypYDLRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      </div> -->
+
+      <!-- Description -->
+<div class="card bg-dark text-light ms-4 me-4">
+  <div class="card-body p-3" id="description">
+    <p>
+  <?php if(isset($_SESSION['id'])){
+        echo $videolist->items[0]->snippet->description;
+    } else{
+        echo " ";
+    }
+    ?>
+    </p>
+  </div>
+</div>
+
+
+    <!-- login logout -->
     <div class="containercomment">
-<!-- login logout -->
 <?php
     echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
         <span class='mx-1'> Log in here</span><br>
@@ -83,3 +133,4 @@ session_start();
 </div>
 </body>
 </html>
+
