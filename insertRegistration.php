@@ -25,7 +25,7 @@ if(isset($_POST['Register']))
         echo "New record has been added successfully !";
         
         //after registration connect to main page
-        header("location:index.html"); 
+        header("location:index.php"); 
         }
         else {
             echo "Error: " . $sql . ":-" . mysqli_error($conn);
@@ -59,7 +59,7 @@ if(isset($_POST['signup']))
              echo "You are connected";
 
             //after login in conncect to main page
-            header("location:index.html");
+            header("location:index.php");
             }
 
             else{
@@ -70,23 +70,5 @@ if(isset($_POST['signup']))
     }
 
 }
-
-
-//Button to disconnect:
-//Work in progress
-//change the name of button when we have it on html
-
-if(isset($_POST['disconnect'])){
-    header("location:home.html");
-}
-
-
-
-
-//For the remember me:
-//Work in progress
-//if(isset($_COOKIE["username"])) { echo $_COOKIE["username"];}
-
-
 
 ?>
