@@ -8,6 +8,7 @@ if(!empty($_SESSION['id'])){
     header("Location: sign.php");
 }
 ?>
+
 <?php 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 $channelID = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
@@ -42,7 +43,7 @@ try{
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
@@ -92,7 +93,7 @@ try{
 ?>
           
   <div class="item">
-    <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+    <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
     <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
     </a>
   </div>
@@ -112,7 +113,7 @@ try{
 ?>
           
 <div class="item">
-  <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+  <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
   <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
   </a>
 </div>
@@ -132,7 +133,7 @@ try{
 ?>
 
   <div class="item">
-    <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+    <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
     <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
     </a>
   </div>
@@ -162,7 +163,7 @@ echo '<p class="error">'.$apiError.'</p>';
 ?>
           
   <div class="item">
-    <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+    <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
     <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
     </a>
   </div>
@@ -183,7 +184,7 @@ for($x=2; $x<4; $x++){
 ?>
 
 <div class="item">
-  <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+  <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
   <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
   </a>
 </div>
@@ -204,7 +205,7 @@ for($x=4; $x<6; $x++){
 ?>
         
 <div class="item">
-   <a id="linkphp" href="playerTest.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
+   <a id="linkphp" href="./auth/index.php?id=<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>">
    <img width="100%" src="https://img.youtube.com/vi/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
    </a>
 </div>
