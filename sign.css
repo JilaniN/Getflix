@@ -31,3 +31,10 @@ body{
 .signup{
     font-weight: 500;
 }
+
+.forgetnav{
+    margin-bottom: 5rem !important;
+}
+.forgetfooter{
+    margin-top: 5rem !important;
+}
