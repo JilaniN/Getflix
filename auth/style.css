@@ -19,7 +19,7 @@ textarea:hover{
 .commentbox{
     position: relative;
     width: 600px;
-    margin-left: 50px;
+    margin-left: 54px;
     color:#ffffff;
 }
 input[type=text], input[type=password]{
@@ -60,7 +60,8 @@ button{
 .deleteform button{
     position: absolute;
     top: 20px;
-    right: 170px;
+    /* right: 170px; */
+    margin-left: 266px;
     
 }
 .deleteform button:hover{
@@ -76,4 +77,10 @@ button{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+.buttonlogout{
+    margin-left: 52px;
+}
+.buttoncomment{
+    margin-left: 320px;
 }
