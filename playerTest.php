@@ -2,8 +2,6 @@
 $item= $_GET['id'];
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-$channelID = 'UCJZv4d5rbIKd4QHMPkcABCw';
-
 
 $apiError = 'Video not found';
 try{
