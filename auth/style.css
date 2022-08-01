@@ -30,6 +30,9 @@ input[type=text], input[type=password]{
     background-color: #ffffff;
     margin-bottom: 20px;
 }
+input[type=password]{
+    margin-left: 4px;
+}
 
 input[type=text]:hover, input[type=password]:hover{
     opacity: 1;
@@ -83,4 +86,5 @@ button{
 }
 .buttoncomment{
     margin-left: 320px;
+    margin-top: 2px;
 }

@@ -1,28 +1,8 @@
 <?php
 date_default_timezone_set('Europe/Paris');
 include_once('config.php');
-include_once('comments.inc.php');
+include_once('comments.inc.home.php');
 session_start();
-?>
-
-<!-- Youtube API -->
-<?php
-$item= $_GET['id'];
-
-$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-
-$apiError = 'Video not found';
-try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$item.'&key='.$API_key.'&part=snippet');
-  if($apiData){
-    $videolist = json_decode($apiData);
-  } else {
-    throw new Exception('Invalid API key or channel ID.');
-  }
-} catch(Exception $e){
-    $apiError = $e->getMessage();
-  }
-
 ?>
 
 <!-- video comments page -->
@@ -47,17 +27,14 @@ try{
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <title><?php echo $videolist->items[0]->snippet->title; ?></title>
+    <title>Player</title>
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
-<!-- </div> -->
-<h2 class="text-light">
-<?php echo $videolist->items[0]->snippet->title; ?>
-</h2>
+  <h2 class="text-light">Deep Sea Nuke</h2>
 
    <!-- <br>
     <video width="420" height="400" controls>
@@ -67,17 +44,9 @@ try{
     </video>
     <br> -->
     <div class="video ratio ratio-16x9" id="player">
-        <iframe width="200" height="200" src="https://www.youtube.com/embed/<?php echo $item; ?>?autoplay=1" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-      </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-      <!-- Description -->
-<div class="card bg-dark text-light ms-4 me-4">
-  <div class="card-body p-3" id="description">
-    <p>
-  <?php echo $videolist->items[0]->snippet->description;  ?></p>
-  </div>
-</div>
-    <div class="containercomment">
 
 <!-- login logout -->
 <?php
