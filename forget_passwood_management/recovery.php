@@ -6,7 +6,7 @@ if(isset($_POST['forget-btn'])){
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
     //url of your website
-    $url = "/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token);
+    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token);
     $expire = date("U") + 1800;
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
@@ -85,9 +85,9 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHTML();
-$mail->Username = 'bhamakaruppasamy@gmail.com';   //enter our team email address       
-$mail->Password = '';                      //enter our team email password
-$mail->setFrom('bhamakaruppasamy@gmail.com');
+$mail->Username = 'besttobe04@gmail.com';   //enter our team email address       
+$mail->Password = 'dxhflypjgarzenjb';                      //enter our team email password
+$mail->setFrom('besttobe04@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 $mail->AltBody = 'Body in plain text for non-HTML mail clients';
