@@ -5,6 +5,8 @@ $youtubePL2= 'RDqWAqMzB31lQ';
 $maxResults = '15';
 
 $apiError = 'Video not found';
+
+//api connection playlist 1
 try{
   $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL1.'&maxResults='.$maxResults.'&key='.$API_key.'');
   if($apiData){
@@ -16,6 +18,8 @@ try{
     $apiError = $e->getMessage();
   }
 
+
+//api connection playlist 2
 try{
     $apiDataMusic = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL2.'&maxResults='.$maxResults.'&key='.$API_key.'');
     if($apiDataMusic){
