@@ -27,14 +27,14 @@ session_start();
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <title>Player</title>
+    <title>Default Player</title>
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
-  <h2 class="text-light">Deep Sea Nuke</h2>
+  <h3 class="text-light">Deep Sea Nuke</h3>
 
    <!-- <br>
     <video width="420" height="400" controls>

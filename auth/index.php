@@ -22,7 +22,6 @@ try{
 } catch(Exception $e){
     $apiError = $e->getMessage();
   }
-
 ?>
 
 <!-- video comments page -->
@@ -54,10 +53,10 @@ try{
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
-<!-- </div> -->
-<h2 class="text-light">
-<?php echo $videolist->items[0]->snippet->title; ?>
-</h2>
+  <!-- </div> -->
+  <h3 class="text-light">
+  <?php echo $videolist->items[0]->snippet->title; ?>
+  </h3>
 
    <!-- <br>
     <video width="420" height="400" controls>
@@ -71,7 +70,7 @@ try{
       </div>
 
       <!-- Description -->
-<div class="card bg-dark text-light ms-4 me-4">
+<div class="descriptioncard card bg-dark text-light ms-4 me-4">
   <div class="card-body p-3" id="description">
     <p>
   <?php echo $videolist->items[0]->snippet->description;  ?></p>
@@ -81,16 +80,16 @@ try{
 
 <!-- login logout -->
 <?php
-    echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
-        <span class='mx-1'> Log in here</span><br>
-        <label for='username'></label>
-        <input type='text' name='name' required value='' placeholder='Name'>
-        <label for='password'></label>
-        <input type='password' name='password' required value='' placeholder='Password'><br>
-        <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
-    </form>";
+    // echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
+    //     <span class='mx-1'> Log in here</span><br>
+    //     <label for='username'></label>
+    //     <input type='text' name='name' required value='' placeholder='Name'>
+    //     <label for='password'></label>
+    //     <input type='password' name='password' required value='' placeholder='Password'><br>
+    //     <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
+    // </form>";
     echo "<form method='POST' action='".userLogout()."'>
-        <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
+        <button type='submit' name='logoutSubmit' class='buttonlogout my-3 bg-danger'>Log out</button>
     </form>";
 
     if(isset($_SESSION['id'])){
