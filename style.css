@@ -341,6 +341,12 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     text-align: center;
     z-index: 1; 
   } 
+
+  #titleVideo{
+    padding: 15px 15px;
+    color: #fff;
+    font-size: 20px;
+  }
 }
 
 
@@ -380,7 +386,14 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   z-index: 1; 
 } 
 
+#titleVideo{
+  padding-top: 5px;
+  color: #fff;
+  font-size: 15px;
+}
+
 #large {
   display: none;
 }
 }
+
