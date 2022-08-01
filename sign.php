@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
   <!-- navbar -->
   <div class="topnav container-fluid p-2">
     <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
-    <a  class="p-3" style="background-color: transparent; color: #fff;" href="./auth/index.php">Home</a>
+    <a  class="p-3" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a>
   </div>
 </div>
 <!-- background image -->
