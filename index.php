@@ -1,12 +1,12 @@
 <?php
-// require_once "config.php";
-// if(!empty($_SESSION['id'])){
-//     $id = $_SESSION['id'];
-//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-//     $row = mysqli_fetch_assoc($result);
-// } else{
-//     header("Location: sign.php");
-// }
+require_once "config.php";
+if(!empty($_SESSION['id'])){
+    $id = $_SESSION['id'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+    $row = mysqli_fetch_assoc($result);
+} else{
+    header("Location: sign.php");
+}
 ?>
 
 <?php 
@@ -25,8 +25,9 @@
               
           <div class="item">
             <a id="linkphp" href="./auth/index.php?id=<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>">
-            <img width="100%" src="https://img.youtube.com/vi/<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
+            <img width="85%" src="https://img.youtube.com/vi/<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
             </a>
+            <p id="titleVideo"><?php echo $list->items[$x]->snippet->title; ?></p>
           </div>
 <?php
         }
@@ -163,7 +164,7 @@
 <a href="#sectionMusic2" class="arrow__btn">›</a>
 </section>
 <section id="sectionMusic2">
-<a href="#section1" class="arrow__btn">‹</a>
+<a href="#sectionMusic1" class="arrow__btn">‹</a>
 <?php 
    insertImage($videolistMusic, $startSect=5, $endSect=10);
 ?>
