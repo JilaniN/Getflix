@@ -65,6 +65,7 @@ button{
     top: 20px;
     /* right: 170px; */
     margin-left: 266px;
+    font-size: small;
     
 }
 .deleteform button:hover{

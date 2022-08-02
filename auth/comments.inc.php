@@ -60,6 +60,7 @@ function getComments($pdo){
 function deleteComments($pdo){
     if(isset($_POST['commentDelete'])){
         $cid = $_POST['cid'];
+        $item = $_POST['id']; // error with yt videos when delete message
 
         $sql = "DELETE FROM comment WHERE cid='$cid'";
         $result = $pdo->query($sql);
@@ -109,7 +110,6 @@ function getLogin($pdo){
 // logout
 function userLogout(){
     if(isset($_POST['logoutSubmit'])){
-        
         session_start();
         session_destroy();
         // header("Location: index.php");
