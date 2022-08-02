@@ -28,14 +28,7 @@ function getComments($pdo){
             if(isset($_SESSION['id'])){
                 if($_SESSION['id'] == $row2['id']){
 
-            // edit comment 
-            // echo "<form class='edit' method='POST' action='editcomment.php'>
-            // <input type='hidden' name='cid' value='".$row['cid']."'>
-            // <input type='hidden' name='name' value='".$row['name']."'>
-            // <input type='hidden' name='date' value='".$row['date']."'>
-            // <input type='hidden' name='message' value='".$row['message']."'>
-            // <button>Edit</button>
-            // </form>";
+            
 
             // delete comment
             echo "<form class='deleteform' method='POST' action='".deleteComments($pdo)."'>
@@ -60,28 +53,13 @@ function getComments($pdo){
 function deleteComments($pdo){
     if(isset($_POST['commentDelete'])){
         $cid = $_POST['cid'];
-        $item = $_POST['id']; // error with yt videos when delete message
 
         $sql = "DELETE FROM comment WHERE cid='$cid'";
         $result = $pdo->query($sql);
         // header("Location: index.php");
-        echo '<script> location.replace("index.php"); </script>';
+        echo '<script> location.replace("home.php"); </script>';
     }
 }
-
-// edit comments function
-// function editComments($pdo){
-//     if(isset($_POST['commentSubmit'])){
-//         $cid = $_POST['cid'];
-//         $uid = $_POST['uid'];
-//         $date = $_POST['date'];
-//         $message = $_POST['message'];
-
-//         $sql = "UPDATE comment SET message='$message' WHERE cid='$cid'";
-//         $result = $pdo->query($sql);
-//         header("Location: index.php");
-//     }
-// }
 
 // login
 function getLogin($pdo){
@@ -110,6 +88,7 @@ function getLogin($pdo){
 // logout
 function userLogout(){
     if(isset($_POST['logoutSubmit'])){
+        
         session_start();
         session_destroy();
         // header("Location: index.php");
@@ -117,22 +96,3 @@ function userLogout(){
         exit();
     }
 }
-
-// Youtube API
-
-// $item= $_GET['id'];
-
-$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-
-$apiError = 'Video not found';
-try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$item.'&key='.$API_key.'&part=snippet');
-  if($apiData){
-    $videolist = json_decode($apiData);
-  } else {
-    throw new Exception('Invalid API key or channel ID.');
-  }
-} catch(Exception $e){
-    $apiError = $e->getMessage();
-  }
-

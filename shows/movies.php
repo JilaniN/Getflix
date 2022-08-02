@@ -1,3 +1,21 @@
+<?php 
+$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
+$channelID = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
+$maxResults = '15';
+
+$apiError = 'Video not found';
+try{
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  if($apiData){
+    $videolist = json_decode($apiData);
+  } else {
+    throw new Exception('Invalid API key or channel ID.');
+  }
+} catch(Exception $e){
+    $apiError = $e->getMessage();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +30,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link css -->
-    <link rel="stylesheet" href="shows.css">
+    <link rel="stylesheet" href="shows.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
@@ -25,9 +43,15 @@
   <a href="#home"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="../index.php">Home</a>
   <a href="./movies.php">Movies</a>
-  <a href="./tvshows.php">TV Shows</a>
-  <a href="#">Categories</a>
-  
+  <a href="./tvshows.php">Music</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+      <a href="./sport.php">Sport</a>
+      <a href="./cooking.php">Cooking</a>
+      <a href="./gaming.php">Gaming</a>
+    </div>
+  </div>
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
@@ -41,6 +65,26 @@
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
+</div>
+
+<div  class="container">
+  <h1 class="head">Videos</h1>
+  <?php
+  if(!empty($videolist->items)){
+    foreach($videolist->items as $item){
+      if(isset($item->id->videoid)){
+        ?>
+        <div class="yvideo-box">
+          <iframe width="280" height="150" src="https://www.youtube.com/embed/<?php echo $item->id->videoid; ?>" frameborder="0"  allowfullscreen></iframe>
+            <h4><?php echo $item->snippet->title; ?></h4>
+        </div>
+        <?php
+      }
+    }
+  } else{
+    echo '<p class="error">'.$apiError.'</p>';
+  }
+  ?>
 </div>
 
 </body>

@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
   <!-- navbar -->
   <div class="topnav">
     <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
-    <a href="./auth/index.php">Home</a>
+    <a href="./auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
 </div>

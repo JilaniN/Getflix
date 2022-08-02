@@ -19,7 +19,7 @@ textarea:hover{
 .commentbox{
     position: relative;
     width: 600px;
-    margin-left: 50px;
+    margin-left: 54px;
     color:#ffffff;
 }
 input[type=text], input[type=password]{
@@ -29,6 +29,9 @@ input[type=text], input[type=password]{
     opacity: 0.8;
     background-color: #ffffff;
     margin-bottom: 20px;
+}
+input[type=password]{
+    margin-left: 4px;
 }
 
 input[type=text]:hover, input[type=password]:hover{
@@ -60,7 +63,9 @@ button{
 .deleteform button{
     position: absolute;
     top: 20px;
-    right: 170px;
+    /* right: 170px; */
+    margin-left: 266px;
+    font-size: small;
     
 }
 .deleteform button:hover{
@@ -77,6 +82,13 @@ button{
     flex-direction: column;
     flex-wrap: wrap;
 }
-button.commentbutton{
-    margin-left: 20rem !important;
+.buttonlogout{
+    margin-left: 52px;
+}
+.buttoncomment{
+    margin-left: 320px;
+    margin-top: 2px;
+}
+.descriptioncard{
+    opacity: 0.8;
 }

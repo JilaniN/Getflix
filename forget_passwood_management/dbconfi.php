@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "bhama";
+$username = "root";
 $password = "";
 $DbName = "loginsystem";
 

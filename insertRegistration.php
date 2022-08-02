@@ -4,7 +4,8 @@
 include_once 'db.php';
 
 // registration form :
-if(isset($_POST['submit']))
+
+if(isset($_POST['Register']))
 {    
      $name = filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
      $email = filter_var($_POST['Email'], FILTER_SANITIZE_STRING);
@@ -40,7 +41,7 @@ if(isset($_POST['submit']))
 
 //Check email and password to log in :
 
-if(isset($_POST['login']))
+if(isset($_POST['signup']))
 {
     if(isset($_POST['email'])  && isset($_POST['Pswd']))
     {
