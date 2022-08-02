@@ -95,6 +95,10 @@ body {
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
 
+.dropdown-menu {
+  background-color: transparent;
+}
+
 .navbar
 {
     border-bottom:10px solid rgb(246, 242, 242);
