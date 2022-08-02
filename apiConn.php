@@ -1,9 +1,13 @@
 <?php 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 $youtubePL1 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
+$category1 = "sport";
 $youtubePL2= 'RDqWAqMzB31lQ';
+$category2= "music";
 $youtubePL3 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
+$category3 = "cooking";
 $youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
+$category4 = "movies";
 $maxResults = '15';
 
 $apiError = 'Video not found';
