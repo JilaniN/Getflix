@@ -67,8 +67,16 @@ if(!empty($_SESSION['id'])){
   <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">TV Shows</a>
-  <a href="#">Categories</a>
+  <a href="./shows/tvshows.php">Music</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+      <a href="./shows/sport.php">Sport</a>
+      <a href="./shows/cooking.php">Cooking</a>
+      <a href="./shows/gaming.php">Gaming</a>
+
+    </div>
+  </div>
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
