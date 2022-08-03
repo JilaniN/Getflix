@@ -1,5 +1,5 @@
 
- <!-- <?php
+ <?php
 require_once "config.php";
 // if(!empty($_SESSION['id'])){
 //     $id = $_SESSION['id'];
@@ -8,7 +8,7 @@ require_once "config.php";
 // } else{
 //     header("Location: sign.php");
 // }
-// ?> -->
+// ?>
 
 <?php 
   //Connection to youtube Data Api:
