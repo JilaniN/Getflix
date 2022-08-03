@@ -1,5 +1,5 @@
 body{
-	background-color: #ddd;
+	background-color: #111827 !important;
 	font-family: 'Poppins', sans-serif !important;
 	letter-spacing: -0.5px !important;
 }
@@ -35,7 +35,7 @@ h2{
 /* Create a right-aligned (split) link inside the navigation bar */
 .topnav a.split {
   float: right;
-  background-color: #e50914;
+  background-color: #d42d3d;
   color: #ffffff;
   padding: 15px;
   border-radius: 2px;
@@ -103,7 +103,7 @@ h2{
 .container1, .container2 {
 	width: 100%;
 	min-height: 460px;
-	background-color: #0c1a35;
+	background-color: #0b101a;
 	margin-top: 10px;
 	display: flex;
 	flex-direction: row;
@@ -153,8 +153,4 @@ h2{
 	font-size: 3.125rem;
 }
 
-/* .imagehome{
-	background-image: url(./assets/home.jpg);
-	background-position: center;
-} */
 
