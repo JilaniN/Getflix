@@ -14,24 +14,25 @@
     <!-- link css -->
     <!-- <link rel="stylesheet" href="shows.css"> -->
     <link rel="stylesheet" href="shows.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../style.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <title>Movies</title>
+    <title>Cooking</title>
 </head>
 <body class='mb-4 mx-3'>
     <!-- navbar -->
 <div class="topnav">
   <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="../index.php">Home</a>
-  <a href="movies.php">Movies</a>
-  <a href="tvshows.php">Music</a>
+  <a href="movies.php?id=<?php echo $youtubePL4; ?>">Movies</a>
+  <a href="tvshows.php?id=<?php echo $youtubePL2; ?>">Music</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="sport.php">Sport</a>
-      <a href="cooking.php">Cooking</a>
-      <a href="gaming.php">Gaming</a>
+      <a href="sport.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="cooking.php?id=<?php echo $youtubePL3; ?>">Cooking</a>
+      <a href="gaming.php?id=<?php echo $youtubePL2; ?>">Gaming</a>
     </div>
   </div>
   <div class="dropdown">
