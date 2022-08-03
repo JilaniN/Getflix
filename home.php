@@ -91,12 +91,6 @@ if(isset($_POST['submit'])){
                   <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
                 </div>
 
-                <div class="form-check d-flex mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" name="TOS" id="form2Example3cg" />
-                  <label class="form-check-label" for="form2Example3g">
-                    I agree to all statements in <a href="#!" class="text-body"><u>Terms of service.</u></a>
-                  </label>
-                </div>
 
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
