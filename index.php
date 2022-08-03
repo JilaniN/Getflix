@@ -412,7 +412,7 @@ if(!empty($_SESSION['id'])){
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="#">BesToBe Originals</a></li>
+    <li><a href="./auth/home.php">BesToBe Originals</a></li>
     </ul>
     <ul>
       <li><a href="#">Copyright 2022 BesTOBe</a></li>

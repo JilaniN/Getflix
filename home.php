@@ -161,7 +161,7 @@ if(isset($_POST['submit'])){
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="#">BesTOBe Originals</a></li>
+    <li><a href="./auth/home.php">BesTOBe Originals</a></li>
     </ul>
     <ul>
     <li><a href="#">Copyright 2022 BesTOBe</a></li>

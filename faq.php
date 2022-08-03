@@ -41,6 +41,20 @@
 
             </div>
         </div>
+        <div class="dropdown">
+    <button class="dropbtn">My account</button>
+    <div class="dropdown-content">
+      <!-- <a href="sign.php">Log in</a> -->
+      <a href="./logout.php">Log out</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search..." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
 
         <div class="container my-5">
             <div class="wrapper bg-white rounded shadow">
@@ -171,7 +185,7 @@
                         <li><a href="./contact.php">Contact Us</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#">BesToBe Originals</a></li>
+                        <li><a href="./auth/home.php">BesToBe Originals</a></li>
                     </ul>
                     <ul>
                         <li><a href="#">Copyright 2022 BesTOBe</a></li>
