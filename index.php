@@ -1,4 +1,5 @@
-<?php
+
+ <?php
 require_once "config.php";
 if(!empty($_SESSION['id'])){
     $id = $_SESSION['id'];
@@ -7,8 +8,7 @@ if(!empty($_SESSION['id'])){
 } else{
     header("Location: sign.php");
 }
-?>
-
+ ?>
 <?php 
   //Connection to youtube Data Api:
   include ('apiConn.php');
