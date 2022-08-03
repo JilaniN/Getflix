@@ -83,7 +83,7 @@
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
-      <li><a href="/faq.php">FAQ</a></li>
+      <li><a href="./faq.php">FAQ</a></li>
     </ul>
     <ul>
       <li><a href="./contact.php">Contact Us</a></li>
