@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "bhama";
-$password = "";
+$username = "root";
+$password = "root";
 $DbName = "loginsystem";
 
 // Create connection

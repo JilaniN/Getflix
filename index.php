@@ -1,13 +1,13 @@
-<?php
-// require_once "config.php";
-// if(!empty($_SESSION['id'])){
-//     $id = $_SESSION['id'];
-//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-//     $row = mysqli_fetch_assoc($result);
-// } else{
-//     header("Location: sign.php");
-// }
-?>
+ <?php
+require_once "config.php";
+if(!empty($_SESSION['id'])){
+    $id = $_SESSION['id'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+    $row = mysqli_fetch_assoc($result);
+} else{
+    header("Location: sign.php");
+}
+ ?>
 
 <?php 
   //Connection to youtube Data Api:
@@ -67,17 +67,15 @@
   <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">TV Shows</a>
+  <a href="./shows/tvshows.php">Music</a>
   <div class="dropdown">
-  <button class="dropbtn  dropdown-toggle" role="button" id="dropdownMenuLink" aria-expanded="false">
-    Dropdown link
-</button>
-    <ul class="dropdown-content dropdown-menu">
-    <li><a class="dropdown-item" href="catalog.php?id=<?php echo $youtubePL1;?>">Sport</a></li>
-    <li><a class="dropdown-item" href="#">Music</a></li>
-    <li><a class="dropdown-item" href="#">Cooking</a></li>
-    <li><a class="dropdown-item" href="#">Movies</a></li>
-    </ul>
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+      <a href="./shows/sport.php">Sport</a>
+      <a href="./shows/cooking.php">Cooking</a>
+      <a href="./shows/gaming.php">Gaming</a>
+
+    </div>
   </div>
   <div class="dropdown">
     <button class="dropbtn">My account</button>

@@ -30,6 +30,9 @@ input[type=text], input[type=password]{
     background-color: #ffffff;
     margin-bottom: 20px;
 }
+input[type=password]{
+    margin-left: 4px;
+}
 
 input[type=text]:hover, input[type=password]:hover{
     opacity: 1;
@@ -62,6 +65,7 @@ button{
     top: 20px;
     /* right: 170px; */
     margin-left: 266px;
+    font-size: small;
     
 }
 .deleteform button:hover{
@@ -83,4 +87,8 @@ button{
 }
 .buttoncomment{
     margin-left: 320px;
+    margin-top: 2px;
+}
+.descriptioncard{
+    opacity: 0.8;
 }
