@@ -1,5 +1,5 @@
 body{
-	background-color:#2f5294 !important;
+	background-color: #ddd;
 	font-family: 'Poppins', sans-serif !important;
 	letter-spacing: -0.5px !important;
 }
@@ -35,7 +35,7 @@ h2{
 /* Create a right-aligned (split) link inside the navigation bar */
 .topnav a.split {
   float: right;
-  background-color: #2f5294;
+  background-color: #e50914;
   color: #ffffff;
   padding: 15px;
   border-radius: 2px;
@@ -48,7 +48,7 @@ h2{
 .footer {
 	max-width: 100%;
 	overflow: auto;
-	background-color: #0c1a35;
+	background-color: #111827;
 }
 .footer, .footer a {
 	color: #999;
