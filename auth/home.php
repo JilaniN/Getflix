@@ -1,27 +1,8 @@
 <?php
 date_default_timezone_set('Europe/Paris');
 include_once('config.php');
-include_once('comments.inc.php');
+include_once('comments.inc.home.php');
 session_start();
-?>
-
-<!-- Youtube API -->
-<?php
-$item= $_GET['id'];
-
-$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-
-$apiError = 'Video not found';
-try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$item.'&key='.$API_key.'&part=snippet');
-  if($apiData){
-    $videolist = json_decode($apiData);
-  } else {
-    throw new Exception('Invalid API key or channel ID.');
-  }
-} catch(Exception $e){
-    $apiError = $e->getMessage();
-  }
 ?>
 
 <!-- video comments page -->
@@ -46,16 +27,14 @@ try{
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <title><?php echo $videolist->items[0]->snippet->title; ?></title>
+    <title>Default Player</title>
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   </div>
-  <h3 class="text-light">
-  <?php echo $videolist->items[0]->snippet->title; ?>
-  </h3>
+  <h3 class="text-light">Deep Sea Nuke</h3>
 
    <!-- <br>
     <video width="420" height="400" controls>
@@ -65,30 +44,22 @@ try{
     </video>
     <br> -->
     <div class="video ratio ratio-16x9" id="player">
-        <iframe width="200" height="200" src="https://www.youtube.com/embed/<?php echo $item; ?>?autoplay=1" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-      </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-      <!-- Description -->
-<div class="descriptioncard card bg-dark text-light ms-4 me-4">
-  <div class="card-body p-3" id="description">
-    <p>
-  <?php echo $videolist->items[0]->snippet->description;  ?></p>
-  </div>
-</div>
-    <div class="containercomment">
 
 <!-- login logout -->
 <?php
-    // echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
-    //     <span class='mx-1'> Log in here</span><br>
-    //     <label for='username'></label>
-    //     <input type='text' name='name' required value='' placeholder='Name'>
-    //     <label for='password'></label>
-    //     <input type='password' name='password' required value='' placeholder='Password'><br>
-    //     <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
-    // </form>";
+    echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
+        <span class='mx-1'> Log in here</span><br>
+        <label for='username'></label>
+        <input type='text' name='name' required value='' placeholder='Name'>
+        <label for='password'></label>
+        <input type='password' name='password' required value='' placeholder='Password'><br>
+        <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
+    </form>";
     echo "<form method='POST' action='".userLogout()."'>
-        <button type='submit' name='logoutSubmit' class='buttonlogout my-3 bg-danger'>Log out</button>
+        <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
     </form>";
 
     if(isset($_SESSION['id'])){
