@@ -50,7 +50,7 @@
                   </div>
                   <!-- Submit button -->
                   <div class="text-center">
-                  <button type="submit" class="btnlogin btn btn-success btn-block mb-4" name ="forget-btn">Recover your password</button>
+                  <button type="submit" class="btnlogin btn btn-success btn-block mb-4" name ="forget-btn">Receive new password by e-mail</button>
                   </div>
 </form>
 <?php
