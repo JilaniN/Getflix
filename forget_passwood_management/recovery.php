@@ -5,11 +5,12 @@ if(isset($_POST['forget-btn'])){
     //print_r($_POST);
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
-    //url of your website
-    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token);
-    $expire = date("U") + 1800;
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
+    //url of your website
+    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
+    $expire = date("U") + 1800;
+   
 
     
     $getUser = "SELECT pwdResetEmail from pwdReset WHERE pwdResetEmail ='$userEmail'";
@@ -63,9 +64,9 @@ $message .= '<p> Here is your password reset link : </br>';
 $message .= '<a href = "' .$url .'">' .$url . ' </a></p>';
 
 
-$headers = "From: website name <bhamaguruswami@gmail.com>\r\n";
-$headers .= "Reply-To: bhamaguruswami@gmail.com>\r\n";
-$headers .= "Content-type:text/html\r\n";
+// $headers = "From: website name <bhamaguruswami@gmail.com>\r\n";
+// $headers .= "Reply-To: bhamaguruswami@gmail.com>\r\n";
+// $headers .= "Content-type:text/html\r\n";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

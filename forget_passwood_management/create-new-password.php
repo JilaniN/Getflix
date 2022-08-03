@@ -1,3 +1,28 @@
+<?php
+require_once "../config.php";
+
+if(isset($_POST['reset-password-submit'])){
+  // $pwd1 = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
+  // $pwd2 = filter_var($_POST['pwd-repeat'], FILTER_SANITIZE_STRING);
+  // $email = filter_var($_POST['new_email'], FILTER_SANITIZE_STRING);
+
+  $pwd1 = $_POST['pwd'];
+  $pwd2 = $_POST['pwd-repeat'];
+  $email = $_POST['new_email'];
+
+  
+  if($pwd1 == $pwd2){
+    $sql = "UPDATE users set password='$pwd2' where email='$email'";
+    mysqli_query($conn, $sql);
+    echo "<h6 class='text-light m-1'>Password Updated successful.</h6><hr>";
+    // var_dump ($name, $email, $password);
+
+  } else{
+    echo "<h6 class='text-light m-1'>Passwords do not match.</h6><hr>";
+  }
+echo "<h6 class='text-light m-1'>Password Update.</h6><hr>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,22 +66,24 @@
                 <?php
                 $selector = $_GET["selector"];
                 $validator = $_GET["validator"];
+                $useremail=$_GET["useremail"];
+
 if (empty($selector) || empty($validator)){
     echo "could not validate your request";
 }
 else{
     if(ctype_xdigit($selector)!==  false && ctype_xdigit($selector)!== false ){
         ?>
-                <form action="forget.php" method="post">
+                <form action="" method="post">
                     <input type = "hidden " name ="selector" value="<?php echo $selector ?>">
                     <input type = "hidden " name ="validator" value="<?php echo $validator ?>">
                     <input type = "password " name ="pwd" placeholder="Enter your password">
                     <input type = "password " name ="pwd-repeat" placeholder="Confirm">
+                    <input type = "text " name ="new_email" value="<?php echo $useremail ?>">
+
 <button type = "submit" name = "reset-password-submit">Reset password</button> 
     </form>
         <?php
-
-
 
     }
 }
