@@ -11,7 +11,7 @@ html {
 }
 body {
   margin: 0;
-  background-color:#2f5294;
+  background-color: #ddd;
 }
 /* container center text on image */
 .welcome{
@@ -30,8 +30,11 @@ body {
   color:rgb(246, 242, 242);
 } 
 .main{
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
+}
+.topnav{
+  background-color: #c6111a;
 }
 .topnav a {
   float: left;
@@ -61,9 +64,11 @@ body {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  color: #ddd;
 }
 .topnav .search-container button:hover {
   background: #ccc;
+  color:#111827;
   border-radius: 4px;
 }
 /* profile dropdown button */
@@ -148,7 +153,7 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 .footer {
 	max-width: 100%;
 	overflow: auto;
-	background-color: #0c1a35;
+	background-color: #111827;
 
 }
 .footer, .footer a {
@@ -324,12 +329,10 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
 }
 
-
 @media only screen and (min-width: 700px){
   #small {
     display: none;
   }
-
   .wrapper section a {
     position: absolute;
     color: #fff;
@@ -341,14 +344,12 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     text-align: center;
     z-index: 1; 
   } 
-
   #titleVideo{
     padding: 15px 15px;
     color: #fff;
     font-size: 15px;
   }
 }
-
 
 #linkphp {
   position: relative;
@@ -361,39 +362,38 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   padding: 0px;  
  }
 
-
-
 @media only screen and (max-width: 700px){
  .wrapper section {
   grid-template-columns: repeat(2, auto);
   margin: 20px 0;
 }
-
 .wrapper {
   grid-template-columns: repeat(3, 100%);
-
 }
-
 .wrapper section a {
   position: absolute;
   color: #fff;
   text-decoration: none;
   font-size: 4em;
-  background: black;
+  background: #000000;
   width: 30px;
   padding: 20px;
   text-align: center;
   z-index: 1; 
 } 
-
 #titleVideo{
   padding-top: 5px;
   color: #fff;
   font-size: 15px;
 }
-
 #large {
   display: none;
 }
 }
-
+#playercat{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  /* height: auto; */
+}

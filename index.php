@@ -66,14 +66,16 @@ if(!empty($_SESSION['id'])){
 <div class="topnav">
   <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="index.php">Home</a>
-  <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">Music</a>
+  <a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Movies</a>
+  <a href="./shows/tvshows.php?id=<?php echo $youtubePL2; ?>">Music</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="./shows/sport.php">Sport</a>
-      <a href="./shows/cooking.php">Cooking</a>
-      <a href="./shows/gaming.php">Gaming</a>
+      <!-- <a href="./shows/sport.php">Sport</a> -->
+      <!-- apiConn playlist -->
+      <a href="./shows/sport.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="./shows/cooking.php?id=<?php echo $youtubePL3; ?>">Cooking</a>
+      <a href="./shows/gaming.php?id=<?php echo $youtubePL2; ?>">Gaming</a>
 
     </div>
   </div>
@@ -94,8 +96,8 @@ if(!empty($_SESSION['id'])){
 
 <!-- PROMO MAIN IMAGE -->
 <div class="container1">
-<img src="./assets/main.jpg" class="main img-fluid" alt="Responsive image">
-<div class="centered carousel-caption"><h1 class="welcome text-light text-center"><u>Welcome <?php echo $row['name']; ?> </u></h1></div>
+<img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
+<div class="centered carousel-caption"><h1 class="welcome text-light text-center">Welcome <?php echo $row['name']; ?></h1></div>
 </div>
 
 <!-- CAROUSEL 1 LARGE SCREEN  -->
