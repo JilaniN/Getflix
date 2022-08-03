@@ -105,7 +105,7 @@
 </div>
 
 <!-- CAROUSEL 1 LARGE SCREEN  -->
-<h4 class="title1">Sport</h4>
+<h4 class="title1 pt-4">Sport</h4>
 <div id="large" class="wrapper">
     <section id="section1">
     <a href="#section3" class="arrow__btn">‹</a>
@@ -409,7 +409,7 @@
 </section>
 </div>
 
-<footer class="footer p-2">
+<footer class="footer p-2 pt-3 mt-5">
   <div class="footer-cols">
     <ul>
       <li><a href="./faq.php">FAQ</a></li>
