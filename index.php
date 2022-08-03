@@ -1,12 +1,12 @@
  <?php
-require_once "config.php";
-if(!empty($_SESSION['id'])){
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-    $row = mysqli_fetch_assoc($result);
-} else{
-    header("Location: sign.php");
-}
+// require_once "config.php";
+// if(!empty($_SESSION['id'])){
+//     $id = $_SESSION['id'];
+//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+//     $row = mysqli_fetch_assoc($result);
+// } else{
+//     header("Location: sign.php");
+// }
  ?>
 
 <?php 
@@ -24,11 +24,17 @@ if(!empty($_SESSION['id'])){
 ?>
               
           <div class="item">
-            <a id="linkphp" href="./auth/index.php?id=<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>">
-            <img width="85%" src="https://img.youtube.com/vi/<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" ></img>
-            </a>
-            <p id="titleVideo"><?php echo $list->items[$x]->snippet->title; ?></p>
+          <a id="linkphp" href="./auth/index.php?id=<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>">
+          <div class="card">
+            
+             <img width="85%" src="https://img.youtube.com/vi/<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt="">></img>
+            
+            <div class="card-body">
+            <p class="card-text" id="titleVideo"><?php echo $list->items[$x]->snippet->title; ?></p>
+            </div> 
           </div>
+          </a>
+        </div> 
 <?php
         }
       }
@@ -189,7 +195,7 @@ if(!empty($_SESSION['id'])){
 </section>
 </div>
 
-<!-- CAROUSEL 1 SMALL SCREEN  -->
+<!-- CAROUSEL 2 SMALL SCREEN  -->
 <div id="small" class="wrapper">
 <section id="sectionSmallMusic1">
 <a href="#sectionSmallMusic3" class="arrow__btn">‹</a>
@@ -342,65 +348,65 @@ if(!empty($_SESSION['id'])){
 </section>
 </div>
 
-<!-- CAROUSEL 5 -->
-<div class="wrapper">
-  <section id="section1">
-    <a href="#section3" class="arrow__btn">‹</a>
-    <div class="item">
-    <img src="https://occ-0-1567-1123.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRvngexxF8H1-OzRWFSj6ddD-aB93tTBP9kMNz3cIVfuIfLEP1E_0saiNAwOtrM6xSOXvoiSCMsihWSkW0dq808-R7_lBnr6WHbjkKBX6I3sD0uCcS8kSPbRjEDdG8CeeVXEAEV6spQ.webp" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABZEK-7pZ1H5FD4cTyUb9qB_KeyJGz5p-kfPhCFv4GU_3mbdm8Xfsy4IBchlG9PFNdGff8cBNPaeMra72VFnot41nt0y3e8RLgaVwwh3UvyM2H2_MkmadWbQUeGuf811K7-cxJJh7gA.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABQCoK53qihwVPLRxPEDX98nyYpGbxgi5cc0ZOM4iHQu7KQvtgNyaNM5PsgI0vy5g3rLPZdjGCFr1EggrCPXpL77p2H08jV0tNEmIfs_e8KUfvBJ6Ay5nM4UM1dl-58xA6t1swmautOM.webp" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABdYtAqj8CyaJTWq5taD8Ro_UgwH3nne9QpFGVps-2J3IG-leqrfqXFii4jzZn48nPYTkrlwKQEV0R7_cEKlYBPRzdKqNODc-Oz26IL3LlLgFboXibIWXwxzeYxzuqn0I9TpARjeByw.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABbcCX42tsqGbBvO2y9CQv5-7QvYbCfoHtXsuc6NPCtZaKa4l4fBX3XWvUwG9F2A3CTsNpHVmulxBbdXKwK8Q6xGjejd9FoadGkZ7CnGrSl601TOQjzSHJ23NuIPC8j0QMGORL4uRIA.jpg" alt="Describe Image">
-  </div>
-    <a href="#section2" class="arrow__btn">›</a>
-  </section>
-  <section id="section2">
-    <a href="#section1" class="arrow__btn">‹</a>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABVopDZ5Fy9_fk_HO5WxHTXKKjKhtWFupbSjuvPwfLK_vytzon4EwRUdGgYJ34JwPxOTK_NkV3aXfkULMB0Dcct-FyfqzH-X44VXuRMp4QeBHlvKwWeZFpZlGdItPzmmg4scmwhG7SQ.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTOj1-116yVcgKWMU2dI3GFR4x0fSkiGsqtLLeLUxRR7STaksjAqBTrYlTfrB8nIGnGvXksi0ewXAhVGg6-pLxpFOIfcpjK-pf8D5xehFZo5a6vJbo4L0AGbrzglbyUoq255QBJgRQ.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABd3IBDpxbRcHXvRMFCZeKa2aHLU1P4SJtrACMS9om3yhLjqPlvNlmR_fypPxjtbsbnKaC4JZhPSpDG4r_kdxSHHAltWguMcCB-1Y1OShr2zWfUv7Whf_39fNH5ZJ3_0gxQrs0akmQjQz44_LT7jXH5LMZ7iMBAzac5IEj4m7Fn_5OWEGYnVsDsKG-QTommDooULMDF9bEw.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABXSd7bhDddcwkq9XpksoQFCHVx29Sxl_h4hb2n3F2GIt32a4XWcOnctQfgnT5qdolv8UML6_xNB5CJ89h56wueb13mYmEBr0sx5e9iLPdtVcOQAOmKXKWHHXwFvJuCUwuNnL3s8eAQwqLXPVMHMEsujM684rUGrZNF2btN2GRy5-RyEslsxZO93V2Q_H2bWs8A8oayt1h5M.webp" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABbXWODpAWqVXcmmjMA7K-2mPkQpvwCLfSdeyhVXzR8A3MSpdSEnnjf4HEJJTYC-TnktU6njTUGAxmzWEYCaJbk4v_ZeL-7QGzmkvYBjg_N-evr2XmcX-Fanoyvu_nimFP4iigPe4O3Vr_WcgplhwkDrJwPUJa84wRLrNAx3TufN5V7cWRP4indqu5HQahvgFEqfL9zjp4g.jpg" alt="Describe Image">
-  </div>
-    <a href="#section3" class="arrow__btn">›</a>
-  </section>
-  <section id="section3">
-    <a href="#section2" class="arrow__btn">‹</a>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABRr4YxdaABuAuH_3FmSQZn7BCvLp-UUPsXE9MiYpvFP3CSUHV2zOew5oVqKqqdaOd3tbFVS0Uf67uIs7_eZydlCghg4nK0nMatRpPImABwTOhnNzCLCxdKrua7pPIcPCZqBYTeAO5g.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/412e4119fb212e3ca9f1add558e2e7fed42f8fb4/AAAABTyWK1MKaw8GcObtz47R2Tj7wkLJ7qQu9tk6TVpcoyxpzD4B-zZ569bQ5vGrREBL-MWFkGilXUwy7tCDaj2XOGkUB4RsbbFAmp9NgSr6lygMpUGNHSlyfrFbUORsRkrxSIoh_ggOvg.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABY7NwkWEJIfXsn6t3Li4bGSCQ1nEErPisI5ZZtXlC-_VRBZOUrhWK5X3vt3t6SR_cpgVhCwxgQqFFDJhk62Kk8hawOnYGZMr0LKeLczMFV2zalCFjkcdLksvT4HB2LEi6LFyruyk3Uu0LmNGsHfC2A8Bly60smr_3sDbz4RruXcklPOG1qYq9wUVu3zfaiwNvqmG4b8aFA.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABemXHOga9feFnOux6I2YyACBD94wvM7N3vcTGIfMpQ_BcaXeoeM9XyzdVdamKtxt0SHXZfvsl6czcp3E48tXMLtHBxuQsh1BjHtPGgJDZ81je_FjItINiqzLtir0A30s_e4KR8G3d7AYAPDjZVOY97bNpzNqtkcHcGp7fGnJByVCps1uLfG9U9tK3Ma1A_3JbRt0NiT2_Q.jpg" alt="Describe Image">
-  </div>
-    <div class="item">
-    <img src="https://occ-0-243-299.1.nflxso.net/dnm/api/v5/rendition/a76057bcfd003711a76fb3985b1f2cf74beee3b8/AAAABVxuRB932hvre-XP0gh6ar5ztoR3Oe3QjKHkyvcDnRak2MKXOrx5H7mFQSvggefMFOppwEs7ZCCpiqrJ_CYGvtvYB9NpU4SWUtNO6uV2u-DTID267AcHjHcGvGBQJ1ufddDkxcGOZyi5MlOQ5QUmBun4652FbYUnib3zMYQDgcna_Pvz8y_HO5fbokxezrRR1JZAAiqFSQ.jpg" alt="Describe Image">
-  </div>
-    <a href="#section1" class="arrow__btn">›</a>
-  </section>
+<!-- CAROUSEL 5 LARGE SCREEN-->
+<h4 class="title1">Video Games</h4>
+<div id="large" class="wrapper">
+    <section id="sectionGames1">
+    <a href="#sectionGames3" class="arrow__btn">‹</a>
+
+<?php 
+ insertImage($videolistVideoGames, $startSect=0, $endSect=5);
+?>
+
+<a href="#sectionGames2" class="arrow__btn">›</a>
+</section>
+<section id="sectionGames2">
+<a href="#sectionGames1" class="arrow__btn">‹</a>
+<?php 
+   insertImage($videolistVideoGames, $startSect=5, $endSect=10);
+?>
+
+<a href="#sectionGames3" class="arrow__btn">›</a>
+</section>
+<section id="sectionGames3">
+<a href="#sectionGames2" class="arrow__btn">‹</a>
+<?php 
+  insertImage($videolistVideoGames, $startSect=10, $endSect=15);
+?>
+
+<a href="#sectionGames1" class="arrow__btn">›</a>
+</section>
+</div>
+
+<!-- CAROUSEL 5 SMALL SCREEN  -->
+<div id="small" class="wrapper">
+<section id="sectionSmallGames1">
+<a href="#sectionSmallGames3" class="arrow__btn">‹</a>
+
+<?php 
+  insertImage($videolistVideoGames, $startSect=0, $endSect=2);
+?>
+
+<a href="#sectionSmallGames2" class="arrow__btn">›</a>
+</section>
+<section id="sectionSmallGames2">
+<a href="#sectionSmallGames1" class="arrow__btn">‹</a>
+
+<?php
+    insertImage($videolistVideoGames, $startSect=2, $endSect=4);
+?>
+
+<a href="#sectionSmallGames3" class="arrow__btn">›</a>
+</section>
+<section id="sectionSmallGames3">
+<a href="#sectionSmallGames2" class="arrow__btn">‹</a>
+
+<?php
+  insertImage($videolistVideoGames, $startSect=4, $endSect=6);
+?>
+
+<a href="#sectionSmallGames1" class="arrow__btn">›</a>
+</section>
 </div>
 
 <footer class="footer p-2">
