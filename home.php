@@ -48,10 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $confirm = test_input($_POST["rptpassword"]);
   }
-  
 }
-
-
 
 //     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 //     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
@@ -67,13 +64,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_query($conn, $sql);
             echo "<h6 class='text-light m-1'>Registration successful.</h6><hr>";
             // var_dump ($name, $email, $password);
-
         } else{
             echo "<h6 class='text-light m-1'>Passwords do not match.</h6><hr>";
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -114,11 +109,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #111827;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
-
               <!-- <form action="" method="post"> -->
               <p><span class="error">* Required field</span></p>
               <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
                 <div class="form-outline mb-4">
                   <label for="name" style="font-weight: 600;">Enter your name </label>
                   <span class="error">* <?php echo $nameErr;?></span>
@@ -139,8 +132,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <span class="error">* <?php echo $confirmErr;?></span>
                   <input type="password" name="rptpassword" id="rptpassword" placeholder="Confirm" class="form-control form-control-md">
                 </div>
-
-
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
                     class="btnsign btn btn-danger btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
@@ -153,18 +144,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 </section>
-<!-- image home container -->
-<!-- </div> -->
-
 <!-- container -->
 <div class="container1">
   <div class="text">
     <h1>Enjoy on your TV.
       </h1>
       <p>
-          Watch on Smart TVs, Playstation, Xbox, <br>
-          Chromecast, Apple TV, Blu-ray players, and<br>
-          more.
+        Watch on Smart TVs, Playstation, Xbox, <br>
+        Chromecast, Apple TV, Blu-ray players, and<br>
+        more.
       </p>
   </div>
   <div class="image">
