@@ -72,15 +72,15 @@
 <div class="topnav">
   <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="index.php">Home</a>
-  <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">Music</a>
+  
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
       <a href="./shows/sport.php">Sport</a>
+      <a href="./shows/tvshows.php">Music</a>
+      <a href="./shows/movies.php">Movies</a>
       <a href="./shows/cooking.php">Cooking</a>
       <a href="./shows/gaming.php">Gaming</a>
-
     </div>
   </div>
   <div class="dropdown">
