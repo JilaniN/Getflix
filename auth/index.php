@@ -113,7 +113,7 @@ try{
         <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
     </form>";
     } else{
-        echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
     }
 
     getComments($pdo);
