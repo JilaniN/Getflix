@@ -55,7 +55,7 @@ try{
 <body class="mb-4 mx-2">
     <!-- navbar -->
   <div class="topnav p-2">
-    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   </div>
   <h3 class="text-light">
   <?php echo $videolist->items[0]->snippet->title; ?>
