@@ -1,6 +1,7 @@
 <?php 
   //Connection to youtube Data Api:
   include ('apiConn.php');
+ 
 
 //Function to insert videos'data on the table:
     function insertTable($list, $category){
@@ -16,6 +17,7 @@
                 echo '<td>'.$list->items[$x]->snippet->title.'</td>';
                 echo '<td>'.$list->items[$x]->snippet->resourceId->videoId.'</td>';
                 echo '<td>'.$category.'</td>';
+
                 ?>
                 <td class="btn btn-danger">Delete</td>
                 </tr>
@@ -27,6 +29,7 @@
             echo '<p class="error">'.$apiError.'</p>';
           }
     }
+
 ?>
 
 
@@ -56,7 +59,7 @@
 
 <!-- navbar -->
 <div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
   <a href="./shows/tvshows.php">TV Shows</a>
@@ -85,7 +88,6 @@
     </form>
   </div>
 </div>
-
 
 <div class="container pt-5">
         <div class="row justify-content-center">

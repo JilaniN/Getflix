@@ -5,12 +5,58 @@ require_once "config.php";
 if(!empty($_SESSION['id'])){
     header("Location: index.php");
 }
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+$nameErr = $emailErr = $passwordErr = $confirmErr = "";
+$name = $email = $password = $confirm = "";
 
 if(isset($_POST['submit'])){
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-    $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-    $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+
+  }
+    
+  if (empty($_POST["password"])) {
+    $password = "Password is required";
+  } else {
+    $password = test_input($_POST["password"]);
+  }
+
+  if (empty($_POST["rptpassword"])) {
+    $confirm = "Password is required";
+  } else {
+    $confirm = test_input($_POST["rptpassword"]);
+  }
+  
+}
+
+
+
+//     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+//     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+//     $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+//     $confirm = filter_var($_POST['rptpassword'], FILTER_SANITIZE_STRING);
 
     $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
     if(mysqli_num_rows($duplicate) > 0){
@@ -27,6 +73,7 @@ if(isset($_POST['submit'])){
         }
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +82,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BesToBe</title>
+    <title>BesTube</title>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +98,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
   <!-- <div class="imagehome"> -->
-    <div class = "container-fluid p-2">
+    <div class = "container-fluid p-2 ">
   <!-- navbar -->
   <div class="topnav">
     <a class="logo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
@@ -67,23 +114,33 @@ if(isset($_POST['submit'])){
           <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #111827;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
-              <form action="" method="post">
+
+              <!-- <form action="" method="post"> -->
+              <p><span class="error">* Required field</span></p>
+              <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
                 <div class="form-outline mb-4">
                   <label for="name" style="font-weight: 600;">Enter your name </label>
-                  <input type="text" name="name" id="name" required value="" placeholder="Name" class="form-control form-control-md">
+                  <span class="error">* <?php echo $nameErr;?></span>
+                  <input type="text" name="name" id="name" placeholder="Name" class="form-control form-control-md">
                 </div>
                 <div class="form-outline mb-4">
                   <label for="email" style="font-weight: 600;">Enter your email address</label>
-                  <input type="text" name="email" id="email" required value="" placeholder="Email address" class="form-control form-control-md">
+                  <span class="error">* <?php echo $emailErr;?></span>
+                  <input type="text" name="email" id="email"  placeholder="Email address" class="form-control form-control-md">
                 </div>
                 <div class="form-outline mb-4">
                   <label for="password" style="font-weight: 600;">Choose a password </label>
-                  <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control form-control-md">
+                  <span class="error">* <?php echo $passwordErr;?></span>
+                  <input type="password" name="password" id="password" placeholder="Password" class="form-control form-control-md">
                 </div>
                 <div class="form-outline mb-4">
                   <label for="rptpassword" style="font-weight: 600;">Confirm password </label>
-                  <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
+                  <span class="error">* <?php echo $confirmErr;?></span>
+                  <input type="password" name="rptpassword" id="rptpassword" placeholder="Confirm" class="form-control form-control-md">
                 </div>
+
+
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
                     class="btnsign btn btn-danger btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>

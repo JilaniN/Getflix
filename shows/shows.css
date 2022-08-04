@@ -1,99 +1,371 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color:#1a1b20;
+}
+/* container center text on image */
+.welcome{
+  color:#fff !important;
+}
+.container1{
+  position: relative !important;
+  text-align: center;
+  color:#fff;
+}
+.centered {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color:rgb(246, 242, 242);
+} 
+.main{
+  opacity: 0.9;
+  width: 100%;
+}
+.topnav{
+  background-color: #c6111a;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: rgba(255, 255, 255, 0.881);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text]{
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  border-radius: 6px;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: transparent;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: #ddd;
+}
+.topnav .search-container button:hover {
+  background: #ccc;
+  color:#111827;
+  border-radius: 4px;
+}
+/* profile dropdown button */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 15px;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: #fff;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #c8252d; opacity: 0.8;}
+.dropdown-menu {
+  background-color: transparent;
+}
+.navbar
+{
+    border-bottom:10px solid rgb(246, 242, 242);
+}
+
+.footer {
+	max-width: 100%;
+	overflow: auto;
+	background-color: #000;
+}
+.footer, .footer a {
+	color: #999;
+	font-size: 0.9rem;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
+}
+.footer p {
+	margin-bottom: 1.5rem;
+}
+.footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+@media screen and (max-width: 350px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
+  .card {
+   width: 150px;
+   height: 200px;
   }
-  html {
-    scroll-behavior: smooth;
+}
+@media screen and (min-width: 351px) and (max-width: 530px){
+	.footer .footer-cols{
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	}
+	.text h1{
+		font-size: 2rem !important;
+	}
+	.text p{
+		font-size: 1rem !important;
+	}
+  .card {
+    width: 200px;
+    height: 250px;
   }
-  body {
-    margin: 0;
-    background-color:#2f5294;
-  }
-  .main{
-    opacity: 0.8;
-    width: 100%;
-  }
-  .topnav a {
-    float: left;
+}
+
+.footer li {
+	line-height: 1.9;
+}
+.footer .lang-select {
+	margin-top: 2rem;
+	color: #999;
+	background-color: #0c1a35;
+	background-image: none;
+	border: 1px solid #333;
+	padding: 1rem 1.2rem;
+	border-radius: 5px;
+}
+
+/* media screen navbar and main image text */
+@media screen and (max-width: 350px){
+  .dropdown{
     display: block;
-    color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  }
+  .dropbtn{
+    padding: 10px;
   }
   .topnav .search-container {
-    float: right;
+    float: left;
+    margin-left: 3%;
+  }
+  .topnav a, .topnav input[type=text], .topnav input[type=submit] {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    width: 70%;
+    padding: 10px;
   }
   .topnav input[type=text]{
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    border: none;
-    border-radius: 6px;
-    /* font-size: 17px; */
+    font-size: 0.9em;
+    margin-bottom: 3%;
   }
-  .topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: transparent;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  .topnav .search-container button:hover {
-    background: #ccc;
-    border-radius: 4px;
-  }
-  /* profile dropdown button */
-  .dropbtn {
-    background-color: transparent;
-    color: white;
-    padding: 14px;
-    border: none;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
+  .pmain{
     display: none;
-    position: absolute;
-    /* background-color: ; */
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
   }
-  .dropdown-content a {
-    color: #fff;
-    /* padding: 12px 16px; */
-    text-decoration: none;
+  h4{
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 500px){
+  .topnav .search-container {
+    float: left;
+    margin-left: 2%;
+  }
+  .topnav input[type=text], .topnav input[type=submit]{
+    display: none;
+  }
+  .topnav .search-container button{
+    display: none;
+  }
+  .topnav a{
+    text-align: left;
+  }
+  .dropdown{
     display: block;
   }
-  .dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
-  .dropdown:hover .dropdown-content {display: block;}
-  .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
-  
-  @media screen and (max-width: 700px) {
-    .topnav a, .topnav input[type=text], .topnav input[type=submit] {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type=text] {
-      border: 1px solid #ccc;  
-    }
+  .pmain{
+    display: none;
+  }
+  h4{
+    font-size: medium;
+  }
+  .card {
+    width: 180px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topnav a, .topnav input[type=text], .topnav input[type=submit] {
+    float: none;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 700px) {
+  .topnav a{
+    float:left;
+    font-size: 0.9em;
+  }
+  .topnav input[type=text]{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 0;
+    width: 60%;
+    font-size: 0.8em;
+  }
+  .topnav .search-container button{
+    padding: 5px 5px;
+    margin-top: 5px;
+    float: none;
+  }
+  .dropbtn{
+    font-size: 0.9em;
+  }
+  h4{
+    font-size: medium;
+  }
+  .pmain{
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width:603px) {
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 604px) and (max-width: 750px){
+  .topnav .search-container{
+    float: none;
+    margin-bottom: 6px;
+  }
+  .card {
+    width: 250px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 885px){
+  .topnav .search-container{
+    float: right;
+    margin-bottom: 6px;
+    width: 30%;
+    font-size: 0.8em;
+  }
+  .topnav .search-container button{
+    padding: 5px 5px;
+    margin-top: 5px;
+    float: none;
+  }
+  .topnav a{
+    padding: 8px;
+    padding-top: 11px;
+  }
+  .dropbtn{
+    padding-top: 11px;
+    padding-left: 7px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width:910px){
+  .topnav input[type=text]{
+    width: 50%;
+  }
+  .topnav .search-container button{
+    /* padding: 5px 5px; */
+    margin-top: 5px;
+    float: none;
+  }
+  .topnav a{
+    float:left;
+    font-size: 0.9em;
+  }
+  .dropbtn{
+    font-size: 0.9em;
   }
 
+}
+
+@media only screen and (min-width: 700px){
+  #small {
+    display: none;
+  }
+  #titleVideo{
+    padding: 15px 15px;
+    color: black;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 300px;
+    height: 350px;
+  }
+
+}
+
+#linkphp {
+  position: relative;
+  color: none;
+  background: none;
+  width: auto;
+  width: auto;
+  font-size: 0em;
+  z-index: 0;
+  padding: 0px;  
+ }
+
+@media only screen and (max-width: 700px){
+#titleVideo{
+  padding-top: 5px;
+  color: black;
+  font-size: 12px;
+}
+}
 #playercat{
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  /* height: auto; */
 }
-.containervideo{
-  margin-top: 150px;
-}
+
+.card-body {
+  background-color: rgb(230, 219, 219); 
+ }
+
+
+

@@ -1,3 +1,52 @@
+<?php 
+$youtubePL1 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
+$category1 = "Sport";
+$youtubePL2= 'RDqWAqMzB31lQ';
+$category2= "Music";
+$youtubePL3 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
+$category3 = "Cooking";
+$youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
+$category4 = "Movies";
+$youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
+$category5 = "Games";
+
+$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
+$channelID = $_GET['id'];
+$maxResults = '50';
+
+$apiError = 'Video not found';
+try{
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  if($apiData){
+    $videolist = json_decode($apiData);
+  } else {
+    throw new Exception('Invalid API key or channel ID.');
+  }
+} catch(Exception $e){
+    $apiError = $e->getMessage();
+  }
+
+
+  $category = '';
+  
+  if ($channelID == $youtubePL1){
+    $category = $category1;
+  } 
+  elseif ($channelID == $youtubePL2){
+    $category = $category2;
+  }
+  elseif ($channelID == $youtubePL3){
+    $category = $category3;
+  }
+  elseif ($channelID == $youtubePL4){
+    $category = $category4;
+  }
+  elseif ($channelID == $youtubePL5){
+    $category = $category5;
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +66,21 @@
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <title>Movies</title>
+    <title><?php echo $category;?></title>
 </head>
 <body class='mb-4 mx-3'>
     <!-- navbar -->
 <div class="topnav">
-  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="../index.php">Home</a>
-  <a href="movies.php">Movies</a>
-  <a href="tvshows.php">Music</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="sport.php">Sport</a>
-      <a href="cooking.php">Cooking</a>
-      <a href="gaming.php">Gaming</a>
+    <a href="movies.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="movies.php?id=<?php echo $youtubePL2;?>">Music</a>
+      <a href="movies.php?id=<?php echo $youtubePL3;?>">Movies</a>
+      <a href="movies.php?id=<?php echo $youtubePL4;?>">Cooking</a>
+      <a href="movies.php?id=<?php echo $youtubePL5;?>">Gaming</a>
     </div>
   </div>
   <div class="dropdown">
@@ -49,33 +98,47 @@
   </div>
 </div>
 
+<div  class="container">
 <div class='containervideo'>
-<?php include_once("showsConn.php") ?>
+<div class="row justify-content-around">
+
+  <?php
+  if(!empty($videolist->items)){
+    foreach($videolist->items as $item){
+      if(isset($item->snippet->resourceId->videoId)){
+        ?>
+        
+        <div class="card m-5">
+        <img width="85%" src="https://img.youtube.com/vi/<?php echo $item->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt=""></img>
+        <div class="card-body">
+        <h5 class="card-title"><?php echo $item->snippet->title; ?></h5>
+        </div>
+        </div>
+       <?php
+      }
+    }
+  } else{
+    echo '<p class="error">'.$apiError.'</p>';
+  }
+  ?>
+</div>
+</div>
 </div>
 
-<footer class="footer p-2">
-  <p>Any questions? Contact us 1-866-579-7172</p>
+<footer class="footer p-2 pt-3 mt-5">
   <div class="footer-cols">
     <ul>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Ways To Watch</a></li>
-      <li><a href="#">Getflix Originals</a></li>
+      <li><a href="./faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="#">Help Center</a></li>
-      <li><a href="#">Terms Of Use</a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-      <li><a href="#">Account</a></li>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Speed Test</a></li>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li><a href="#">Media Center</a></li>
-      <li><a href="#">Cookie Preferences</a></li>
-      <li><a href="#">Legal Notices</a></li>
-    </ul>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
+   </ul>
   </div>
 </footer>
 <!-- link script js -->

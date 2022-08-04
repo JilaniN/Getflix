@@ -22,7 +22,7 @@
 
 <!-- navbar -->
 <div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
   <a href="./shows/tvshows.php">TV Shows</a>
@@ -54,12 +54,16 @@
 </div>
 
 <?php
+//get the id from the category clicked on dropdown menu 
 $videoID= $_GET['id'];
+
+//max result can change if we wont get more videos
 $maxResults = 50;
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 
 $apiError = 'Video not found';
+
 try{
     $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$videoID.'&maxResults='.$maxResults.'&key='.$API_key.'');
     if($apiData){
