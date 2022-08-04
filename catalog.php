@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
-<body>
+<body class='mb-4 mx-2'>
 
 <!-- navbar -->
 <div class="topnav">
@@ -37,6 +37,7 @@
     <li><a class="dropdown-item" href="#">Movies</a></li>
     </ul>
   </div>
+  
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
@@ -53,12 +54,16 @@
 </div>
 
 <?php
+//get the id from the category clicked on dropdown menu 
 $videoID= $_GET['id'];
+
+//max result can change if we wont get more videos
 $maxResults = 50;
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 
 $apiError = 'Video not found';
+
 try{
     $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$videoID.'&maxResults='.$maxResults.'&key='.$API_key.'');
     if($apiData){
@@ -72,12 +77,12 @@ try{
 
     if(!empty($videolist->items)){
   
-        for($x; $x<$maxResults; $x++){
+        for($x=0; $x<$maxResults; $x++){
         
           if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
             ?>
-            <div class="video ratio ratio-16x9" id="player">
-            <iframe src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <div class="video " id="playercat">
+            <iframe width='560' height='315' src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
           <?php
     

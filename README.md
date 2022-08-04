@@ -57,8 +57,6 @@ For non-registered users, they will have a preview of the website and can only w
     - Connect different databases
 
 #### Credit:
-Images from Unsplash  
+Images from Unsplash
+Images from browsecat  
 Icons from Flaticons   
-
-
-

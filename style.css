@@ -5,12 +5,10 @@
 } 
 html {
   scroll-behavior: smooth;
-  /*scroll carousel*/
-
 }
 body {
   margin: 0;
-  background-color:black;
+  background-color:#1a1b20;
 }
 /* container center text on image */
 .welcome{
@@ -29,13 +27,16 @@ body {
   color:rgb(246, 242, 242);
 } 
 .main{
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
+}
+.topnav{
+  background-color: #c6111a;
 }
 .topnav a {
   float: left;
   display: block;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.881);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -60,9 +61,11 @@ body {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  color: #ddd;
 }
 .topnav .search-container button:hover {
   background: #ccc;
+  color:#111827;
   border-radius: 4px;
 }
 /* profile dropdown button */
@@ -79,9 +82,8 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  /* background-color: ; */
   min-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px #00000033;
   z-index: 1;
 }
 .dropdown-content a {
@@ -92,17 +94,14 @@ body {
 }
 .dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
-
+.dropdown:hover .dropbtn {background-color: #c8252d; opacity: 0.8;}
 .dropdown-menu {
   background-color: transparent;
 }
-
 .navbar
 {
     border-bottom:10px solid rgb(246, 242, 242);
 }
-
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100%);
@@ -124,13 +123,11 @@ body {
   margin: 0 40px;
   transform: scale(1.2);
 } 
-
-
 .wrapper section a:nth-of-type(1) {
   top: 0;
   bottom: 0;
   left: 0;
-background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 } 
  .wrapper section a:nth-of-type(2) {
   top: 0;
@@ -145,19 +142,22 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 } */
 .title1{
   margin-top: 15px;
-  margin-left: 10px;
+  margin-left: 20px;
   color: #fff;
   padding-top: 10px;
 }
 .footer {
 	max-width: 100%;
 	overflow: auto;
-	background-color: #0c1a35;
-  }
-  
+	background-color: #000;
+}
 .footer, .footer a {
 	color: #999;
 	font-size: 0.9rem;
+  text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: underline;
 }
 .footer p {
 	margin-bottom: 1.5rem;
@@ -167,7 +167,6 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 2rem;
 }
-
 
 @media screen and (max-width: 350px){
 	.footer .footer-cols{
@@ -180,15 +179,11 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	.text p{
 		font-size: 1rem !important;
 	}
-
   .card {
    width: 150px;
    height: 200px;
   }
-  
 }
-
-
 @media screen and (min-width: 351px) and (max-width: 530px){
 	.footer .footer-cols{
 	grid-template-columns: repeat(2, 1fr);
@@ -200,14 +195,11 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	.text p{
 		font-size: 1rem !important;
 	}
-
   .card {
     width: 200px;
     height: 250px;
   }
-
 }
-
 
 .footer li {
 	line-height: 1.9;
@@ -222,8 +214,14 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	border-radius: 5px;
 }
 
-
+/* media screen navbar and main image text */
 @media screen and (max-width: 350px){
+  .dropdown{
+    display: block;
+  }
+  .dropbtn{
+    padding: 10px;
+  }
   .topnav .search-container {
     float: left;
     margin-left: 3%;
@@ -241,9 +239,18 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
   .welcome{
     font-size: 0.8em;
+    display: block;
+    padding-left: 125px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .pmain{
+    display: none;
+  }
+  h4{
+    font-size: small;
   }
 }
-
 
 @media screen and (min-width: 351px) and (max-width: 500px){
   .topnav .search-container {
@@ -251,15 +258,17 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     margin-left: 2%;
   }
   .topnav input[type=text], .topnav input[type=submit]{
-    display: inline-block;
+    /* display: inline-block;
     width: 75%;
     margin-bottom: 3%;
     padding: 10px;
-    text-align: left;
+    text-align: left; */
+    display: none;
   }
   .topnav .search-container button{
-    padding: 5px 1px;
-    margin-top: 10px;
+    /* padding: 5px 1px;
+    margin-top: 10px; */
+    display: none;
   }
   .topnav a{
     text-align: left;
@@ -268,15 +277,19 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     display: block;
   }
   .welcome{
-    font-size: 0.9em;
+    display: none;
   }
-
+  .pmain{
+    display: none;
+  }
+  h4{
+    font-size: medium;
+  }
   .card {
     width: 180px;
     height: 200px;
   }
 }
-
 
 @media screen and (max-width: 700px) {
   .topnav a, .topnav input[type=text], .topnav input[type=submit] {
@@ -289,9 +302,6 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
 }
 @media screen and (min-width: 501px) and (max-width: 700px) {
-  .welcome{
-    font-size: 1.5em;
-  }
   .topnav a{
     float:left;
     font-size: 0.9em;
@@ -311,6 +321,18 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   .dropbtn{
     font-size: 0.9em;
   }
+  h4{
+    font-size: medium;
+  }
+  .pmain{
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 604px){
+  .welcome{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 531px) and (max-width:603px) {
@@ -320,19 +342,16 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
 }
 
-
 @media screen and (min-width: 604px) and (max-width: 750px){
   .topnav .search-container{
     float: none;
     margin-bottom: 6px;
   }
-
   .card {
     width: 250px;
     height: 300px;
   }
 }
-
 
 @media screen and (min-width: 750px) and (max-width: 885px){
   .topnav .search-container{
@@ -356,7 +375,6 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   }
 }
 
-
 @media screen and (min-width: 700px) and (max-width:910px){
   .topnav input[type=text]{
     width: 50%;
@@ -376,12 +394,10 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 
 }
 
-
 @media only screen and (min-width: 700px){
   #small {
     display: none;
   }
-
   .wrapper section a {
     position: absolute;
     color: #fff;
@@ -393,7 +409,6 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     text-align: center;
     z-index: 1; 
   } 
-
   #titleVideo{
     padding: 15px 15px;
     color: black;
@@ -407,7 +422,6 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 
 }
 
-
 #linkphp {
   position: relative;
   color: none;
@@ -419,41 +433,40 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   padding: 0px;  
  }
 
-
-
 @media only screen and (max-width: 700px){
  .wrapper section {
   grid-template-columns: repeat(2, auto);
   margin: 20px 0;
 }
-
 .wrapper {
   grid-template-columns: repeat(3, 100%);
-
 }
-
 .wrapper section a {
   position: absolute;
   color: #fff;
   text-decoration: none;
   font-size: 4em;
-  background: black;
+  background: #000000;
   width: 30px;
   padding: 20px;
   text-align: center;
   z-index: 1; 
 } 
-
 #titleVideo{
   padding-top: 5px;
   color: black;
   font-size: 12px;
 }
-
-
 #large {
   display: none;
 }
+}
+#playercat{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  /* height: auto; */
 }
 
 .card-body {

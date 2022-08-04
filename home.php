@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #203056;">
+          <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #111827;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
 
@@ -151,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
-                    class="btnsign btn btn-success btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
+                    class="btnsign btn btn-danger btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
                 </div>
               </form>
             </div>
