@@ -6,12 +6,11 @@
 html {
   scroll-behavior: smooth;
   /*scroll carousel*/
-  scroll-padding-top: 300px;
-  
+
 }
 body {
   margin: 0;
-  background-color: #ddd;
+  background-color:black;
 }
 /* container center text on image */
 .welcome{
@@ -86,7 +85,7 @@ body {
   display: none;
   position: absolute;
   /* background-color: ; */
-  min-width: 160px;
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -99,6 +98,10 @@ body {
 .dropdown-content a:hover {background-color: transparent; opacity: 0.9;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #2f5294; opacity: 0.8;}
+
+.dropdown-menu {
+  background-color: transparent;
+}
 
 .navbar
 {
@@ -149,6 +152,7 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   margin-top: 15px;
   margin-left: 10px;
   color: #fff;
+  padding-top: 10px;
 }
 .footer {
 	max-width: 100%;
@@ -156,6 +160,9 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	background-color: #111827;
 
 }
+	/* background-color: #0c1a35;
+  } */
+  
 .footer, .footer a {
 	color: #999;
 	font-size: 0.9rem;
@@ -168,6 +175,8 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 2rem;
 }
+
+
 @media screen and (max-width: 350px){
 	.footer .footer-cols{
 	grid-template-columns: repeat(2, 1fr);
@@ -179,7 +188,15 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	.text p{
 		font-size: 1rem !important;
 	}
+
+  .card {
+   width: 150px;
+   height: 200px;
+  }
+  
 }
+
+
 @media screen and (min-width: 351px) and (max-width: 530px){
 	.footer .footer-cols{
 	grid-template-columns: repeat(2, 1fr);
@@ -191,7 +208,15 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	.text p{
 		font-size: 1rem !important;
 	}
+
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+
 }
+
+
 .footer li {
 	line-height: 1.9;
 }
@@ -204,6 +229,8 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 	padding: 1rem 1.2rem;
 	border-radius: 5px;
 }
+
+
 @media screen and (max-width: 350px){
   .topnav .search-container {
     float: left;
@@ -224,6 +251,8 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     font-size: 0.8em;
   }
 }
+
+
 @media screen and (min-width: 351px) and (max-width: 500px){
   .topnav .search-container {
     float: left;
@@ -249,7 +278,14 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   .welcome{
     font-size: 0.9em;
   }
+
+  .card {
+    width: 180px;
+    height: 200px;
+  }
 }
+
+
 @media screen and (max-width: 700px) {
   .topnav a, .topnav input[type=text], .topnav input[type=submit] {
     float: none;
@@ -284,12 +320,28 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     font-size: 0.9em;
   }
 }
+
+@media screen and (min-width: 531px) and (max-width:603px) {
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+
 @media screen and (min-width: 604px) and (max-width: 750px){
   .topnav .search-container{
     float: none;
     margin-bottom: 6px;
   }
+
+  .card {
+    width: 250px;
+    height: 300px;
+  }
 }
+
+
 @media screen and (min-width: 750px) and (max-width: 885px){
   .topnav .search-container{
     float: right;
@@ -311,6 +363,8 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
     padding-left: 7px;
   }
 }
+
+
 @media screen and (min-width: 700px) and (max-width:910px){
   .topnav input[type=text]{
     width: 50%;
@@ -327,6 +381,7 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   .dropbtn{
     font-size: 0.9em;
   }
+
 }
 
 @media only screen and (min-width: 700px){
@@ -346,9 +401,15 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   } 
   #titleVideo{
     padding: 15px 15px;
-    color: #fff;
-    font-size: 15px;
+    color: black;
+    font-size: 20px;
   }
+
+  .card {
+    width: 300px;
+    height: 350px;
+  }
+
 }
 
 #linkphp {
@@ -383,8 +444,8 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
 } 
 #titleVideo{
   padding-top: 5px;
-  color: #fff;
-  font-size: 15px;
+  color: black;
+  font-size: 12px;
 }
 #large {
   display: none;
@@ -397,3 +458,9 @@ background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
   max-width: 100%;
   /* height: auto; */
 }
+
+.card-body {
+  background-color: rgb(230, 219, 219); 
+ }
+
+

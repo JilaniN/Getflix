@@ -6,8 +6,10 @@ $youtubePL2= 'RDqWAqMzB31lQ';
 $category2= "music";
 $youtubePL3 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
 $category3 = "cooking";
-$youtubePL4 = 'PLYeOyMz9C9kbTRqRJCmMQfhkvRrnLNIjq';
+$youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
 $category4 = "movies";
+$youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
+$category5 = "videogame";
 $maxResults = '15';
 
 $apiError = 'Video not found';
@@ -54,6 +56,18 @@ try{
   $apiDataTrailer = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL4.'&maxResults='.$maxResults.'&key='.$API_key.'');
   if($apiDataTrailer){
     $videolistTrailer = json_decode($apiDataTrailer);
+  } else {
+    throw new Exception('Invalid API key or channel ID.');
+  }
+} catch(Exception $e){
+    $apiError = $e->getMessage();
+  }
+
+//api connection playlist 5
+try{
+  $apiDataGames = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL5.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  if($apiDataGames){
+    $videolistVideoGames = json_decode($apiDataGames);
   } else {
     throw new Exception('Invalid API key or channel ID.');
   }
