@@ -48,19 +48,17 @@ if(isset($_POST['submit'])){
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    
 </head>
 <body>
   <!-- <div class="imagehome"> -->
     <div class = "container-fluid p-2">
   <!-- navbar -->
   <div class="topnav">
-    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
-    <a href="./auth/home.php">Home</a>
+    <a class="logo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logohome" href="./auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
 </div>
-    
 <section class="vh-50 mt-3 mb-5">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
@@ -69,35 +67,23 @@ if(isset($_POST['submit'])){
           <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #111827;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
-
               <form action="" method="post">
                 <div class="form-outline mb-4">
                   <label for="name" style="font-weight: 600;">Enter your name </label>
                   <input type="text" name="name" id="name" required value="" placeholder="Name" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="email" style="font-weight: 600;">Enter your email address</label>
                   <input type="text" name="email" id="email" required value="" placeholder="Email address" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="password" style="font-weight: 600;">Choose a password </label>
                   <input type="password" name="password" id="password" required value="" placeholder="Password" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="rptpassword" style="font-weight: 600;">Confirm password </label>
                   <input type="password" name="rptpassword" id="rptpassword" required value="" placeholder="Confirm" class="form-control form-control-md">
                 </div>
-
-                <div class="form-check d-flex mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" name="TOS" id="form2Example3cg" />
-                  <label class="form-check-label" for="form2Example3g">
-                    I agree to all statements in <a href="#!" class="text-body"><u>Terms of service.</u></a>
-                  </label>
-                </div>
-
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
                     class="btnsign btn btn-danger btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
@@ -133,10 +119,9 @@ if(isset($_POST['submit'])){
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile.png">
     </div>
     <div class="text px-3">
-        <h1>Download your shows to watch on the go.
-          </h1>
+        <h1>Download your shows to watch on the go.</h1>
           <p>
-              Save your data and watch all your favourites offline.
+            Save your data and watch all your favourites offline.
           </p>
       </div>
   </div>
@@ -144,15 +129,15 @@ if(isset($_POST['submit'])){
       <div class="text">
         <h1>Watch everywhere.</h1>
           <p>
-              Stream unlimited movies and TV shows on <br>your phone, tablet, laptop,  and TV without paying more.
+            Stream unlimited movies and TV shows on <br>your phone, tablet, laptop,  and TV without paying more.
           </p>
       </div>
       <div class="image">
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png">
       </div>
     </div>
-
-    <footer class="footer p-2 footer-container">
+<!-- footer -->
+<footer class="footer p-2 footer-container">
   <div class="footer-cols">
     <ul>
       <li><a href="./faq.php">FAQ</a></li>
@@ -161,16 +146,15 @@ if(isset($_POST['submit'])){
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesTOBe Originals</a></li>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
     </ul>
   </div>
 </footer>
-
-  <script src="myscripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<!-- link script js -->
+<script src="myscripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

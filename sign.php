@@ -64,7 +64,6 @@ if(isset($_POST['submit'])){
             <div class="card" style="border-radius: 15px;">
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Sign In</h2>
-
                 <form action="" method="post">
                   <!-- Email input -->
                   <div class="form-outline mb-4">
@@ -109,7 +108,7 @@ if(isset($_POST['submit'])){
     </div>
     </div>
   </section>
-
+<!-- footer -->
 <footer class="footer p-2">
   <div class="footer-cols">
     <ul>
@@ -119,14 +118,13 @@ if(isset($_POST['submit'])){
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-      <li><a href="./auth/home.php">BesTOBe Originals</a></li>
+      <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
     </ul>
   </div>
 </footer>
-
 <!-- link script js -->
 <script src="myscripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
