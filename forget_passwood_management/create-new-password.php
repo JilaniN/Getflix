@@ -1,3 +1,28 @@
+<?php
+require_once "dbconfi.php";
+
+if(isset($_POST['reset-password-submit'])){
+  // $pwd1 = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
+  // $pwd2 = filter_var($_POST['pwd-repeat'], FILTER_SANITIZE_STRING);
+  // $email = filter_var($_POST['new_email'], FILTER_SANITIZE_STRING);
+
+  $pwd1 = $_POST['pwd'];
+  $pwd2 = $_POST['pwd-repeat'];
+  $email = $_POST['new_email'];
+
+  
+  if($pwd1 == $pwd2){
+    $sql = "UPDATE users set password='$pwd2' where email='$email'";
+    mysqli_query($conn, $sql);
+    echo "<h6 class='text-light m-1'>Password Updated successful.</h6><hr>";
+    // var_dump ($name, $email, $password);
+
+  } else{
+    echo "<h6 class='text-light m-1'>Passwords do not match.</h6><hr>";
+  }
+echo "<h6 class='text-light m-1'>Password Update.</h6><hr>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,22 +66,24 @@
                 <?php
                 $selector = $_GET["selector"];
                 $validator = $_GET["validator"];
+                $useremail=$_GET["useremail"];
+
 if (empty($selector) || empty($validator)){
     echo "could not validate your request";
 }
 else{
     if(ctype_xdigit($selector)!==  false && ctype_xdigit($selector)!== false ){
         ?>
-                <form action="forget.php" method="post">
+                <form action="" method="post">
                     <input type = "hidden " name ="selector" value="<?php echo $selector ?>">
                     <input type = "hidden " name ="validator" value="<?php echo $validator ?>">
                     <input type = "password " name ="pwd" placeholder="Enter your password">
                     <input type = "password " name ="pwd-repeat" placeholder="Confirm">
+                    <input type = "text " name ="new_email" value="<?php echo $useremail ?>">
+
 <button type = "submit" name = "reset-password-submit">Reset password</button> 
     </form>
         <?php
-
-
 
     }
 }
@@ -73,32 +100,23 @@ else{
 
   </section>
 
+  <footer class="footer p-2">
+            <div class="footer-cols">
+                <ul>
+                    <li><a href="/faq.php">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./contact.php">Contact Us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./auth/home.php">BesToBe Originals</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+                </ul>
+            </div>
+        </footer>
 
-  <footer class="forgetfooter footer p-2">
-  <p>Any questions? Contact us 1-866-579-7172</p>
-  <div class="footer-cols">
-    <ul>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Ways To Watch</a></li>
-      <li><a href="#">Getflix Originals</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Help Center</a></li>
-      <li><a href="#">Terms Of Use</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Account</a></li>
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Speed Test</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Media Center</a></li>
-      <li><a href="#">Cookie Preferences</a></li>
-      <li><a href="#">Legal Notices</a></li>
-    </ul>
-  </div>
-</footer>
 
   <script src="myscripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

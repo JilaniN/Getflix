@@ -5,11 +5,12 @@ if(isset($_POST['forget-btn'])){
     //print_r($_POST);
     $selector = bin2hex(random_bytes(8));
     $token = random_bytes(32);
-    //url of your website
-    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token);
-    $expire = date("U") + 1800;
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
+    //url of your website
+    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
+    $expire = date("U") + 1800;
+   
 
     
     $getUser = "SELECT pwdResetEmail from pwdReset WHERE pwdResetEmail ='$userEmail'";
@@ -28,7 +29,7 @@ if(isset($_POST['forget-btn'])){
           }
           mysqli_free_result($result);
           if($resultCnt < 0){
-            echo 'there was an error';
+            echo 'There was an error';
             exit(2);
           }
           if ($result = mysqli_query($conn, $sql)) {
@@ -44,7 +45,7 @@ if(isset($_POST['forget-btn'])){
 $sql = "INSERT INTO pwdReset (pwdResetEmail,pwdResetSelector,pwdResetToken,pwdResetExpire) VALUES(?,?,?,?);";
 $stmt =mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt,$sql)){
-    echo 'there was an error';
+    echo 'There was an error';
     exit();
 }
 else{
@@ -63,9 +64,9 @@ $message .= '<p> Here is your password reset link : </br>';
 $message .= '<a href = "' .$url .'">' .$url . ' </a></p>';
 
 
-$headers = "From: website name <bhamaguruswami@gmail.com>\r\n";
-$headers .= "Reply-To: bhamaguruswami@gmail.com>\r\n";
-$headers .= "Content-type:text/html\r\n";
+// $headers = "From: website name < writeemail>\r\n";
+// $headers .= "Reply-To: write email>\r\n";
+// $headers .= "Content-type:text/html\r\n";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
