@@ -76,11 +76,11 @@
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="./shows/sport.php">Sport</a>
-      <a href="./shows/tvshows.php">Music</a>
-      <a href="./shows/movies.php">Movies</a>
-      <a href="./shows/cooking.php">Cooking</a>
-      <a href="./shows/gaming.php">Gaming</a>
+      <a href="#sport">Sport</a>
+      <a href="#music">Music</a>
+      <a href="#movies">Movies</a>
+      <a href="#cooking">Cooking</a>
+      <a href="#games">Gaming</a>
     </div>
   </div>
   <div class="dropdown">
@@ -105,7 +105,7 @@
 </div>
 
 <!-- CAROUSEL 1 LARGE SCREEN  -->
-<h4 class="title1 pt-4">Sport</h4>
+<h4 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Sport</a></h4>
 <div id="large" class="wrapper">
     <section id="section1">
     <a href="#section3" class="arrow__btn">‹</a>
@@ -166,7 +166,7 @@
 </div>
   
 <!-- CAROUSEL 2 LARGE SCREEN-->
-<h4 class="title1">Music</h4>
+<h4 class="title1" id="music"><a href="./shows/movies.php?id=<?php echo $youtubePL2; ?>">Music</a></h4>
 <div id="large" class="wrapper">
     <section id="sectionMusic1">
     <a href="#sectionMusic3" class="arrow__btn">‹</a>
@@ -227,7 +227,7 @@
 </div>
 
 <!-- CAROUSEL 3 LARGE SCREEN-->
-<h4 class="title1">Cooking</h4>
+<h4 class="title1" id="cooking"><a href="./shows/movies.php?id=<?php echo $youtubePL3; ?>">Cooking</a></h4>
 <div id="large" class="wrapper">
     <section id="sectionCooking1">
     <a href="#sectionCooking3" class="arrow__btn">‹</a>
@@ -288,7 +288,7 @@
 </div>
 
 <!-- CAROUSEL 4 LARGE SCREEN-->
-<h4 class="title1">Movies</h4>
+<h4 class="title1" id="movies"><a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Movies</a></h4>
 <div id="large" class="wrapper">
     <section id="sectionTrailer1">
     <a href="#sectionTrailer3" class="arrow__btn">‹</a>
@@ -349,7 +349,7 @@
 </div>
 
 <!-- CAROUSEL 5 LARGE SCREEN-->
-<h4 class="title1">Video Games</h4>
+<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Video Games</a></h4>
 <div id="large" class="wrapper">
     <section id="sectionGames1">
     <a href="#sectionGames3" class="arrow__btn">‹</a>
