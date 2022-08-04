@@ -1,5 +1,5 @@
 <?php
-require_once "../config.php";
+require_once "dbconfi.php";
 
 if(isset($_POST['reset-password-submit'])){
   // $pwd1 = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
