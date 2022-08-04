@@ -8,7 +8,7 @@ $category3 = "Cooking";
 $youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
 $category4 = "Movies";
 $youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
-$category5 = "Games";
+$category5 = "Gaming";
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 $channelID = $_GET['id'];
@@ -57,9 +57,11 @@ try{
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link font awesome icons -->
+    <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link css -->
     <!-- <link rel="stylesheet" href="shows.css"> -->
     <link rel="stylesheet" href="shows.css?v=<?php echo time(); ?>">
@@ -68,7 +70,7 @@ try{
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <title><?php echo $category;?></title>
 </head>
-<body class='mb-4 mx-3'>
+<body>
     <!-- navbar -->
 <div class="topnav">
   <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
@@ -76,10 +78,10 @@ try{
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-    <a href="movies.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="movies.php?id=<?php echo $youtubePL1;?>">Sport</a>
       <a href="movies.php?id=<?php echo $youtubePL2;?>">Music</a>
-      <a href="movies.php?id=<?php echo $youtubePL3;?>">Movies</a>
-      <a href="movies.php?id=<?php echo $youtubePL4;?>">Cooking</a>
+      <a href="movies.php?id=<?php echo $youtubePL3;?>">Cooking</a>
+      <a href="movies.php?id=<?php echo $youtubePL4;?>">Movies</a>
       <a href="movies.php?id=<?php echo $youtubePL5;?>">Gaming</a>
     </div>
   </div>
@@ -108,12 +110,15 @@ try{
       if(isset($item->snippet->resourceId->videoId)){
         ?>
         
-        <div class="card m-5">
+        
+        <a id="linkphp" href="../auth/index.php?id=<?php echo $item->snippet->resourceId->videoId; ?>">
+        <div class="card my-5">
         <img width="85%" src="https://img.youtube.com/vi/<?php echo $item->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt=""></img>
-        <div class="card-body">
-        <h5 class="card-title"><?php echo $item->snippet->title; ?></h5>
+        <div class="card-body" style="background-color:#eae9e7;">
+        <h5 class="card-text" id="titleVideo"><?php echo $item->snippet->title; ?></h5>
         </div>
         </div>
+        </a>
        <?php
       }
     }
@@ -128,16 +133,16 @@ try{
 <footer class="footer p-2 pt-3 mt-5">
   <div class="footer-cols">
     <ul>
-      <li><a href="./faq.php">FAQ</a></li>
+      <li><a href="../faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="./contact.php">Contact Us</a></li>
+      <li><a href="../contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    <li><a href="../auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li><a href="#">Copyright 2022 BesTube</a></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
    </ul>
   </div>
 </footer>

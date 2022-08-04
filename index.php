@@ -1,13 +1,13 @@
 <?php
 //Connection to users table
-require_once "config.php";
-if(!empty($_SESSION['id'])){
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-    $row = mysqli_fetch_assoc($result);
-} else{
-    header("Location: sign.php");
-}
+// require_once "config.php";
+// if(!empty($_SESSION['id'])){
+//     $id = $_SESSION['id'];
+//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+//     $row = mysqli_fetch_assoc($result);
+// } else{
+//     header("Location: sign.php");
+// }
 ?>
 <?php 
 //Connection to youtube Data Api:
@@ -69,8 +69,8 @@ function insertImage($list, $x, $y){
     <div class="dropdown-content">
       <a href="#sport">Sport</a>
       <a href="#music">Music</a>
-      <a href="#movies">Movies</a>
       <a href="#cooking">Cooking</a>
+      <a href="#movies">Movies</a>
       <a href="#games">Gaming</a>
     </div>
   </div>
@@ -299,7 +299,7 @@ function insertImage($list, $x, $y){
 </div>
 
 <!-- CAROUSEL 5 LARGE SCREEN-->
-<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Video Games</a></h4>
+<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Gaming</a></h4>
 <div id="large" class="wrapper">
   <section id="sectionGames1">
     <a href="#sectionGames3" class="arrow__btn">‹</a>
