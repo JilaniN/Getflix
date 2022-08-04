@@ -2,19 +2,16 @@
     text-decoration: none;
 }
 .btnpwd:hover{
-    text-decoration: none;
-    color: #198754;
+    text-decoration:underline;
 }
 body{
-    background-image: url(./assets/home.jpg) !important;
-    background-repeat: no-repeat;
+    background-image: url(./assets/background.png) !important;
+    /* background-color: #111827 !important; */
+    background-size: auto;
     opacity: 0.9;
 }
 .card{
-    box-shadow: 5px 5px 8px #192350;
-}
-.card:hover{
-    opacity: 1;
+    box-shadow: 5px 5px 8px #111827;
 }
 .topnav .logo{
 	background-color: #ddd;

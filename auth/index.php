@@ -5,6 +5,7 @@ include_once('comments.inc.php');
 session_start();
 ?>
 
+<!-- link youtube API -->
 <!-- Youtube API -->
 <?php
 $item= $_GET['id'];
@@ -22,6 +23,7 @@ try{
 } catch(Exception $e){
     $apiError = $e->getMessage();
   }
+
 ?>
 
 <!-- video comments page -->
@@ -46,6 +48,8 @@ try{
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+
+    
     <title><?php echo $videolist->items[0]->snippet->title; ?></title>
 </head>
 <body class="mb-4 mx-2">
@@ -109,7 +113,7 @@ try{
         <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
     </form>";
     } else{
-        echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
     }
 
     getComments($pdo);
@@ -120,3 +124,4 @@ try{
 
 </body>
 </html>
+

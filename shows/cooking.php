@@ -1,41 +1,3 @@
-<?php 
-$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
-$channelID = $_GET['id'];
-$maxResults = '50';
-
-$apiError = 'Video not found';
-try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.'');
-  if($apiData){
-    $videolist = json_decode($apiData);
-  } else {
-    throw new Exception('Invalid API key or channel ID.');
-  }
-} catch(Exception $e){
-    $apiError = $e->getMessage();
-  }
-
-
-  $category = '';
-  
-  if ($channelID == 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-'){
-    $category = 'Sport';
-  } 
-  elseif ($channelID == 'RDqWAqMzB31lQ'){
-    $category = 'Music';
-  }
-  elseif ($channelID == 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb'){
-    $category = 'Cooking';
-  }
-  elseif ($channelID == 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_'){
-    $category = 'Movies';
-  }
-  elseif ($channelID == 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7'){
-    $category = 'Games';
-  }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,24 +14,25 @@ try{
     <!-- link css -->
     <!-- <link rel="stylesheet" href="shows.css"> -->
     <link rel="stylesheet" href="shows.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../style.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <title><?php echo $category;?></title>
+    <title>Cooking</title>
 </head>
 <body class='mb-4 mx-3'>
     <!-- navbar -->
 <div class="topnav">
   <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="../index.php">Home</a>
-  <a href="movies.php">Movies</a>
-  <a href="tvshows.php">Music</a>
+  <a href="movies.php?id=<?php echo $youtubePL4; ?>">Movies</a>
+  <a href="tvshows.php?id=<?php echo $youtubePL2; ?>">Music</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="sport.php">Sport</a>
-      <a href="cooking.php">Cooking</a>
-      <a href="gaming.php">Gaming</a>
+      <a href="sport.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="cooking.php?id=<?php echo $youtubePL3; ?>">Cooking</a>
+      <a href="gaming.php?id=<?php echo $youtubePL2; ?>">Gaming</a>
     </div>
   </div>
   <div class="dropdown">
@@ -87,47 +50,33 @@ try{
   </div>
 </div>
 
-<div  class="container">
 <div class='containervideo'>
-<div class="row justify-content-around">
-
-  <?php
-  if(!empty($videolist->items)){
-    foreach($videolist->items as $item){
-      if(isset($item->snippet->resourceId->videoId)){
-        ?>
-        
-        <div class="card m-5" style="width: 20rem;">
-        <img width="85%" src="https://img.youtube.com/vi/<?php echo $item->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt=""></img>
-        <div class="card-body">
-        <h5 class="card-title"><?php echo $item->snippet->title; ?></h5>
-        </div>
-        </div>
-       <?php
-      }
-    }
-  } else{
-    echo '<p class="error">'.$apiError.'</p>';
-  }
-  ?>
-</div>
-</div>
+<?php include_once("showsConn.php") ?>
 </div>
 
-<footer class="footer p-2 pt-3 mt-5">
+<footer class="footer p-2">
+  <p>Any questions? Contact us 1-866-579-7172</p>
   <div class="footer-cols">
     <ul>
-      <li><a href="./faq.php">FAQ</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Ways To Watch</a></li>
+      <li><a href="#">Getflix Originals</a></li>
     </ul>
     <ul>
-      <li><a href="./contact.php">Contact Us</a></li>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Terms Of Use</a></li>
+      <li><a href="#">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesToBe Originals</a></li>
+      <li><a href="#">Account</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Speed Test</a></li>
     </ul>
     <ul>
-      <li><a href="#">Copyright 2022 BesTOBe</a></li>
-   </ul>
+      <li><a href="#">Media Center</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+      <li><a href="#">Legal Notices</a></li>
+    </ul>
   </div>
 </footer>
 <!-- link script js -->

@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
-<body>
+<body class='mb-4 mx-2'>
 
 <!-- navbar -->
 <div class="topnav">
@@ -37,6 +37,7 @@
     <li><a class="dropdown-item" href="#">Movies</a></li>
     </ul>
   </div>
+  
   <div class="dropdown">
     <button class="dropbtn">My account</button>
     <div class="dropdown-content">
@@ -80,8 +81,8 @@ try{
         
           if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
             ?>
-            <div class="video ratio ratio-16x9" id="player">
-            <iframe src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <div class="video " id="playercat">
+            <iframe width='560' height='315' src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
           <?php
     
