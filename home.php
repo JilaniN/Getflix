@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
               <!-- <form action="" method="post"> -->
-              <p><span class="error">* Required field</span></p>
+              <p><span class="error text-danger">* Required field</span></p>
               <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <div class="form-outline mb-4">
                   <label for="name" style="font-weight: 600;">Enter your name </label>
