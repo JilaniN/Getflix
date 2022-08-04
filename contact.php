@@ -24,7 +24,7 @@
 <body>
     <!-- navbar -->
 <div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="index.php">Home</a>
   <a href="./shows/movies.php">Movies</a>
   <a href="./shows/tvshows.php">Music</a>
@@ -52,46 +52,38 @@
   </div>
 </div>
 
-<div class="container py-4">
-
-<form id="contactForm">
-
-  <!-- Name input -->
-  <div class="mb-3">
-    <label class="form-label text-primary" for="name">Name</label>
-    <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-  </div>
-
-  <!-- Email address input -->
-  <div class="mb-3">
-    <label class="form-label text-primary" for="emailAddress">Email Address</label>
-    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
-    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-  </div>
-
-  <!-- Message input -->
-  <div class="mb-3">
-    <label class="form-label text-primary" for="message">Message</label>
-    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-  </div>
-
-  <!-- Form submissions success message -->
-  <div class="d-none" id="submitSuccessMessage">
-    <div class="text-center mb-3">Form submission successful!</div>
-  </div>
-
-  <!-- Form submissions error message -->
-  <div class="d-none" id="submitErrorMessage">
-    <div class="text-center text-danger mb-3">Error sending message!</div>
-  </div>
-
-  <!-- Form submit button -->
-  <div class="d-grid">
-    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-  </div>
+<div class="my-5 conatiner">
+            <div class="text-center">
+                <h3 class="text-light">How Can We Help You?</h3>
+            </div>
+            <div class=" d-flex align-items-center justify-content-center">
+                <div class="bg-white col-md-6 rounded-5">
+                    <div class="p-4 rounded shadow-md ">
+                        <div>
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mt-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Your Email" required>
+                        </div class="mt-3">
+                        <div class="mt-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="mt-3 mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" cols="20" rows="6" class="form-control"
+                                placeholder="message"></textarea>
+                        </div>
+                        <button class="btn btn-primary">
+                            Submit Form
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 
 </form>
 <footer class="footer p-2">
@@ -103,10 +95,10 @@
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesToBe Originals</a></li>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li><a href="#">Copyright 2022 BesTOBe</a></li>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
    </ul>
   </div>
 </footer>
