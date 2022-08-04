@@ -27,8 +27,8 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Back office for user and comment management (CRUD).   
 - Create a page or section that displays the top movies with the movie db API.  
 - Integrate a newsletter with Mailchimp.   
-### The project: BesToBe
-We decided to create a platform to watch the best videos on Youtube. The name is **BesToBe**. 
+### The project: BesTube
+We decided to create a platform to watch the best videos on Youtube. The name is **BesTube**. 
 We wanted to create an easier way to find only the best of Youtube with a good catalogue and functional filters.
 The videos are divided in categories (as a playlist) and only registered users can comment.  
 

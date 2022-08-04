@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BesToBe</title>
+    <title>BesTube</title>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class = "container-fluid p-2 ">
   <!-- navbar -->
   <div class="topnav">
-    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a href="./auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
@@ -212,10 +212,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesTOBe Originals</a></li>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+    <li><a href="#">Copyright 2022 BesTube</a></li>
     </ul>
   </div>
 </footer>

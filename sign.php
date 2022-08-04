@@ -119,10 +119,10 @@ if(isset($_POST['submit'])){
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-      <li><a href="./auth/home.php">BesTOBe Originals</a></li>
+      <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+    <li><a href="#">Copyright 2022 BesTube</a></li>
     </ul>
   </div>
 </footer>

@@ -41,7 +41,7 @@ try{
 
 <!-- navbar -->
 <div class="topnav">
-  <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="#home">Home</a>
   <a href="#contact">Movies</a>
   <a href="#">TV Shows</a>

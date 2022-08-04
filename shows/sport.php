@@ -23,7 +23,7 @@
 <body class='mb-4 mx-3'>
     <!-- navbar -->
 <div class="topnav">
-  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="../index.php">Home</a>
   <a href="movies.php?id=<?php echo $youtubePL4; ?>">Movies</a>
   <a href="tvshows.php?id=<?php echo $youtubePL2; ?>">Music</a>

@@ -60,7 +60,7 @@ try{
 <body class='mb-4 mx-3'>
     <!-- navbar -->
 <div class="topnav">
-  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="../index.php">Home</a>
   <a href="movies.php">Movies</a>
   <a href="tvshows.php">Music</a>
@@ -123,10 +123,10 @@ try{
       <li><a href="./contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesToBe Originals</a></li>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li><a href="#">Copyright 2022 BesTOBe</a></li>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
    </ul>
   </div>
 </footer>

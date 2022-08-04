@@ -46,7 +46,7 @@ echo "<h6 class='text-light m-1'>Password Update.</h6><hr>";
 <body>
   <!-- navbar -->
   <div class="forgetnav topnav container-fluid p-2">
-    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   </div>
 </div>
 <!-- background image -->
@@ -109,10 +109,10 @@ else{
                     <li><a href="./contact.php">Contact Us</a></li>
                 </ul>
                 <ul>
-                    <li><a href="./auth/home.php">BesToBe Originals</a></li>
+                    <li><a href="./auth/home.php">BesTube Originals</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Copyright 2022 BesTOBe</a></li>
+                    <li><a href="#">Copyright 2022 BesTube</a></li>
                 </ul>
             </div>
         </footer>

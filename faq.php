@@ -247,7 +247,7 @@
                         aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                         <div class="accordion-body p-0">
                             Use a password unique to BesTube
-                            Do not use the same password on Netflix that you use for other websites or apps.
+                            Do not use the same password on BesTube that you use for other websites or apps.
 
                             Your password should be:
                             Unique to BesTube and not used for other websites or apps
