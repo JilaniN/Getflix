@@ -1,4 +1,15 @@
 <?php 
+$youtubePL1 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
+$category1 = "Sport";
+$youtubePL2= 'RDqWAqMzB31lQ';
+$category2= "Music";
+$youtubePL3 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
+$category3 = "Cooking";
+$youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
+$category4 = "Movies";
+$youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
+$category5 = "Games";
+
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 $channelID = $_GET['id'];
 $maxResults = '50';
@@ -18,20 +29,20 @@ try{
 
   $category = '';
   
-  if ($channelID == 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-'){
-    $category = 'Sport';
+  if ($channelID == $youtubePL1){
+    $category = $category1;
   } 
-  elseif ($channelID == 'RDqWAqMzB31lQ'){
-    $category = 'Music';
+  elseif ($channelID == $youtubePL2){
+    $category = $category2;
   }
-  elseif ($channelID == 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb'){
-    $category = 'Cooking';
+  elseif ($channelID == $youtubePL3){
+    $category = $category3;
   }
-  elseif ($channelID == 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_'){
-    $category = 'Movies';
+  elseif ($channelID == $youtubePL4){
+    $category = $category4;
   }
-  elseif ($channelID == 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7'){
-    $category = 'Games';
+  elseif ($channelID == $youtubePL5){
+    $category = $category5;
   }
 
 ?>
@@ -62,14 +73,14 @@ try{
 <div class="topnav">
   <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesToBe</b></a>
   <a href="../index.php">Home</a>
-  <a href="movies.php">Movies</a>
-  <a href="tvshows.php">Music</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
-      <a href="sport.php">Sport</a>
-      <a href="cooking.php">Cooking</a>
-      <a href="gaming.php">Gaming</a>
+    <a href="movies.php?id=<?php echo $youtubePL1;?>">Sport</a>
+      <a href="movies.php?id=<?php echo $youtubePL2;?>">Music</a>
+      <a href="movies.php?id=<?php echo $youtubePL3;?>">Movies</a>
+      <a href="movies.php?id=<?php echo $youtubePL4;?>">Cooking</a>
+      <a href="movies.php?id=<?php echo $youtubePL5;?>">Gaming</a>
     </div>
   </div>
   <div class="dropdown">
@@ -97,7 +108,7 @@ try{
       if(isset($item->snippet->resourceId->videoId)){
         ?>
         
-        <div class="card m-5" style="width: 20rem;">
+        <div class="card m-5">
         <img width="85%" src="https://img.youtube.com/vi/<?php echo $item->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt=""></img>
         <div class="card-body">
         <h5 class="card-title"><?php echo $item->snippet->title; ?></h5>

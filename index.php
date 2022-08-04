@@ -1,5 +1,5 @@
 <?php
-// Connection to users table
+//Connection to users table
 require_once "config.php";
 if(!empty($_SESSION['id'])){
     $id = $_SESSION['id'];
