@@ -53,12 +53,16 @@
 </div>
 
 <?php
+//get the id from the category clicked on dropdown menu 
 $videoID= $_GET['id'];
+
+//max result can change if we wont get more videos
 $maxResults = 50;
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 
 $apiError = 'Video not found';
+
 try{
     $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$videoID.'&maxResults='.$maxResults.'&key='.$API_key.'');
     if($apiData){
@@ -72,12 +76,12 @@ try{
 
     if(!empty($videolist->items)){
   
-        for($x; $x<$maxResults; $x++){
+        for($x=0; $x<$maxResults; $x++){
         
           if(isset($videolist->items[$x]->snippet->resourceId->videoId)){
             ?>
             <div class="video ratio ratio-16x9" id="player">
-            <iframe src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <iframe src="https://www.youtube.com/embed/<?php echo $videolist->items[$x]->snippet->resourceId->videoId; ?>" title="YouTube video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
           <?php
     
