@@ -1,4 +1,5 @@
 <?php
+// link connection comments 
 date_default_timezone_set('Europe/Paris');
 include_once('config.php');
 include_once('comments.inc.php');
@@ -6,10 +7,8 @@ session_start();
 ?>
 
 <!-- link youtube API -->
-<!-- Youtube API -->
 <?php
 $item= $_GET['id'];
-
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 
 $apiError = 'Video not found';
@@ -23,7 +22,6 @@ try{
 } catch(Exception $e){
     $apiError = $e->getMessage();
   }
-
 ?>
 
 <!-- video comments page -->
@@ -42,45 +40,50 @@ try{
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- link -->
+    <!-- link font awesome icons -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
+    <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-
-    
     <title><?php echo $videolist->items[0]->snippet->title; ?></title>
 </head>
 <body class="mb-4 mx-2">
-    <!-- navbar -->
+  <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logoback" href="../index.php"><i class="fa-solid fa-backward fa-xl"></i></a>
   </div>
-  <h3 class="text-light">
+  <h3 class="text-light text-center my-4">
   <?php echo $videolist->items[0]->snippet->title; ?>
   </h3>
-
-   <!-- <br>
-    <video width="420" height="400" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support.
-    </video>
-    <br> -->
-    <div class="video ratio ratio-16x9" id="player">
-        <iframe width="200" height="200" src="https://www.youtube.com/embed/<?php echo $item; ?>?autoplay=1" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <div class="video" id="player">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/<?php echo $item; ?>?autoplay=1" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       </div>
+  <!-- Description -->
+  <!-- <div class="descriptioncard card bg-dark text-light ms-4 me-4">
+    <div class="card-body p-3" id="description">
+      <p>Description</p>
+      <p><?php // echo $videolist->items[0]->snippet->description; ?></p>
+      </div>
+    </div> -->
 
-      <!-- Description -->
-<div class="descriptioncard card bg-dark text-light ms-4 me-4">
-  <div class="card-body p-3" id="description">
-    <p>
-  <?php echo $videolist->items[0]->snippet->description;  ?></p>
+  <div class="accordion accordion-flush mx-5 mb-4" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Description
+        </button>
+      </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body bg-dark text-light"><?php echo $videolist->items[0]->snippet->description; ?></div>
+    </div>
+    </div>
   </div>
-</div>
-    <div class="containercomment">
 
+    <div class="containercomment">
 <!-- login logout -->
 <?php
     // echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
@@ -91,12 +94,12 @@ try{
     //     <input type='password' name='password' required value='' placeholder='Password'><br>
     //     <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
     // </form>";
-    echo "<form method='POST' action='".userLogout()."'>
-        <button type='submit' name='logoutSubmit' class='buttonlogout my-3 bg-danger'>Log out</button>
-    </form>";
+    // echo "<form method='POST' action='".userLogout()."'>
+    //     <button type='submit' name='logoutSubmit' class='buttonlogout my-3 bg-danger'>Log out</button>
+    // </form>";
 
     if(isset($_SESSION['id'])){
-        echo "<br><span class='mx-5'>  </span>";
+        echo "<br><span class='mx-5'> </span>";
     } else{
         echo " ";
     }
@@ -119,9 +122,6 @@ try{
     getComments($pdo);
 ?>
 </div>
-
-
-
 </body>
 </html>
 
