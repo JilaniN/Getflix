@@ -117,13 +117,13 @@ try{
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
-      <li><a href="./faq.php">FAQ</a></li>
+      <li><a href="../faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="./contact.php">Contact Us</a></li>
+      <li><a href="../contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    <li><a href="home.php">BesTube Originals</a></li>
     </ul>
     <ul>
       <li><a href="#">Copyright 2022 BesTube</a></li>
