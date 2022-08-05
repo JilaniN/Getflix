@@ -143,7 +143,7 @@
     <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a href="./auth/home.php" class="split">Home</a>
   </div>
-  <!-- container -->
+
    <div class="container my-5">
         <div class="wrapper bg-white rounded shadow">
             <div class="h2 text-center fw-bold">Frequently Asked Questions</div>
@@ -238,7 +238,7 @@
         <footer class="footer p-2">
             <div class="footer-cols">
                 <ul>
-                    <li><a href="#">FAQ</a></li>
+                      <li><a href="#">FAQ</a></li>
                 </ul>
                 <ul>
                     <li><a href="./contact.php">Contact Us</a></li>
@@ -251,6 +251,7 @@
                 </ul>
             </div>
         </footer>
+
     </div>
     <!-- link script js -->
     <script src="myscripts.js"></script>

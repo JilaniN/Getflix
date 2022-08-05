@@ -1,8 +1,8 @@
-
 <?php
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,37 +16,64 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <!-- link css -->
-    <link rel="stylesheet" href="./signin/home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="../style.css">
 
-  </head>
+</head>
 
 <body>
-   <!-- navbar -->
-   <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <!-- <a  class="p-3 split" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a> -->
-    <a href="./auth/home.php" class="split">Home</a>
+    <!-- navbar -->
+<div class="topnav">
+  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+  <a href="index.php">Home</a>
+  <a href="./shows/movies.php">Movies</a>
+  <a href="./shows/tvshows.php">Music</a>
+  <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+      <a href="./shows/sport.php">Sport</a>
+      <a href="./shows/cooking.php">Cooking</a>
+      <a href="./shows/gaming.php">Gaming</a>
+
+    </div>
   </div>
+  <div class="dropdown">
+    <button class="dropbtn">My account</button>
+    <div class="dropdown-content">
+      <!-- <a href="sign.php">Log in</a> -->
+      <a href="./logout.php">Log out</a>
+    </div>
+  </div>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search..." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
 
 <div class="my-5 conatiner">
-<?php include('./contact_backoffice/message.php'); ?>
+<?php include('message.php'); ?>
             <div class="text-center">
-                <h3 class="text-light mb-5">How Can We Help You?</h3>
+                <h3 class="text-light">How Can We Help You?
+                <a href="index.php" class="btn btn-danger float-end">BACK</a>
+                </h3>
             </div>
             <div class=" d-flex align-items-center justify-content-center">
-                <div class="bg-white col-md-6 rounded-2">
+                <div class="bg-white col-md-6 rounded-5">
                     <div class="p-4 rounded shadow-md ">
+                    <form action="code.php" method="POST">
                         <div>
-                            <label for="name" class="form-label">Enter your name</label>
+                            <label for="name" class="form-label">Your Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="mt-3">
-                            <label for="email" class="form-label">Enter your email</label>
+                            <label for="email" class="form-label">Your Email</label>
                             <input type="text" name="email" class="form-control" placeholder="Your Email" required>
                         </div class="mt-3">
                         <div class="mt-3">
@@ -56,11 +83,9 @@ session_start();
                         <div class="mt-3 mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea name="message" cols="20" rows="6" class="form-control"
-                                placeholder="Leave your message here."></textarea>
+                                placeholder="Message"></textarea>
                         </div>
-                        <button class="btn btn-danger">
-                            Send
-                        </button>
+                        <button type="submit" name="save_message" class="btn btn-primary">Submit Form</button>
                     </div>
                 </div>
             </div>
@@ -68,7 +93,6 @@ session_start();
         </div>
 
 </form>
-
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
@@ -81,12 +105,10 @@ session_start();
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
    </ul>
   </div>
 </footer>
-
-
 
 </div>
 <script src="myscripts.js"></script>
