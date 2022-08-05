@@ -139,11 +139,34 @@
 
 <body>
     <!-- navbar -->
-    <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a href="./auth/home.php" class="split">Home</a>
-  </div>
-  <!-- container -->
+    <div class="topnav">
+        <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+        <a href="index.php">Home</a>
+        <a href="./shows/movies.php">Movies</a>
+        <a href="./shows/tvshows.php">Music</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a href="./shows/sport.php">Sport</a>
+                <a href="./shows/cooking.php">Cooking</a>
+                <a href="./shows/gaming.php">Gaming</a>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">My account</button>
+            <div class="dropdown-content">
+                <!-- <a href="sign.php">Log in</a> -->
+                <a href="./logout.php">Log out</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
    <div class="container my-5">
         <div class="wrapper bg-white rounded shadow">
             <div class="h2 text-center fw-bold">Frequently Asked Questions</div>
@@ -238,7 +261,7 @@
         <footer class="footer p-2">
             <div class="footer-cols">
                 <ul>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="/faq.php">FAQ</a></li>
                 </ul>
                 <ul>
                     <li><a href="./contact.php">Contact Us</a></li>
@@ -247,10 +270,11 @@
                     <li><a href="./auth/home.php">BesTube Originals</a></li>
                 </ul>
                 <ul>
-                <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
+                    <li><a href="#">Copyright 2022 BesTube</a></li>
                 </ul>
             </div>
         </footer>
+
     </div>
     <!-- link script js -->
     <script src="myscripts.js"></script>
