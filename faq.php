@@ -301,22 +301,21 @@
             </div>
         </div>
         <footer class="footer p-2">
-            <div class="footer-cols">
-                <ul>
-                    <li><a href="/faq.php">FAQ</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./contact.php">Contact Us</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./auth/home.php">BesTube Originals</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Copyright 2022 BesTube</a></li>
-                </ul>
-            </div>
-        </footer>
-
+  <div class="footer-cols ">
+    <ul>
+      <li><a href="./faq.php">FAQ</a></li>
+    </ul>
+    <ul>
+      <li><a href="./contact.php">Contact Us</a></li>
+    </ul>
+    <ul>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
+   </ul>
+  </div>
+</footer>
     </div>
     <script src="myscripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

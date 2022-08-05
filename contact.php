@@ -74,7 +74,7 @@
                         <div class="mt-3 mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea name="message" cols="20" rows="6" class="form-control"
-                                placeholder="message"></textarea>
+                                placeholder="Message"></textarea>
                         </div>
                         <button class="btn btn-primary">
                             Submit Form
