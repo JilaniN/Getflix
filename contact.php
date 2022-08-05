@@ -62,7 +62,7 @@
         </div>
 
 </form>
-<div class="fixed-bottom">
+
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
@@ -79,7 +79,7 @@
    </ul>
   </div>
 </footer>
-</div>
+
 
 
 </div>

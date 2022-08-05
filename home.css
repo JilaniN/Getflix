@@ -166,3 +166,12 @@ h2{
 .text h1{
 	font-size: 3.125rem;
 }
+
+@media screen and (min-width: 700px){
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+}
