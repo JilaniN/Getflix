@@ -9,6 +9,7 @@ if(!empty($_SESSION['id'])){
     header("Location: sign.php");
 }
 ?>
+
 <?php 
 //Connection to youtube Data Api:
 include ('apiConn.php');
