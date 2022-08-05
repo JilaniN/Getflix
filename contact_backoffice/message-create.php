@@ -1,8 +1,8 @@
-
 <?php
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +21,8 @@ session_start();
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="../style.css">
 
 </head>
 
@@ -58,13 +58,16 @@ session_start();
 </div>
 
 <div class="my-5 conatiner">
-<?php include('./contact_backoffice/message.php'); ?>
+<?php include('message.php'); ?>
             <div class="text-center">
-                <h3 class="text-light">How Can We Help You?</h3>
+                <h3 class="text-light">How Can We Help You?
+                <a href="index.php" class="btn btn-danger float-end">BACK</a>
+                </h3>
             </div>
             <div class=" d-flex align-items-center justify-content-center">
                 <div class="bg-white col-md-6 rounded-5">
                     <div class="p-4 rounded shadow-md ">
+                    <form action="code.php" method="POST">
                         <div>
                             <label for="name" class="form-label">Your Name</label>
                             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
