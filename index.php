@@ -363,7 +363,7 @@ function insertImage($list, $x, $y){
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li>Copyright 2022 BesTube <i class="fa-regular fa-copyright"></i></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
    </ul>
   </div>
 </footer>
