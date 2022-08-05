@@ -112,7 +112,7 @@ h2{
 	background-image: none;
 	border: 1px solid #333;
 	padding: 1rem 1.2rem;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 }
 .container1, .container2{
 	width: 100%;

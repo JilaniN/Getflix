@@ -16,12 +16,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link css -->
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-    <!-- link icon in head -->
+     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="home.css?v=<?php echo time(); ?>">
+    <!-- <link rel="stylesheet" href="sign.css?v=<?php echo time(); ?>"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -33,14 +32,14 @@
         }
 
         body {
-            background-image: linear-gradient(to right top, #9AF6FB, #7096F8);
-            min-height: 100vh
+            min-height: 100vh;
+            background-color: #1a1b20 !important;
         }
 
         .wrapper {
             max-width: 760px;
-            margin: 50px auto;
-            padding: 40px 20px
+            margin: 150px auto;
+            padding: 40px 20px;
         }
 
         .wrapper .search {
@@ -150,40 +149,31 @@
             .w-75 {
                 width: 90% !important
             }
+      
         }
+
+        p {
+            padding: 15px;
+        }
+
+        /* @media (min-width: 700px) {
+            .wrapper {
+                margin-bottom: 200px;
+            }
+        } */
+
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <div class="topnav">
-        <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-        <a href="index.php">Home</a>
-        <a href="./shows/movies.php">Movies</a>
-        <a href="./shows/tvshows.php">Music</a>
-        <div class="dropdown">
-            <button class="dropbtn">Categories</button>
-            <div class="dropdown-content">
-                <a href="./shows/sport.php">Sport</a>
-                <a href="./shows/cooking.php">Cooking</a>
-                <a href="./shows/gaming.php">Gaming</a>
+     <!-- navbar -->
+  <div class="topnav container-fluid p-2">
+    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <!-- <a  class="p-3 split" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a> -->
+    <a href="./auth/home.php" class="split">Home</a>
+  </div>
 
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">My account</button>
-            <div class="dropdown-content">
-                <!-- <a href="sign.php">Log in</a> -->
-                <a href="./logout.php">Log out</a>
-            </div>
-        </div>
-        <div class="search-container">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
    <div class="container my-5">
 
         <div class="wrapper bg-white rounded shadow">
@@ -300,6 +290,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="fixed-bottom">
         <footer class="footer p-2">
             <div class="footer-cols">
                 <ul>
@@ -316,6 +308,7 @@
                 </ul>
             </div>
         </footer>
+    </div>
 
     </div>
     <script src="myscripts.js"></script>
