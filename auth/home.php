@@ -1,8 +1,24 @@
 <?php
-date_default_timezone_set('Europe/Paris');
-include_once('config.php');
-include_once('comments.inc.home.php');
-session_start();
+// date_default_timezone_set('Europe/Paris');
+// include_once('config.php');
+// include_once('comments.inc.home.php');
+// session_start();
+?>
+<?php
+$videoID= '9tbxDgcv74c' ;
+$API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
+
+$apiError = 'Video not found';
+try{
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$videoID.'&key='.$API_key.'&part=snippet');
+  if($apiData){
+    $videolist = json_decode($apiData);
+  } else {
+    throw new Exception('Invalid API key or channel ID.');
+  }
+} catch(Exception $e){
+    $apiError = $e->getMessage();
+  }
 ?>
 
 <!-- video comments page -->
@@ -23,6 +39,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- link -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
@@ -31,15 +49,31 @@ session_start();
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
-  <div class="topnav p-2">
-    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a class="logoback" href="../index.php"><i class="fa-solid fa-backward fa-xl"></i></a>
-  </div>
+    
+    <div class="topnav p-2">
+    <a class="logo" href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a href="sign.php" class="split">Log in</a>
+    </div>
+
   <!-- video -->
   <h3 class="text-light text-center mb-2">Deep Sea Nuke</h3>
     <div class="video" id="player">
         <iframe width="854" height="480" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
+<!-- description -->
+<div class="accordion accordion-flush mx-5 mb-4" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Description
+        </button>
+      </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body bg-dark text-light"><?php echo $videolist->items[0]->snippet->description; ?></div>
+    </div>
+    </div>
+  </div>
 
 <!-- login logout -->
 <?php
@@ -80,7 +114,22 @@ session_start();
 ?>
 </div>
 
-
+<footer class="footer p-2">
+  <div class="footer-cols ">
+    <ul>
+      <li><a href="./faq.php">FAQ</a></li>
+    </ul>
+    <ul>
+      <li><a href="./contact.php">Contact Us</a></li>
+    </ul>
+    <ul>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
+   </ul>
+  </div>
+</footer>
 
 </body>
 </html>

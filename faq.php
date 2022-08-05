@@ -194,7 +194,7 @@
                         aria-labelledby="flush-headingOne" data-bs-parent="#myAccordion">
                         <div class="accordion-body p-0">
                             <p>Use a password unique to BesTube. Do not use the same password on BesTube that you use for other websites or apps. <br>
-                            Your password should be: <br>
+                            Your password should be: <br> 
                             - Unique to BesTube and not used for other websites or apps <br>
                             - At least 6 characters long <br>
                             - A combination of letters (upper and lower-case), numbers, and symbols <br>
