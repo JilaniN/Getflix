@@ -1,8 +1,8 @@
 <?php
-date_default_timezone_set('Europe/Paris');
-include_once('config.php');
-include_once('comments.inc.home.php');
-session_start();
+// date_default_timezone_set('Europe/Paris');
+// include_once('config.php');
+// include_once('comments.inc.home.php');
+// session_start();
 ?>
 
 <!-- video comments page -->
@@ -31,10 +31,13 @@ session_start();
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
-  <div class="topnav p-2">
-    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-  </div>
-  <h3 class="text-light">Deep Sea Nuke</h3>
+    <div class="topnav">
+    <a class="logo" href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a href="sign.php" class="split">Log in</a>
+    </div>
+    <div class="my-4">
+        <h3 class="text-light">Deep Sea Nuke</h3>
+    </div>
 
    <!-- <br>
     <video width="420" height="400" controls>
@@ -50,44 +53,59 @@ session_start();
 
 <!-- login logout -->
 <?php
-    echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
-        <span class='mx-1'> Log in here</span><br>
-        <label for='username'></label>
-        <input type='text' name='name' required value='' placeholder='Name'>
-        <label for='password'></label>
-        <input type='password' name='password' required value='' placeholder='Password'><br>
-        <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
-    </form>";
-    echo "<form method='POST' action='".userLogout()."'>
-        <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
-    </form>";
+    // echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
+    //     <span class='mx-1'> Log in here</span><br>
+    //     <label for='username'></label>
+    //     <input type='text' name='name' required value='' placeholder='Name'>
+    //     <label for='password'></label>
+    //     <input type='password' name='password' required value='' placeholder='Password'><br>
+    //     <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
+    // </form>";
+    // echo "<form method='POST' action='".userLogout()."'>
+    //     <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
+    // </form>";
 
-    if(isset($_SESSION['id'])){
-        echo "<br><span class='mx-5'>  </span>";
-    } else{
-        echo " ";
-    }
+    // if(isset($_SESSION['id'])){
+    //     echo "<br><span class='mx-5'>  </span>";
+    // } else{
+    //     echo " ";
+    // }
 ?>
 <!-- comments section -->
 <?php
-    if(isset($_SESSION['id'])){
-        echo " ";
-        echo "<form method='POST' action='".setComments($pdo)."'>
-        <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-        <input type='hidden' name='name' value='".$_SESSION['id']."'>
-        <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
-        <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
-        <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
-    </form>";
-    } else{
-        echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
-    }
+    // if(isset($_SESSION['id'])){
+    //     echo " ";
+    //     echo "<form method='POST' action='".setComments($pdo)."'>
+    //     <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+    //     <input type='hidden' name='name' value='".$_SESSION['id']."'>
+    //     <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
+    //     <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
+    //     <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
+    // </form>";
+    // } else{
+    //     echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+    // }
 
-    getComments($pdo);
+    // getComments($pdo);
 ?>
 </div>
 
-
+<footer class="footer p-2">
+  <div class="footer-cols ">
+    <ul>
+      <li><a href="./faq.php">FAQ</a></li>
+    </ul>
+    <ul>
+      <li><a href="./contact.php">Contact Us</a></li>
+    </ul>
+    <ul>
+    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Copyright 2022 BesTube</a></li>
+   </ul>
+  </div>
+</footer>
 
 </body>
 </html>
