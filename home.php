@@ -48,10 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $confirm = test_input($_POST["rptpassword"]);
   }
-  
 }
-
-
 
 //     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 //     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
@@ -67,13 +64,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_query($conn, $sql);
             echo "<h6 class='text-light m-1'>Registration successful.</h6><hr>";
             // var_dump ($name, $email, $password);
-
         } else{
             echo "<h6 class='text-light m-1'>Passwords do not match.</h6><hr>";
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -95,22 +90,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- link icon image -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <style>
-.error {color: #FF0000;}
-</style>
-
 </head>
 <body>
   <!-- <div class="imagehome"> -->
     <div class = "container-fluid p-2 ">
   <!-- navbar -->
   <div class="topnav">
-    <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a href="./auth/home.php">Home</a>
+    <a class="logo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logohome" href="./auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
 </div>
-    
 <section class="vh-50 mt-3 mb-5">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
@@ -119,36 +109,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="card" style="border-radius: 15px; box-shadow: 5px 5px 10px #111827;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Sign up now</h2>
-
               <!-- <form action="" method="post"> -->
-              <p><span class="error">* Required field</span></p>
+              <p><span class="error text-danger">* Required field</span></p>
               <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
                 <div class="form-outline mb-4">
                   <label for="name" style="font-weight: 600;">Enter your name </label>
                   <span class="error">* <?php echo $nameErr;?></span>
                   <input type="text" name="name" id="name" placeholder="Name" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="email" style="font-weight: 600;">Enter your email address</label>
                   <span class="error">* <?php echo $emailErr;?></span>
                   <input type="text" name="email" id="email"  placeholder="Email address" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="password" style="font-weight: 600;">Choose a password </label>
                   <span class="error">* <?php echo $passwordErr;?></span>
                   <input type="password" name="password" id="password" placeholder="Password" class="form-control form-control-md">
                 </div>
-
                 <div class="form-outline mb-4">
                   <label for="rptpassword" style="font-weight: 600;">Confirm password </label>
                   <span class="error">* <?php echo $confirmErr;?></span>
                   <input type="password" name="rptpassword" id="rptpassword" placeholder="Confirm" class="form-control form-control-md">
                 </div>
-
-
                 <div class="d-flex justify-content-center">
                   <button type="submit" name="submit"
                     class="btnsign btn btn-danger btn-block btn-lg gradient-custom-4 text-light text-uppercase">Sign up</button>
@@ -161,18 +144,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 </section>
-<!-- image home container -->
-<!-- </div> -->
-
 <!-- container -->
 <div class="container1">
   <div class="text">
     <h1>Enjoy on your TV.
       </h1>
       <p>
-          Watch on Smart TVs, Playstation, Xbox, <br>
-          Chromecast, Apple TV, Blu-ray players, and<br>
-          more.
+        Watch on Smart TVs, Playstation, Xbox, <br>
+        Chromecast, Apple TV, Blu-ray players, and<br>
+        more.
       </p>
   </div>
   <div class="image">
@@ -184,10 +164,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile.png">
     </div>
     <div class="text px-3">
-        <h1>Download your shows to watch on the go.
-          </h1>
+        <h1>Download your shows to watch on the go.</h1>
           <p>
-              Save your data and watch all your favourites offline.
+            Save your data and watch all your favourites offline.
           </p>
       </div>
   </div>
@@ -195,15 +174,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="text">
         <h1>Watch everywhere.</h1>
           <p>
-              Stream unlimited movies and TV shows on <br>your phone, tablet, laptop,  and TV without paying more.
+            Stream unlimited movies and TV shows on <br>your phone, tablet, laptop,  and TV without paying more.
           </p>
       </div>
       <div class="image">
 <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png">
       </div>
     </div>
-
-    <footer class="footer p-2 footer-container">
+<!-- footer -->
+<footer class="footer p-2 footer-container">
   <div class="footer-cols">
     <ul>
       <li><a href="./faq.php">FAQ</a></li>
@@ -215,13 +194,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li><a href="#">Copyright 2022 BesTube</a></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
     </ul>
   </div>
 </footer>
-
-  <script src="myscripts.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<!-- link script js -->
+<script src="myscripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

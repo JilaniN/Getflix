@@ -1,13 +1,13 @@
 <?php
-// Connection to users table
-require_once "config.php";
-if(!empty($_SESSION['id'])){
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-    $row = mysqli_fetch_assoc($result);
-} else{
-    header("Location: sign.php");
-}
+//Connection to users table
+// require_once "config.php";
+// if(!empty($_SESSION['id'])){
+//     $id = $_SESSION['id'];
+//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+//     $row = mysqli_fetch_assoc($result);
+// } else{
+//     header("Location: sign.php");
+// }
 ?>
 <?php 
 //Connection to youtube Data Api:
@@ -48,8 +48,9 @@ function insertImage($list, $x, $y){
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <!-- link font awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- link font awesome icons -->
+  <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
   <!-- link bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- link css -->
@@ -68,8 +69,8 @@ function insertImage($list, $x, $y){
     <div class="dropdown-content">
       <a href="#sport">Sport</a>
       <a href="#music">Music</a>
-      <a href="#movies">Movies</a>
       <a href="#cooking">Cooking</a>
+      <a href="#movies">Movies</a>
       <a href="#games">Gaming</a>
     </div>
   </div>
@@ -298,7 +299,7 @@ function insertImage($list, $x, $y){
 </div>
 
 <!-- CAROUSEL 5 LARGE SCREEN-->
-<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Video Games</a></h4>
+<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Gaming</a></h4>
 <div id="large" class="wrapper">
   <section id="sectionGames1">
     <a href="#sectionGames3" class="arrow__btn">‹</a>
