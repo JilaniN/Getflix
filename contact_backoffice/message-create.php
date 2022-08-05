@@ -28,34 +28,9 @@ session_start();
 
 <body>
     <!-- navbar -->
-<div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-  <a href="index.php">Home</a>
-  <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">Music</a>
-  <div class="dropdown">
-    <button class="dropbtn">Categories</button>
-    <div class="dropdown-content">
-      <a href="./shows/sport.php">Sport</a>
-      <a href="./shows/cooking.php">Cooking</a>
-      <a href="./shows/gaming.php">Gaming</a>
-
+    <div class="topnav container-fluid p-2">
+    <a class="logo"  href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">My account</button>
-    <div class="dropdown-content">
-      <!-- <a href="sign.php">Log in</a> -->
-      <a href="./logout.php">Log out</a>
-    </div>
-  </div>
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search..." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
 
 <div class="my-5 conatiner">
 <?php include('message.php'); ?>
