@@ -1,5 +1,3 @@
-
-
 <?php
 if (isset($_POST['forget_btn'])){
 
@@ -23,7 +21,6 @@ $num = mysqli_num_rows($result);
         else{
             echo "Name or password are not correct";
         }
-
 
 sendpasswordresetlink($user['token']);
 ?>

@@ -1,8 +1,8 @@
 <?php
-require_once "config.php";
+require_once "../config.php";
 
 if(!empty($_SESSION['id'])){
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 
 if(isset($_POST['submit'])){
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
         if($password == $row['password']){
             $_SESSION['login'] = true;
             $_SESSION['id'] = $row['id'];
-            header("Location: index.php");
+            header("Location: ../index.php");
         } else{
             echo "<h6 class='text-light m-1'>Wrong password.</h6><hr>";
         }
@@ -43,15 +43,15 @@ if(isset($_POST['submit'])){
   <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
 </head>
 <body>
   <!-- navbar -->
   <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <!-- <a  class="p-3 split" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a> -->
-    <a href="./auth/home.php" class="split">Home</a>
+    <a href="../auth/home.php" class="split">Home</a>
   </div>
 </div>
 <!-- background image -->
@@ -87,12 +87,12 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="col">
                       <!-- Simple link -->
-                      <a class="btnpwd" href="./forget_passwood_management/forget.php">Forgot password?</a>
+                      <a class="btnpwd" href="../forget_passwood_management/forget.php">Forgot password?</a>
                     </div>
                   </div>
                   <!-- Submit button -->
                   <div class="text-center">
-                    <a href="index.php">
+                    <a href="../index.php">
                   <button type="submit" name="submit" class="btnlogin btn btn-danger btn-block mb-4">Log in</button></a>
                   </div>
                   <!-- Register buttons -->
@@ -112,13 +112,13 @@ if(isset($_POST['submit'])){
 <footer class="footer p-2">
   <div class="footer-cols">
     <ul>
-      <li><a href="./faq.php">FAQ</a></li>
+      <li><a href="../faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="./contact.php">Contact Us</a></li>
+      <li><a href="../contact.php">Contact Us</a></li>
     </ul>
     <ul>
-      <li><a href="./auth/home.php">BesTube Originals</a></li>
+      <li><a href="../auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
     <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
@@ -126,7 +126,7 @@ if(isset($_POST['submit'])){
   </div>
 </footer>
 <!-- link script js -->
-<script src="myscripts.js"></script>
+<script src="../myscripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
 crossorigin="anonymous"></script>

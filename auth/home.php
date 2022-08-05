@@ -1,8 +1,8 @@
 <?php
-// date_default_timezone_set('Europe/Paris');
-// include_once('config.php');
-// include_once('comments.inc.home.php');
-// session_start();
+date_default_timezone_set('Europe/Paris');
+include_once('config.php');
+include_once('comments.inc.home.php');
+session_start();
 ?>
 <?php
 $videoID= '9tbxDgcv74c' ;
@@ -32,7 +32,7 @@ try{
     <!-- <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="../home.css"> -->
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../signin/home.css?v=<?php echo time(); ?>">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +51,8 @@ try{
     <!-- navbar -->
     
     <div class="topnav p-2">
-    <a class="logo" href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a href="sign.php" class="split">Log in</a>
+    <a class="logo" href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a href="../signin/sign.php" class="split">Log in</a>
     </div>
 
   <!-- video -->
@@ -117,16 +117,16 @@ try{
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
-      <li><a href="../faq.php">FAQ</a></li>
+        <li><a href="../faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="../contact.php">Contact Us</a></li>
+        <li><a href="../contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="home.php">BesTube Originals</a></li>
+        <li><a href="home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-      <li><a href="#">Copyright 2022 BesTube</a></li>
+        <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
    </ul>
   </div>
 </footer>

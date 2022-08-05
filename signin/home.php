@@ -1,9 +1,9 @@
 <!-- registration.php form -->
 <?php
-require_once "config.php";
+require_once "../config.php";
 
 if(!empty($_SESSION['id'])){
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 function test_input($data) {
   $data = trim($data);
@@ -96,8 +96,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class = "container-fluid p-2 ">
   <!-- navbar -->
   <div class="topnav">
-    <a class="logo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a class="logohome" href="./auth/home.php">Home</a>
+    <a class="logo" href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logohome" href="../auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
 </div>
@@ -185,13 +185,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <footer class="footer p-2 footer-container">
   <div class="footer-cols">
     <ul>
-      <li><a href="./faq.php">FAQ</a></li>
+      <li><a href="../faq.php">FAQ</a></li>
     </ul>
     <ul>
-      <li><a href="./contact.php">Contact Us</a></li>
+      <li><a href="../contact.php">Contact Us</a></li>
     </ul>
     <ul>
-    <li><a href="./auth/home.php">BesTube Originals</a></li>
+    <li><a href="../auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
     <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
@@ -199,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
 </footer>
 <!-- link script js -->
-<script src="myscripts.js"></script>
+<script src="../myscripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
