@@ -33,20 +33,13 @@ session_start();
     <!-- navbar -->
   <div class="topnav p-2">
     <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logoback" href="../index.php"><i class="fa-solid fa-backward fa-xl"></i></a>
   </div>
-  <h3 class="text-light">Deep Sea Nuke</h3>
-
-   <!-- <br>
-    <video width="420" height="400" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support.
-    </video>
-    <br> -->
-    <div class="video ratio ratio-16x9" id="player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- video -->
+  <h3 class="text-light text-center mb-2">Deep Sea Nuke</h3>
+    <div class="video" id="player">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
 
 <!-- login logout -->
 <?php
