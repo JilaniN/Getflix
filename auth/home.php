@@ -31,62 +31,54 @@
 </head>
 <body class="mb-4 mx-2">
     <!-- navbar -->
+    
     <div class="topnav">
     <a class="logo" href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a href="sign.php" class="split">Log in</a>
     </div>
-    <div class="my-4">
-        <h3 class="text-light">Deep Sea Nuke</h3>
-    </div>
 
-   <!-- <br>
-    <video width="420" height="400" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-        Your browser does not support.
-    </video>
-    <br> -->
-    <div class="video ratio ratio-16x9" id="player">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!-- video -->
+  <h3 class="text-light text-center mb-2">Deep Sea Nuke</h3>
+    <div class="video" id="player">
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/9tbxDgcv74c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
 
 <!-- login logout -->
 <?php
-    // echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
-    //     <span class='mx-1'> Log in here</span><br>
-    //     <label for='username'></label>
-    //     <input type='text' name='name' required value='' placeholder='Name'>
-    //     <label for='password'></label>
-    //     <input type='password' name='password' required value='' placeholder='Password'><br>
-    //     <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
-    // </form>";
-    // echo "<form method='POST' action='".userLogout()."'>
-    //     <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
-    // </form>";
+    echo "<form class='mt-4 mx-5 text-light' method='POST' action='".getLogin($pdo)."'>
+        <span class='mx-1'> Log in here</span><br>
+        <label for='username'></label>
+        <input type='text' name='name' required value='' placeholder='Name'>
+        <label for='password'></label>
+        <input type='password' name='password' required value='' placeholder='Password'><br>
+        <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
+    </form>";
+    echo "<form method='POST' action='".userLogout()."'>
+        <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
+    </form>";
 
-    // if(isset($_SESSION['id'])){
-    //     echo "<br><span class='mx-5'>  </span>";
-    // } else{
-    //     echo " ";
-    // }
+    if(isset($_SESSION['id'])){
+        echo "<br><span class='mx-5'>  </span>";
+    } else{
+        echo " ";
+    }
 ?>
 <!-- comments section -->
 <?php
-    // if(isset($_SESSION['id'])){
-    //     echo " ";
-    //     echo "<form method='POST' action='".setComments($pdo)."'>
-    //     <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-    //     <input type='hidden' name='name' value='".$_SESSION['id']."'>
-    //     <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
-    //     <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
-    //     <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
-    // </form>";
-    // } else{
-    //     echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
-    // }
+    if(isset($_SESSION['id'])){
+        echo " ";
+        echo "<form method='POST' action='".setComments($pdo)."'>
+        <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+        <input type='hidden' name='name' value='".$_SESSION['id']."'>
+        <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
+        <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
+        <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
+    </form>";
+    } else{
+        echo "<br>" . "<span class='mx-5'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+    }
 
-    // getComments($pdo);
+    getComments($pdo);
 ?>
 </div>
 
