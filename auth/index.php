@@ -1,5 +1,5 @@
 <?php
-// link connection comments
+// link connection comments 
 date_default_timezone_set('Europe/Paris');
 include_once('config.php');
 include_once('comments.inc.php');

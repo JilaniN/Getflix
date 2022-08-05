@@ -12,49 +12,25 @@
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link css -->
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="home.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="sign.css">
 
-</head>
+  </head>
 
 <body>
     <!-- navbar -->
-<div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-  <a href="index.php">Home</a>
-  <a href="./shows/movies.php">Movies</a>
-  <a href="./shows/tvshows.php">Music</a>
-  <div class="dropdown">
-    <button class="dropbtn">Categories</button>
-    <div class="dropdown-content">
-      <a href="./shows/sport.php">Sport</a>
-      <a href="./shows/cooking.php">Cooking</a>
-      <a href="./shows/gaming.php">Gaming</a>
-
-    </div>
+   <!-- navbar -->
+   <div class="topnav container-fluid p-2">
+    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <!-- <a  class="p-3 split" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a> -->
+    <a href="./auth/home.php" class="split">Home</a>
   </div>
-  <div class="dropdown">
-    <button class="dropbtn">My account</button>
-    <div class="dropdown-content">
-      <!-- <a href="sign.php">Log in</a> -->
-      <a href="./logout.php">Log out</a>
-    </div>
-  </div>
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search..." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
 
 <div class="my-5 conatiner">
             <div class="text-center">
-                <h3 class="text-light">How Can We Help You?</h3>
+                <h3 class="text-light mb-5">How Can We Help You?</h3>
             </div>
             <div class=" d-flex align-items-center justify-content-center">
                 <div class="bg-white col-md-6 rounded-5">
@@ -86,6 +62,7 @@
         </div>
 
 </form>
+
 <footer class="footer p-2">
   <div class="footer-cols ">
     <ul>
@@ -102,6 +79,8 @@
    </ul>
   </div>
 </footer>
+
+
 
 </div>
 <script src="myscripts.js"></script>
