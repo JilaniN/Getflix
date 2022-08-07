@@ -79,7 +79,7 @@ h2{
 }
 ul{
 	list-style-type:none;
-  }
+}
 @media screen and (max-width: 350px){
 	.footer .footer-cols{
 	grid-template-columns: repeat(2, 1fr);
