@@ -18,7 +18,7 @@ if(isset($_POST['login']))
         if($num > 0) {
              echo "Connected";
 
-            //after login in conncect to main page
+            //after login in conncect to bckoffice
             header("location:./contact_backoffice/index.php");
             }
 
