@@ -91,7 +91,7 @@ require_once "../config.php";
                         if($password == $row['password']){
                             $_SESSION['login'] = true;
                             $_SESSION['id'] = $row['id'];
-                            header("Location: ../index.php");
+                            echo '<script> location.replace("../index.php"); </script>';
                         } else{
                             echo "<hr><h6 class='m-1 text-center text-danger'>Wrong password, try again.</h6>";
                         }
