@@ -28,7 +28,7 @@ We were inspired by Netflix, Amazon Prime Video, Youtube...  The goal is to disp
 - Create a page or section that displays the top movies with the movie db API.  
 - Integrate a newsletter with Mailchimp.   
 ### The project: BesTube
-We decided to create a platform to watch the best videos on Youtube. The name is **BesTube**. 
+We decided to create a platform to watch the best videos on Youtube, according to us. The name is **BesTube**. 
 We wanted to create an easier way to find only the best of Youtube with a good catalogue and functional filters.
 The videos are divided in categories (as a playlist) and only registered users can comment.  
 
@@ -45,18 +45,18 @@ For non-registered users, they will have a preview of the website and can only w
 
 ### Preview of the project
 #### Main Page
-![Main page](/assets/main_name.png)  
+![Main page](/assets/main.png)   
+![Main page videos](/assets/main2.png)  
 
 ### Sign in page
-![Sign in page](/assets/signin.png)
+![Sign in page](/assets/sign.png)
 
 ### Pending:
-    - Deploy the site
     - Search bar by filters
     - Optional features
     - Connect different databases
 
 #### Credit:
-Images from Unsplash
-Images from browsecat  
-Icons from Flaticons   
+Images from Unsplash   
+Images from browsecat   
+Icons from Flaticons    
