@@ -1,13 +1,13 @@
 <?php
 // Connection to users table
-require_once "config.php";
-if(!empty($_SESSION['id'])){
-    $id = $_SESSION['id'];
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
-    $row = mysqli_fetch_assoc($result);
-} else{
-    header("Location: ./signin/sign.php");
-}
+// require_once "config.php";
+// if(!empty($_SESSION['id'])){
+//     $id = $_SESSION['id'];
+//     $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$id'");
+//     $row = mysqli_fetch_assoc($result);
+// } else{
+//     header("Location: ./signin/sign.php");
+// }
 ?>
 
 <?php 
@@ -54,6 +54,7 @@ function insertImage($list, $x, $y){
   <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
   <!-- link bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <!-- link css -->
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
   <!-- link icon in head -->
@@ -363,9 +364,37 @@ function insertImage($list, $x, $y){
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
-   </ul>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#admin">
+<i class="fa fa-puzzle-piece"></i></button></li>
+  </ul>
   </div>
+
+ <!-- Modal -->
+<div class="modal fade" id="admin" tabindex="-1" aria-labelledby="Admin Form" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-body">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="myform bg-dark">
+            <h1 class="text-center">Login Admin</h1>
+            <form action="" method="POST">
+              <?php include "adminConn.php"; ?>
+                <div class="mb-3 mt-4">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="userAdmin" class="form-control" id="usernameAdmin" aria-describedby="username admin">
+                </div>
+                <div class="mb-3">
+                    <label for="password"  class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="passwordAdmin">
+                </div>
+                <button type="submit" name="login" class="btn btn-light mt-3">LOGIN</button>               
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </footer>
 <!-- link script js -->
 <script src="myscript.js"></script>
