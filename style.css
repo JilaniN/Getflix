@@ -97,6 +97,7 @@ ul{
   /* padding: 12px 16px; */
   text-decoration: none;
   display: block;
+  font-weight: 600;
 }
 .dropdown-content a:hover{background-color: transparent; opacity: 1; color:#c8252d; font-weight: 600;}
 .dropdown:hover .dropdown-content{display: block;}
@@ -242,11 +243,7 @@ ul{
     margin-bottom: 3%;
   }
   .welcome{
-    font-size: 0.8em;
-    display: block;
-    padding-left: 125px;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    display: none;
   }
   .pmain{
     display: none;
@@ -262,17 +259,15 @@ ul{
     margin-left: 2%;
   }
   .topnav input[type=text], .topnav input[type=submit]{
-    /* display: inline-block;
+    display: inline-block;
     width: 75%;
     margin-bottom: 3%;
     padding: 10px;
-    text-align: left; */
-    display: none;
+    text-align: left;
   }
   .topnav .search-container button{
-    /* padding: 5px 1px;
-    margin-top: 10px; */
-    display: none;
+    padding: 5px 1px;
+    margin-top: 10px;
   }
   .topnav a{
     text-align: left;
@@ -310,6 +305,9 @@ ul{
     float:left;
     font-size: 0.9em;
   }
+  .topnavhome{
+    margin-top: 2px;
+  }
   .topnav input[type=text]{
     margin-top: 6px;
     margin-bottom: 6px;
@@ -332,20 +330,17 @@ ul{
     font-size: small;
   }
 }
-
 @media screen and (min-width: 501px) and (max-width: 604px){
   .welcome{
     display: none;
   }
 }
-
 @media screen and (min-width: 531px) and (max-width:603px) {
   .card {
     width: 200px;
     height: 250px;
   }
 }
-
 @media screen and (min-width: 604px) and (max-width: 750px){
   .topnav .search-container{
     float: none;
@@ -356,12 +351,11 @@ ul{
     height: 300px;
   }
 }
-
 @media screen and (min-width: 750px) and (max-width: 885px){
   .topnav .search-container{
     float: right;
     margin-bottom: 6px;
-    width: 30%;
+    /* width: 30%; */
     font-size: 0.8em;
   }
   .topnav .search-container button{
@@ -378,7 +372,11 @@ ul{
     padding-left: 7px;
   }
 }
-
+@media screen and (max-width:750px){
+  .dropdown-content{
+    position: relative;
+  }
+}
 @media screen and (min-width: 700px) and (max-width:910px){
   .topnav input[type=text]{
     width: 50%;
@@ -392,12 +390,13 @@ ul{
     float:left;
     font-size: 0.9em;
   }
+  .topnavlogo{
+    margin-top: -1px;
+  }
   .dropbtn{
     font-size: 0.9em;
   }
-
 }
-
 @media only screen and (min-width: 700px){
   #small {
     display: none;
@@ -418,12 +417,10 @@ ul{
     color: black;
     font-size: 20px;
   }
-
   .card {
     width: 300px;
     height: 350px;
   }
-
 }
 
 #linkphp {
@@ -476,7 +473,6 @@ ul{
 .card-body {
   background-color: rgb(230, 219, 219); 
 }
-
 h4 >a{
   color: white;
   text-decoration: none;
@@ -484,4 +480,3 @@ h4 >a{
 h4 >a:hover{
   color:#c6111a;
 }
-

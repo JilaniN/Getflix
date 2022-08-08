@@ -63,8 +63,8 @@ function insertImage($list, $x, $y){
 <body>
 <!-- navbar -->
 <div class="topnav">
-  <a href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-  <a href="index.php">Home</a>
+  <a class="topnavlogo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+  <a class="topnavhome" href="index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
