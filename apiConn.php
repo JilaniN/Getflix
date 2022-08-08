@@ -10,7 +10,7 @@ $youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
 $category4 = "movies";
 $youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
 $category5 = "videogame";
-$maxResults = '15';
+$maxResults = '50';
 
 $apiError = 'Video not found';
 
