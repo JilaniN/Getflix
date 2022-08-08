@@ -161,6 +161,7 @@ ul{
 }
 .footer a:hover{
   text-decoration: underline;
+  color: #d42d3d;
 }
 .footer p {
 	margin-bottom: 1.5rem;
