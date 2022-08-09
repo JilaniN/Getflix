@@ -19,8 +19,8 @@ require 'dbcon.php';
     <!-- link font awesome icons -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <!-- link css -->
-    <link rel="stylesheet" href="../home.css?v=<?php echo time(); ?>">
-    <!-- <link rel="stylesheet" href="sign.css?v=<?php echo time(); ?>"> -->
+    <link rel="stylesheet" href="../signin/home.css?v=<?php echo time(); ?>">
+    <!-- <link rel="stylesheet" href="sign.css?v=; ?>"> -->
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
