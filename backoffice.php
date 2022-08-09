@@ -57,14 +57,14 @@
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
 <body>
 
 <!-- navbar -->
 <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a href="./auth/home.php" class="split">Home</a>
   </div>
 

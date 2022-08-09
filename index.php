@@ -59,13 +59,13 @@ function insertImage($list, $x, $y){
   <!-- link css -->
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
   <!-- link icon in head -->
-  <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
 </head>
 <body>
 <!-- navbar -->
 <div class="topnav">
-  <a class="topnavlogo" href="index.php"><img src="./images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+  <a class="topnavlogo" href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a class="topnavhome" href="index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
@@ -146,7 +146,7 @@ $conn->close();
 
 <!-- Main image -->
 <div class="container1">
-<img src="./images/background.png" class="main img-fluid" alt="Responsive image">
+<img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
 <div class="centered carousel-caption" style="top:56% !important; left:28% !important;padding-left: 7%;"><h4>Watch the best videos of Youtube selected only for you.</h4><p class="pmain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nostrum officia quisquam, eveniet tempora quidem minus soluta esse illum consectetur!</p></div>
 </div>
 <!-- CAROUSEL 1 LARGE SCREEN  -->

@@ -20,14 +20,14 @@ session_start();
     <!-- link css -->
     <link rel="stylesheet" href="./signin/home.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
   </head>
 
 <body>
    <!-- navbar -->
    <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <!-- <a  class="p-3 split" style="background-color: transparent; color: #fff;" href="./auth/home.php">Home</a> -->
     <a href="./auth/home.php" class="split">Home</a>
   </div>
