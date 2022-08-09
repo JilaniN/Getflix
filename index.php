@@ -1,4 +1,5 @@
 <?php
+include "adminConn.php";
 //Connection to users table
 require_once "config.php";
 if(!empty($_SESSION['id'])){
@@ -375,8 +376,7 @@ function insertImage($list, $x, $y){
         <div class="myform bg-dark">
             <h1 class="text-center">Login Admin</h1>
             <form action="" method="POST">
-              <?php include "adminConn.php"; ?>
-                <div class="mb-3 mt-4">
+                  <div class="mb-3 mt-4">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" name="userAdmin" class="form-control" id="usernameAdmin" aria-describedby="username admin">
                 </div>

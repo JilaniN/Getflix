@@ -19,7 +19,7 @@ if(isset($_POST['login']))
              echo "Connected";
 
             //after login in conncect to bckoffice
-            header("location:./contact_backoffice/index.php");
+            header("location: ./contact_backoffice/index.php");
             }
 
             else{
