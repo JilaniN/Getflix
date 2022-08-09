@@ -81,15 +81,15 @@ $mail = new PHPMailer(true);
 
 $mail->isSMTP();                    
 $mail->SMTPAuth = true;   
-//$mail->SMTPSecure = 'ssl'; 
-//$mail->SMTPDebug = 3;
+// $mail->SMTPSecure = 'ssl'; 
+// $mail->SMTPDebug = 3;
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHTML();
-$mail->Username = 'besttobe04@gmail.com';   //enter our team email address       
-$mail->Password = 'dxhflypjgarzenjb';                      //enter our team email password
-$mail->setFrom('besttobe04@gmail.com');
+$mail->Username = 'bestube04@gmail.com';   //enter our team email address       
+$mail->Password = 'bliznuzoybxdhwcg';                      //enter our team email password
+$mail->setFrom('bestube04@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 $mail->AltBody = 'Body in plain text for non-HTML mail clients';
