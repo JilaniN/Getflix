@@ -87,10 +87,10 @@ try{
         <input type='hidden' name='name' value='".$_SESSION['id']."'>
         <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
         <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
-        <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
+        <br><span class='messagestext text-light'>Messages</span>
     </form>";
     } else{
-        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='messagestext text-light'>Messages</span>";
     }
 
     getComments($pdo);

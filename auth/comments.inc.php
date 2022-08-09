@@ -28,30 +28,14 @@ function getComments($pdo){
             if(isset($_SESSION['id'])){
                 if($_SESSION['id'] == $row2['id']){
 
-            // edit comment 
-            // echo "<form class='edit' method='POST' action='editcomment.php'>
-            // <input type='hidden' name='cid' value='".$row['cid']."'>
-            // <input type='hidden' name='name' value='".$row['name']."'>
-            // <input type='hidden' name='date' value='".$row['date']."'>
-            // <input type='hidden' name='message' value='".$row['message']."'>
-            // <button>Edit</button>
-            // </form>";
-
             // delete comment
             echo "<form class='deleteform' method='POST' action='".deleteComments($pdo)."'>
                 <input type='hidden' name='cid' value='".$row['cid']."'>
                 <button type='submit' name='commentDelete'>Delete</button>";
-
-                // delete page not working
-                // echo '<a href="delete.php?cid='. $row['cid'] .'" title="Delete" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-
              echo "</form>";
-             
                 }
             }
-
             echo "</div>";
-            
         }
     }
 }
@@ -68,20 +52,6 @@ function deleteComments($pdo){
         echo '<script> location.replace("index.php"); </script>';
     }
 }
-
-// edit comments function
-// function editComments($pdo){
-//     if(isset($_POST['commentSubmit'])){
-//         $cid = $_POST['cid'];
-//         $uid = $_POST['uid'];
-//         $date = $_POST['date'];
-//         $message = $_POST['message'];
-
-//         $sql = "UPDATE comment SET message='$message' WHERE cid='$cid'";
-//         $result = $pdo->query($sql);
-//         header("Location: index.php");
-//     }
-// }
 
 // login
 function getLogin($pdo){
@@ -119,8 +89,7 @@ function userLogout(){
 }
 
 // Youtube API
-
-// $item= $_GET['id'];
+$item= $_GET['id'];
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 
@@ -135,4 +104,3 @@ try{
 } catch(Exception $e){
     $apiError = $e->getMessage();
   }
-

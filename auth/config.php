@@ -13,11 +13,3 @@ try{
 } catch(PDOException $e){
     die("ERROR: Could not connect. " . $e->getMessage());
 }
-
-// $conn = mysqli_connect("localhost", "root", "root", "comments");
-
-// // Check connection
-// if($conn === false){
-//     die("ERROR: Could not connect. "
-//         . mysqli_connect_error());
-//   }
