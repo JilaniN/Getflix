@@ -27,7 +27,7 @@ if ($result->num_rows > 0){
 
 <a id="linkphp" href="../auth/index.php?id=<?php echo $row["id"]; ?> ">
   <div class="card my-5">        
-    <iframe width="85%" src="https://www.youtube.com/embed/<?php echo $row["id"]; ?>  "title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <iframe src="https://www.youtube.com/embed/<?php echo $row["id"]; ?>  "title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
       <div class="card-body" style="background-color:#eae9e7;">
         <p class="card-text" id="titleVideo"><?php echo $row["name"]; ?> </p>
       </div> 

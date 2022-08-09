@@ -119,11 +119,11 @@ ul{
   grid-template-columns: repeat(5, auto);
   margin: 20px 0;
 }
-.wrapper section .item{
+.card{
   padding: 0 2px;
   transition: 250ms all;
 }
-.wrapper section .item:hover{
+.card:hover{
   margin: 0 40px;
   transform: scale(1.2);
 } 
@@ -481,8 +481,6 @@ h4 >a{
 h4 >a:hover{
   color:#c6111a;
 }
-.card{
-  padding: 0 2px;
-  transition: 250ms all;
-}
+
+
 
