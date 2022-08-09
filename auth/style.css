@@ -2,7 +2,7 @@ body{
     font-family: 'Poppins', sans-serif !important;
 }
 textarea{
-    width: 360px;
+    width: 350px;
     height: 80px;
     background-color:#ffffff;
     border-radius: 3px;
@@ -27,23 +27,25 @@ form{
 }
 .commentbox{
     position: relative;
-    width: 600px;
+    width: 55%;
     margin-left: 54px;
     color:#ffffff;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 5%;
     border: 2px solid #d42d3d;
     border-radius: 2px;
     background-color: #d42d3d;
     padding: 1%;
+    opacity: 0.9;
 }
 input[type=text], input[type=password]{
     border-radius: 2px;
     border: transparent;
-    padding: 5px;
+    padding: 4px;
     opacity: 0.8;
     background-color: #ffffff;
     margin-bottom: 20px;
+    margin-left: -10px;
 }
 input[type=password]{
     margin-left: 4px;
@@ -66,8 +68,8 @@ button{
 }
 .deleteform button{
     position: absolute;
-    top: 20px;
-    margin-left: 217px;
+    top: 55px;
+    margin-left: 50%;
     font-size: small;
 }
 .video{
@@ -81,10 +83,14 @@ button{
 .messagestext{
     font-weight: 600;
     text-decoration: underline;
-    padding: 4px;
+    padding: 3px;
     font-size: large;
 }
+.messagename{
+    font-weight: 600;
+}
 .buttonlogout, .buttonlogin{
+    margin-top: 5px;
     margin-left: 4px;
     background-color: #1a1b20;
 }
@@ -92,8 +98,7 @@ button{
     background-color: #d42d3d;
 }
 .buttoncomment{
-    /* margin-left: 320px; */
-    margin-left: 270px;
+    margin-left: 1px;
     margin-top: 2px;
     margin-bottom: 50px;
     font-size: small;
@@ -117,10 +122,10 @@ iframe{
     width:854px;
     height:480px;
 }
-@media screen and (max-width:500px){ /* max-width:850px; */
+@media screen and (max-width:854px){
     iframe{
-        max-width: 426px;
-        height: 240px;
+        max-width: 640px;
+        height: 360px;
     }
     h3{
         font-size: small !important;
@@ -136,7 +141,6 @@ iframe{
     }
     .commentbox{
         margin-left: 5px;
-        width: 350px;
     }
     textarea{
         width: 350px;
@@ -144,5 +148,42 @@ iframe{
     #accordionFlushExample{
         margin-left: 2% !important;
         margin-right: 2% !important;
+    }
+    /* .account{
+        margin-left: 1px !important;
+    } */
+    .messagestext{
+        display: none;
+    }
+}
+@media screen and (max-width:426px){
+    iframe{
+        width: 300px;
+        height: 200px;
+    }
+    .commentbox{
+        margin-left: 5px;
+        width: auto;
+    }
+    textarea{
+        width:360px;
+    }
+    .deleteform button{
+        margin-left:180px;
+    }
+}
+@media screen and (min-width:426px) and (max-width:640px){
+    iframe{
+        width:auto;
+        height: auto;
+    }
+    .commentbox{
+        width:365px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:854px){
+    iframe{
+        width:640px;
+        height:360px;
     }
 }
