@@ -9,6 +9,9 @@ if(!empty($_SESSION['id'])){
 } else{
     header("Location: ./signin/sign.php");
 }
+
+$backgraound = 0;
+
 ?>
 
 <?php 
@@ -92,63 +95,21 @@ function insertImage($list, $x, $y){
   </div>
 </div>
 
-<!-- php for the searchbar -->
 <?php
-  if (isset($_POST['submitSearch'])) {
-
-    $search = $_POST['search'];
-
-    $sql = "SELECT * FROM videos WHERE name LIKE '%".$search."%'";
-
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0){
-
-      ?>
-      <div  class="container">  
-      <div class='containervideo'>
-      <div class="row justify-content-around">
-  <?php
-      
-      while($row = $result->fetch_assoc() ){
-?>    
- 
-  <a id="linkphp" href="./auth/index.php?id=<?php echo $row["id"]; ?> ">
-    <div class="card my-5">        
-      <iframe width="85%" src="https://www.youtube.com/embed/<?php echo $row["id"]; ?>  "title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-      <div class="card-body" style="background-color:#eae9e7;">
-        <p class="card-text" id="titleVideo"><?php echo $row["name"]; ?> </p>
-      </div> 
-    </div>
-  </a>
-
-<?php
-
-        }
-        ?>
-       </div>
-      </div>
-      </div>
-      <?php
-    } else {
-?> 
-          <p style="color: white">
-<?php
-      echo "0 records";
-?>
-           </p>
-<?php
-     }
-  }
-                                    
-$conn->close();
+include_once('search.php');
 ?>
 
 <!-- Main image -->
+<?php 
+if($background==0){
+  ?>
 <div class="container1">
 <img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
 <div class="centered carousel-caption" style="top:56% !important; left:28% !important;padding-left: 7%;"><h4>Watch the best videos of Youtube selected only for you.</h4><p class="pmain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nostrum officia quisquam, eveniet tempora quidem minus soluta esse illum consectetur!</p></div>
 </div>
+<?php
+}
+?>
 <!-- CAROUSEL 1 LARGE SCREEN  -->
 <h4 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Sport</a></h4>
 <div id="large" class="wrapper">
