@@ -4,11 +4,11 @@
 --
 
 CREATE TABLE `pwdreset` (
-  `pwdResetId` int(11) NOT NULL AUTO_INCREMENT,
+  `pwdResetId` int(11) NOT NULL ,
   `pwdResetEmail` text NOT NULL,
   `pwdResetSelector` text NOT NULL,
   `pwdResetToken` longtext NOT NULL,
-  `pwdResetExpire` text NOT NULL,PRIMARY KEY (`pwdResetId`)
+  `pwdResetExpire` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
