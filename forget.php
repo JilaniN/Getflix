@@ -20,14 +20,14 @@
   <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
 </head>
 
 <body>
   <!-- navbar -->
   <div class="topnav">
-    <a href="#home"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
+    <a href="#home"><img src="./images/ventilateur.png" width="30" alt="logo"> <b>YesToBe</b></a>
     <!-- <a href="#" class="split">Log in</a> -->
   </div>
 </div>

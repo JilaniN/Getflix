@@ -5,7 +5,7 @@
     text-decoration:underline;
 }
 body{
-    background-image: url(../assets/background.png) !important;
+    background-image: url(../images/background.png) !important;
     /* background-color: #111827 !important; */
     background-size: cover;
     opacity: 0.9;

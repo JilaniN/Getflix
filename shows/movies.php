@@ -69,14 +69,14 @@ try{
     <!-- <link rel="stylesheet" href="shows.css"> -->
     <link rel="stylesheet" href="shows.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
     <title><?php echo $category;?></title>
 </head>
 <body>
     <!-- navbar -->
 <div class="topnav">
-  <a href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+  <a href="../index.php"><img src="../images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   <a href="../index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Categories</button>

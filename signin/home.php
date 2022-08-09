@@ -86,15 +86,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- link icon image -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
 </head>
 <body>
   <!-- <div class="imagehome"> -->
     <div class = "container-fluid p-2 ">
   <!-- navbar -->
   <div class="topnav">
-    <a class="logo" href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo" href="../index.php"><img src="../images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a class="logohome" href="../auth/home.php">Home</a>
     <a href="sign.php" class="split">Log in</a>
   </div>
@@ -154,12 +154,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </p>
   </div>
   <div class="image">
-  <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
+  <img src="https://images.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
   </div>
 </div>
 <div class="container2">
     <div class="image">
-<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile.png">
+<img src="https://images.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile.png">
     </div>
     <div class="text px-3">
         <h1>Download your shows to watch on the go.</h1>
@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </p>
       </div>
       <div class="image">
-<img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png">
+<img src="https://images.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png">
       </div>
     </div>
 <!-- footer -->

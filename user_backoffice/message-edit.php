@@ -23,8 +23,8 @@ require 'dbcon.php';
     <link rel="stylesheet" href="../signin/home.css?v=<?php echo time(); ?>">
     <!-- <link rel="stylesheet" href="sign.css?v=<?php echo time(); ?>"> -->
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
 
 </head>
 <body>

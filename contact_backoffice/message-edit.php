@@ -21,8 +21,8 @@ require 'dbcon.php';
     <!-- link css -->
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
     <link rel="stylesheet" href="../home.css">
   <link rel="stylesheet" href="../style.css">
 

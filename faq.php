@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="./signin/home.css?v=<?php echo time(); ?>">
     <!-- <link rel="stylesheet" href="sign.css?v=<?php echo time(); ?>"> -->
     <!-- link icon in head -->
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/ventilateur.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/ventilateur.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/ventilateur.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
         *{
@@ -140,7 +140,7 @@
 <body>
     <!-- navbar -->
     <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="index.php"><img src="./images/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
     <a href="./auth/home.php" class="split">Home</a>
   </div>
 
