@@ -80,7 +80,7 @@ try{
         <input type='text' name='name' required value='' placeholder='Name'>
         <label for='password'></label>
         <input type='password' name='password' required value='' placeholder='Password'><br>
-        <button type='submit' name='loginSubmit' class='mx-1'>Log in</button>
+        <button type='submit' name='loginSubmit' class='buttonlogin mx-1'>Log in</button>
     </form>";
     echo "<form method='POST' action='".userLogout()."'>
         <button type='submit' name='logoutSubmit' class='buttonlogout'>Log out</button>
@@ -101,10 +101,10 @@ try{
         <input type='hidden' name='name' value='".$_SESSION['id']."'>
         <textarea name='message' id='message' required value='' placeholder='Leave your message here'></textarea><br>
         <button type='submit' name='commentSubmit' class='buttoncomment'>Comment</button>
-        <br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>
+        <br><span class='messagestext text-light'>Messages</span>
     </form>";
     } else{
-        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='text-light' style='font-weight: 500; margin-left: 52px;'>Messages</span>";
+        echo "<br>" . "<span class='mx-5 text-light'><i>You need an account to comment!</i></span><br><span class='messagestext text-light'>Messages</span>";
     }
 
     getComments($pdo);

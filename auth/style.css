@@ -8,7 +8,7 @@ textarea{
     border-radius: 3px;
     border: transparent;
     opacity: 0.8;
-    margin-left: 50px !important;
+    /* margin-left: 50px !important; */
     padding: 5px;
 }
 textarea:hover{
@@ -30,6 +30,12 @@ form{
     width: 600px;
     margin-left: 54px;
     color:#ffffff;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    border: 2px solid #d42d3d;
+    border-radius: 2px;
+    background-color: #d42d3d;
+    padding: 1%;
 }
 input[type=text], input[type=password]{
     border-radius: 2px;
@@ -49,7 +55,8 @@ button{
     width: 90px;
     height: 25px;
     padding: 2px;
-    background-color:#d42d3d;
+    background-color:#1a1b20;
+    opacity: 0.9;
     border: transparent;
     border-radius: 2px !important;
     color:#ffffff;
@@ -60,7 +67,7 @@ button{
 .deleteform button{
     position: absolute;
     top: 20px;
-    margin-left: 266px;
+    margin-left: 217px;
     font-size: small;
 }
 .video{
@@ -71,16 +78,29 @@ button{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.buttonlogout{
+.messagestext{
+    font-weight: 600;
+    text-decoration: underline;
+    padding: 4px;
+    font-size: large;
+}
+.buttonlogout, .buttonlogin{
     margin-left: 4px;
+    background-color: #1a1b20;
+}
+.buttonlogin:hover, .buttonlogout:hover{
+    background-color: #d42d3d;
 }
 .buttoncomment{
-    margin-left: 320px;
+    /* margin-left: 320px; */
+    margin-left: 270px;
     margin-top: 2px;
+    margin-bottom: 50px;
     font-size: small;
+    background-color: #d42d3d;
 }
 .buttoncomment:hover, .deleteform button:hover{
-    background-color: #c41324;
+    opacity: 1;
 }
 /* .descriptioncard{
     opacity: 0.8;
@@ -108,7 +128,21 @@ iframe{
     form{
         margin-left: 1% !important;
     }
+    .buttoncomment{
+        margin-left: 260px;
+    }
     .accordion-body{
         font-size: small;
+    }
+    .commentbox{
+        margin-left: 5px;
+        width: 350px;
+    }
+    textarea{
+        width: 350px;
+    }
+    #accordionFlushExample{
+        margin-left: 2% !important;
+        margin-right: 2% !important;
     }
 }
