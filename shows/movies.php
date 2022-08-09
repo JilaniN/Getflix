@@ -1,16 +1,14 @@
 <?php
-$youtubePL1 = 'PLW_c2xKfxEIrXT9uU39TE6l7p8C8DHX5J';
-$category1 = "Originals";
-$youtubePL2 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
-$category2 = "Sport";
-$youtubePL3= 'RDqWAqMzB31lQ';
-$category3= "Music";
-$youtubePL4 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
-$category4 = "Cooking";
-$youtubePL5 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
-$category5 = "Movies";
-$youtubePL6 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
-$category6 = "Gaming";
+$youtubePL1 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
+$category1 = "Sport";
+$youtubePL2= 'RDqWAqMzB31lQ';
+$category2= "Music";
+$youtubePL3 = 'PL4WiRZw8bmXvAw7LyLC3LIuLDoagogZdb';
+$category3 = "Cooking";
+$youtubePL4 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
+$category4 = "Movies";
+$youtubePL5 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
+$category5 = "Gaming";
 
 $API_key = 'AIzaSyADr5BLQb1yjMtHftZIhhUEj96FvESVLMM';
 $channelID = $_GET['id'];
