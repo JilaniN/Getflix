@@ -333,6 +333,10 @@ body {
   margin: 0 40px;
   transform: scale(1.2);
 } 
+.card{
+  padding: 0 2px;
+  transition: 250ms all;
+}
 
 
 
