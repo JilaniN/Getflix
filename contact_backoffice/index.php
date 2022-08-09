@@ -28,7 +28,7 @@ require 'dbcon.php';
 </head>
 <body>
 <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
   </div>
 
 <div class="my-5 conatiner">
