@@ -363,11 +363,9 @@ function insertImage($list, $x, $y){
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li>2022 BesTube <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#admin">
-<i class="fa fa-puzzle-piece"></i></button></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-dark mx-3" data-bs-toggle="modal" data-bs-target="#admin"><i class="fa fa-puzzle-piece"></i></button></li>
   </ul>
   </div>
-
  <!-- Modal -->
 <div class="modal fade" id="admin" tabindex="-1" aria-labelledby="Admin Form" aria-hidden="true">
   <div class="modal-dialog">
@@ -393,7 +391,6 @@ function insertImage($list, $x, $y){
     </div>
   </div>
 </div>
-
 </footer>
 <!-- link script js -->
 <script src="myscript.js"></script>
