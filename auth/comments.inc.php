@@ -23,7 +23,7 @@ function getComments($pdo){
         if($row2 = $result2->fetch()){
             echo "<div class='commentbox'>";
             echo "<i>" . $row['date'] . "</i>" . "<br>";
-            echo "<span class='messagename'" . $row2['name'] . "</span>" . "<br>";
+            echo "<span class='messagename'>" . $row2['name'] . "</span>" . "<br>";
             echo nl2br ($row['message']);
             if(isset($_SESSION['id'])){
                 if($_SESSION['id'] == $row2['id']){
