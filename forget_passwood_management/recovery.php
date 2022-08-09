@@ -8,7 +8,7 @@ if(isset($_POST['forget-btn'])){
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
     //url of your website
-    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
+    $url = "https:/localhost/becode/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
     $expire = date("U") + 1800;
    
 
@@ -88,7 +88,7 @@ $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHTML();
 $mail->Username = 'bestube04@gmail.com';   //enter our team email address       
-$mail->Password = 'bliznuzoybxdhwcg';                      //enter our team email password
+$mail->Password = 'iiqovzlmcfttkrey';                      //enter our team email password
 $mail->setFrom('bestube04@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
