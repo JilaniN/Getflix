@@ -104,7 +104,7 @@ try{
         <br><span class='messagestext text-light'>Messages</span>
     </form>";
     } else{
-        echo "<br>" . "<span class='account text-light'><i>You need an account to comment!</i></span><br><span class='messagestext text-light'>Messages</span>";
+        echo "<br>" . "<span class='account text-light mx-5'><i>You need an account to comment!</i></span><br><span class='messagestext text-light'> </span>";
     }
 
     getComments($pdo);
