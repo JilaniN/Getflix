@@ -8,7 +8,7 @@ if(isset($_POST['forget-btn'])){
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
     //url of your website
-    $url = "http://localhost/becode/getflixProject/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
+    $url = "https://infinite-depths-37750.herokuapp.com//forget_passwood_management//create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
     $expire = date("U") + 1800;
    
 
@@ -81,15 +81,15 @@ $mail = new PHPMailer(true);
 
 $mail->isSMTP();                    
 $mail->SMTPAuth = true;   
-//$mail->SMTPSecure = 'ssl'; 
-//$mail->SMTPDebug = 3;
+// $mail->SMTPSecure = 'ssl'; 
+// $mail->SMTPDebug = 3;
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHTML();
-$mail->Username = 'besttobe04@gmail.com';   //enter our team email address       
-$mail->Password = 'dxhflypjgarzenjb';                      //enter our team email password
-$mail->setFrom('besttobe04@gmail.com');
+$mail->Username = 'bestube04@gmail.com';   //enter our team email address       
+$mail->Password = 'iiqovzlmcfttkrey';                      //enter our team email password
+$mail->setFrom('bestube04@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
 $mail->AltBody = 'Body in plain text for non-HTML mail clients';
