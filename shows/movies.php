@@ -1,4 +1,6 @@
-<?php 
+<?php
+$youtubePL1 = 'PLW_c2xKfxEIrXT9uU39TE6l7p8C8DHX5J';
+$category1 = "Originals";
 $youtubePL1 = 'PLW_c2xKfxEIqpPCrfw_twlTSWYiiwvnq-';
 $category1 = "Sport";
 $youtubePL2= 'RDqWAqMzB31lQ';
