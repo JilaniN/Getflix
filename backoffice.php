@@ -65,7 +65,8 @@
 <!-- navbar -->
 <div class="topnav container-fluid p-2">
     <a class="logo"  href="index.php"><img src="./assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
-    <a href="./auth/home.php" class="split">Home</a>
+    <a href="./user_backoffice/index.php" class="split">Users</a>
+    <a href="./contact_backoffice/index.php" class="split">Messages</a>
   </div>
 
 <div class="container mb-5">
