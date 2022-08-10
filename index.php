@@ -27,7 +27,7 @@ function insertImage($list, $x, $y){
   <a id="linkphp" href="./auth/index.php?id=<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>">
     <div class="card">        
       <img width="85%" src="https://img.youtube.com/vi/<?php echo $list->items[$x]->snippet->resourceId->videoId; ?>/maxresdefault.jpg" class="card-img-top" alt="video">></img>
-      <div class="card-body" style="background-color:#eae9e7;">
+      <div class="card-body">
         <p class="card-text" id="titleVideo"><?php echo $list->items[$x]->snippet->title; ?></p>
       </div> 
     </div>
@@ -89,8 +89,10 @@ function insertImage($list, $x, $y){
   <span class="welcome text-light text-center mx-3"><b>Welcome <?php echo $row['name']; ?></b></span>
   <div class="search-container">
     <form action="" method="post">
+
       <input type="text" name="search" placeholder="Search..." name="search">
       <button name="submitSearch" type="submit"><i class="fa fa-search"></i></button>
+
     </form>
   </div>
 </div>
@@ -105,7 +107,7 @@ if($background==0){
   ?>
 <div class="container1">
 <img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
-<div class="centered carousel-caption" style="top:56% !important; left:28% !important;padding-left: 7%;"><h4>Watch the best videos of Youtube selected only for you.</h4><p class="pmain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nostrum officia quisquam, eveniet tempora quidem minus soluta esse illum consectetur!</p></div>
+<div class="centered carousel-caption" style="top:56% !important; left:28% !important;padding-left: 7%;"><h2>Watch the best videos of Youtube selected only for you.</h2><p class="pmain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem nostrum officia quisquam, eveniet tempora quidem minus soluta esse illum consectetur!</p></div>
 </div>
 <?php
 }
@@ -378,7 +380,9 @@ if($background==0){
     <li><a href="./auth/home.php">BesTube Originals</a></li>
     </ul>
     <ul>
-    <li>2022 BesTube <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-dark mx-3" data-bs-toggle="modal" data-bs-target="#admin"><i class="fa fa-puzzle-piece"></i></button></li>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button" class="btn btn-dark ms-5" data-bs-toggle="modal" data-bs-target="#admin" id="admin"><i class="fa fa-puzzle-piece"></i></button></li>
   </ul>
   </div>
  <!-- Modal -->
