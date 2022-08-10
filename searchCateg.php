@@ -8,7 +8,7 @@ if (isset($_POST['submitSearch'])) {
 //change background in the main page
 // $background = 1;
 
-$search = $_POST['search'];
+$search = filter_var($_POST['search'], FILTER_SANITIZE_STRING);
 
 $sql = "SELECT * FROM videos WHERE name LIKE '%".$search."%' and category='$category'";
 
@@ -45,7 +45,7 @@ if ($result->num_rows > 0){
 
 <?php
 } else {
-  $background = 0;
+  // $background = 0;
 ?>    
 <div class="alert alert-light m-5 alert-dismissible fade show" role="alert">
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

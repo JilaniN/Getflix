@@ -8,8 +8,8 @@ if (isset($_POST['submitSearch'])) {
   //change background in the main page
   $background = 1;
 
-  $search = $_POST['search'];
-
+  $search = filter_var($_POST['search'], FILTER_SANITIZE_STRING);
+  
   $sql = "SELECT * FROM videos WHERE name LIKE '%".$search."%'";
 
   $result = $conn->query($sql);
