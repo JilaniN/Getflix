@@ -7,15 +7,15 @@ if(isset($_POST['forget-btn'])){
     require 'dbconfi.php';
     $userEmail = $_POST['email_forget'];
     //url of your website
-    $url = "https://infinite-depths-37750.herokuapp.com//forget_passwood_management//create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
+    $url = "https://infinite-depths-37750.herokuapp.com/forget_passwood_management/create-new-password.php?selector=".$selector."&validator=" .bin2hex($token)."&useremail=".$userEmail;
     $expire = date("U") + 1800;
    
 
     
-    $getUser = "SELECT pwdResetEmail from pwdReset WHERE pwdResetEmail ='$userEmail'";
+    $getUser = "SELECT pwdResetEmail from pwdreset WHERE pwdResetEmail ='$userEmail'";
     //echo $getUser;
 
-    $sql = "DELETE FROM pwdReset WHERE pwdResetEmail ='$userEmail'";
+    $sql = "DELETE FROM pwdreset WHERE pwdResetEmail ='$userEmail'";
     $stmt = mysqli_stmt_init($conn);
     // mysqli_stmt_bind_param($stmt, "s",$userEmail);
     
@@ -41,7 +41,7 @@ if(isset($_POST['forget-btn'])){
         exit();
     }
 
-$sql = "INSERT INTO pwdReset (pwdResetEmail,pwdResetSelector,pwdResetToken,pwdResetExpire) VALUES(?,?,?,?);";
+$sql = "INSERT INTO pwdreset (pwdResetEmail,pwdResetSelector,pwdResetToken,pwdResetExpire) VALUES(?,?,?,?);";
 $stmt =mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt,$sql)){
     echo 'There was an error';
