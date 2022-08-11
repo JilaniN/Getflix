@@ -1,8 +1,6 @@
 <?php
 session_start();
 require 'dbcon.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +45,7 @@ require 'dbcon.php';
                         $message = mysqli_fetch_array($query_run);
                         ?>
 
-            <div class=" d-flex align-items-center justify-content-center">
+            <div class="d-flex align-items-center justify-content-center">
                 <div class="bg-white col-md-6 rounded-5">
                     <div class="p-4 rounded shadow-md ">
                     <form action="code.php" method="POST">
@@ -88,7 +86,6 @@ require 'dbcon.php';
                     }
                 }
                 ?>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
