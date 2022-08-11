@@ -98,7 +98,7 @@ try{
   </div>
   <div class="search-container">
     <form action="" method="post">
-      <input type="text" name="search" placeholder="Search in <?php echo $category;?>..." name="search">
+      <input type="text" name="search" style="width: 300px;" placeholder="Search in <?php echo $category;?>..." name="search">
       <button name="submitSearch" type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
@@ -156,6 +156,5 @@ include_once('../searchCateg.php');
   </div>
 </footer>
 <!-- link script js -->
-<script src="myscript.js"></script>
 </body>
 </html>

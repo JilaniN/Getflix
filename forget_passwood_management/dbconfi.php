@@ -1,8 +1,4 @@
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "root";
-// $DbName = "loginsystem";
 $servername = "database-2.csmkfiung66c.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "4G^xPTq3";
