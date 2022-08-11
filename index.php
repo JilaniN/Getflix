@@ -112,27 +112,28 @@ if($background==0){
 <?php
 }
 ?>
+
 <!-- CAROUSEL 1 LARGE SCREEN  -->
-<h3 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Sport</a></h3>
+<h3 class="title1 pt-4" id="originals"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Originals</a></h3>
 <div id="large" class="wrapper">
   <section id="section1">
     <a href="#section3" class="arrow__btn">‹</a>
 <?php 
- insertImage($videolist, $startSect=0, $endSect=5);
+ insertImage($videolistOriginals, $startSect=0, $endSect=5);
 ?>
 <a href="#section2" class="arrow__btn">›</a>
 </section>
 <section id="section2">
 <a href="#section1" class="arrow__btn">‹</a>
 <?php 
-   insertImage($videolist, $startSect=5, $endSect=10);
+   insertImage($videolistOriginals, $startSect=5, $endSect=10);
 ?>
 <a href="#section3" class="arrow__btn">›</a>
 </section>
 <section id="section3">
 <a href="#section2" class="arrow__btn">‹</a>
 <?php 
-  insertImage($videolist, $startSect=10, $endSect=15);
+  insertImage($videolistOriginals, $startSect=10, $endSect=15);
 ?>
 <a href="#section1" class="arrow__btn">›</a>
 </section>
@@ -143,28 +144,78 @@ if($background==0){
 <section id="sectionSmall1">
 <a href="#sectionSmall3" class="arrow__btn">‹</a>
 <?php 
-  insertImage($videolist, $startSect=0, $endSect=2);
+  insertImage($videolistOriginals, $startSect=0, $endSect=2);
 ?>
 <a href="#sectionSmall2" class="arrow__btn">›</a>
 </section>
 <section id="sectionSmall2">
 <a href="#sectionSmall1" class="arrow__btn">‹</a>
 <?php
-    insertImage($videolist, $startSect=2, $endSect=4);
+    insertImage($videolistOriginals, $startSect=2, $endSect=4);
 ?>
 <a href="#sectionSmall3" class="arrow__btn">›</a>
 </section>
 <section id="sectionSmall3">
 <a href="#sectionSmall2" class="arrow__btn">‹</a>
 <?php
-  insertImage($videolist, $startSect=4, $endSect=6);
+  insertImage($videolistOriginals, $startSect=4, $endSect=6);
 ?>
 <a href="#sectionSmall1" class="arrow__btn">›</a>
 </section>
 </div>
-  
-<!-- CAROUSEL 2 LARGE SCREEN-->
-<h3 class="title1" id="music"><a href="./shows/movies.php?id=<?php echo $youtubePL2; ?>">Music</a></h3>
+
+<!-- CAROUSEL 2 LARGE SCREEN  -->
+<h3 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL2; ?>">Sport</a></h3>
+<div id="large" class="wrapper">
+  <section id="section1">
+    <a href="#section3" class="arrow__btn">‹</a>
+<?php 
+ insertImage($videolistSport, $startSect=0, $endSect=5);
+?>
+<a href="#section2" class="arrow__btn">›</a>
+</section>
+<section id="section2">
+<a href="#section1" class="arrow__btn">‹</a>
+<?php 
+   insertImage($videolistSport, $startSect=5, $endSect=10);
+?>
+<a href="#section3" class="arrow__btn">›</a>
+</section>
+<section id="section3">
+<a href="#section2" class="arrow__btn">‹</a>
+<?php 
+  insertImage($videolistSport, $startSect=10, $endSect=15);
+?>
+<a href="#section1" class="arrow__btn">›</a>
+</section>
+</div>
+
+<!-- CAROUSEL 2 SMALL SCREEN  -->
+<div id="small" class="wrapper">
+<section id="sectionSmall1">
+<a href="#sectionSmall3" class="arrow__btn">‹</a>
+<?php 
+  insertImage($videolistSport, $startSect=0, $endSect=2);
+?>
+<a href="#sectionSmall2" class="arrow__btn">›</a>
+</section>
+<section id="sectionSmall2">
+<a href="#sectionSmall1" class="arrow__btn">‹</a>
+<?php
+    insertImage($videolistSport, $startSect=2, $endSect=4);
+?>
+<a href="#sectionSmall3" class="arrow__btn">›</a>
+</section>
+<section id="sectionSmall3">
+<a href="#sectionSmall2" class="arrow__btn">‹</a>
+<?php
+  insertImage($videolistSport, $startSect=4, $endSect=6);
+?>
+<a href="#sectionSmall1" class="arrow__btn">›</a>
+</section>
+</div>
+<!-- CAROUSEL 3 LARGE SCREEN-->
+<h3 class="title1" id="music"><a href="./shows/movies.php?id=<?php echo $youtubePL3; ?>">Music</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionMusic1">
   <a href="#sectionMusic3" class="arrow__btn">‹</a>
@@ -189,7 +240,7 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 2 SMALL SCREEN  -->
+<!-- CAROUSEL 3 SMALL SCREEN  -->
 <div id="small" class="wrapper">
 <section id="sectionSmallMusic1">
 <a href="#sectionSmallMusic3" class="arrow__btn">‹</a>
@@ -214,8 +265,8 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 3 LARGE SCREEN-->
-<h3 class="title1" id="cooking"><a href="./shows/movies.php?id=<?php echo $youtubePL3; ?>">Cooking</a></h3>
+<!-- CAROUSEL 4 LARGE SCREEN-->
+<h3 class="title1" id="cooking"><a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Cooking</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionCooking1">
     <a href="#sectionCooking3" class="arrow__btn">‹</a>
@@ -240,7 +291,7 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 3 SMALL SCREEN  -->
+<!-- CAROUSEL 4 SMALL SCREEN  -->
 <div id="small" class="wrapper">
 <section id="sectionSmallCooking1">
 <a href="#sectionSmallCooking3" class="arrow__btn">‹</a>
@@ -265,8 +316,8 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 4 LARGE SCREEN-->
-<h3 class="title1" id="movies"><a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Movies</a></h3>
+<!-- CAROUSEL 5 LARGE SCREEN-->
+<h3 class="title1" id="movies"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Movies</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionTrailer1">
     <a href="#sectionTrailer3" class="arrow__btn">‹</a>
@@ -291,7 +342,7 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 4 SMALL SCREEN  -->
+<!-- CAROUSEL 5 SMALL SCREEN  -->
 <div id="small" class="wrapper">
 <section id="sectionSmallTrailer1">
 <a href="#sectionSmallTrailer3" class="arrow__btn">‹</a>
@@ -316,8 +367,8 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 5 LARGE SCREEN-->
-<h3 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Gaming</a></h3>
+<!-- CAROUSEL 6 LARGE SCREEN-->
+<h3 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL6; ?>">Gaming</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionGames1">
     <a href="#sectionGames3" class="arrow__btn">‹</a>
@@ -342,7 +393,7 @@ if($background==0){
 </section>
 </div>
 
-<!-- CAROUSEL 5 SMALL SCREEN  -->
+<!-- CAROUSEL 6 SMALL SCREEN  -->
 <div id="small" class="wrapper">
 <section id="sectionSmallGames1">
 <a href="#sectionSmallGames3" class="arrow__btn">‹</a>

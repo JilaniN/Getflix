@@ -45,11 +45,11 @@ For non-registered users, they will have a preview of the website and can only w
 
 ### Preview of the project
 #### Main Page
-![Main page](/images/main.png)   
-![Main page videos](/images/main2.png)  
+![Main page](/assets/main.png)   
+![Main page videos](/assets/main2.png)  
 
 ### Sign in page
-![Sign in page](/images/sign.png)
+![Sign in page](/assets/sign.png)
 
 ### Pending:
     - Optional features
