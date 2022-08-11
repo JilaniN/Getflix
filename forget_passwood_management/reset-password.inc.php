@@ -19,7 +19,7 @@ if (isset($_post["reset-password-submit"])){
      $currentDate = date ("U");
 
      require  "dbconfi.php";
-     $sql ="SELECT * FROM pwdReset WHERE pwdResetSelector=? AND pwdResetExpire >= ?";
+     $sql ="SELECT * FROM pwdreset WHERE pwdResetSelector=? AND pwdResetExpire >= ?";
      $stmt = mysqli_stmt_init($conn);
      if (!mysqli_stmt_prepare($stmt,$sql)){
          echo 'there was an error';
