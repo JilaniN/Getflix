@@ -105,7 +105,7 @@ include_once('search.php');
 <?php 
 if($background==0){
   ?>
-<div class="container1 centered">
+<div class="container1">
 <img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
 <div class="centered carousel-caption" style="top:56% ;"><h2>Watch our selection of the best videos on Youtube</h2></div>
 </div>
