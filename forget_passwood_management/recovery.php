@@ -88,7 +88,7 @@ $mail->Host = 'smtp.gmail.com';
 $mail->Port = '465';
 $mail->isHTML();
 $mail->Username = 'bestube04@gmail.com';   //enter our team email address       
-$mail->Password = 'iiqovzlmcfttkrey';                      //enter our team email password
+$mail->Password = 'sohhdjqdowunsbtd';                      //enter our team email password
 $mail->setFrom('bestube04@gmail.com');
 $mail->Subject = $subject;
 $mail->Body    = $message;
