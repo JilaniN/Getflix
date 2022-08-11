@@ -117,51 +117,51 @@ if($background==0){
 <!-- CAROUSEL 1 LARGE SCREEN  -->
 <h3 class="title1 pt-4" id="originals"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Originals</a></h3>
 <div id="large" class="wrapper">
-  <section id="section1">
-    <a href="#section3" class="arrow__btn">‹</a>
+  <section id="sectionOriginals1">
+    <a href="#sectionOriginals3" class="arrow__btn">‹</a>
 <?php 
  insertImage($videolistOriginals, $startSect=0, $endSect=5);
 ?>
-<a href="#section2" class="arrow__btn">›</a>
+<a href="#sectionOriginals2" class="arrow__btn">›</a>
 </section>
-<section id="section2">
-<a href="#section1" class="arrow__btn">‹</a>
+<section id="sectionOriginals2">
+<a href="#sectionOriginals1" class="arrow__btn">‹</a>
 <?php 
    insertImage($videolistOriginals, $startSect=5, $endSect=10);
 ?>
-<a href="#section3" class="arrow__btn">›</a>
+<a href="#sectionOriginals3" class="arrow__btn">›</a>
 </section>
-<section id="section3">
-<a href="#section2" class="arrow__btn">‹</a>
+<section id="sectionOriginals3">
+<a href="#sectionOriginals2" class="arrow__btn">‹</a>
 <?php 
   insertImage($videolistOriginals, $startSect=10, $endSect=15);
 ?>
-<a href="#section1" class="arrow__btn">›</a>
+<a href="#sectionOriginals1" class="arrow__btn">›</a>
 </section>
 </div>
 
 <!-- CAROUSEL 1 SMALL SCREEN  -->
 <div id="small" class="wrapper">
-<section id="sectionSmall1">
-<a href="#sectionSmall3" class="arrow__btn">‹</a>
+<section id="sectionSmallOrignals1">
+<a href="#sectionSmallOriginals3" class="arrow__btn">‹</a>
 <?php 
   insertImage($videolistOriginals, $startSect=0, $endSect=2);
 ?>
-<a href="#sectionSmall2" class="arrow__btn">›</a>
+<a href="#sectionSmallOriginals2" class="arrow__btn">›</a>
 </section>
-<section id="sectionSmall2">
-<a href="#sectionSmall1" class="arrow__btn">‹</a>
+<section id="sectionSmallOriginals2">
+<a href="#sectionSmallOriginals1" class="arrow__btn">‹</a>
 <?php
     insertImage($videolistOriginals, $startSect=2, $endSect=4);
 ?>
-<a href="#sectionSmall3" class="arrow__btn">›</a>
+<a href="#sectionSmallOriginals3" class="arrow__btn">›</a>
 </section>
-<section id="sectionSmall3">
-<a href="#sectionSmall2" class="arrow__btn">‹</a>
+<section id="sectionSmallOriginals3">
+<a href="#sectionSmallOriginals2" class="arrow__btn">‹</a>
 <?php
   insertImage($videolistOriginals, $startSect=4, $endSect=6);
 ?>
-<a href="#sectionSmall1" class="arrow__btn">›</a>
+<a href="#sectionSmallOriginals1" class="arrow__btn">›</a>
 </section>
 </div>
 

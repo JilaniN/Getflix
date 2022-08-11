@@ -18,9 +18,9 @@ $apiError = 'Video not found';
 
 //api connection playlist 0
 try{
-  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL1.'&maxResults='.$maxResults.'&key='.$API_key.'');
-  if($apiData){
-    $videolistOriginals = json_decode($apiData);
+  $apiDataOriginals = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL1.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  if($apiDataOriginals){
+    $videolistOriginals = json_decode($apiDataOriginals);
   } else {
     throw new Exception('Invalid API key or channel ID.');
   }
