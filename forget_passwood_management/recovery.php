@@ -64,9 +64,9 @@ $message .= '<p> Here is your password reset link : </br>';
 $message .= '<a href = "' .$url .'">' .$url . ' </a></p>';
 
 
-// $headers = "From: website name < writeemail>\r\n";
-// $headers .= "Reply-To: write email>\r\n";
-// $headers .= "Content-type:text/html\r\n";
+$headers = "From: website name < bestube04@gmail.com>\r\n";
+$headers .= "Reply-To: bestube04@gmail.com>\r\n";
+$headers .= "Content-type:text/html\r\n";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
