@@ -107,13 +107,13 @@ if($background==0){
   ?>
 <div class="container1">
 <img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
-<div class="justify-content-center carousel-caption" style="top:35%" ><h2>Watch our selection of the best videos on Youtube</h2></div>
+<div class="centered carousel-caption" style="top:56% !important; left:28% !important;padding-left: 7%;" ><h2>Watch our selection of the best videos on Youtube</h2></div>
 </div>
 <?php
 }
 ?>
 <!-- CAROUSEL 1 LARGE SCREEN  -->
-<h4 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Sport</a></h4>
+<h3 class="title1 pt-4" id="sport"><a href="./shows/movies.php?id=<?php echo $youtubePL1; ?>">Sport</a></h3>
 <div id="large" class="wrapper">
   <section id="section1">
     <a href="#section3" class="arrow__btn">‹</a>
@@ -164,7 +164,7 @@ if($background==0){
 </div>
   
 <!-- CAROUSEL 2 LARGE SCREEN-->
-<h4 class="title1" id="music"><a href="./shows/movies.php?id=<?php echo $youtubePL2; ?>">Music</a></h4>
+<h3 class="title1" id="music"><a href="./shows/movies.php?id=<?php echo $youtubePL2; ?>">Music</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionMusic1">
   <a href="#sectionMusic3" class="arrow__btn">‹</a>
@@ -215,7 +215,7 @@ if($background==0){
 </div>
 
 <!-- CAROUSEL 3 LARGE SCREEN-->
-<h4 class="title1" id="cooking"><a href="./shows/movies.php?id=<?php echo $youtubePL3; ?>">Cooking</a></h4>
+<h3 class="title1" id="cooking"><a href="./shows/movies.php?id=<?php echo $youtubePL3; ?>">Cooking</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionCooking1">
     <a href="#sectionCooking3" class="arrow__btn">‹</a>
@@ -266,7 +266,7 @@ if($background==0){
 </div>
 
 <!-- CAROUSEL 4 LARGE SCREEN-->
-<h4 class="title1" id="movies"><a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Movies</a></h4>
+<h3 class="title1" id="movies"><a href="./shows/movies.php?id=<?php echo $youtubePL4; ?>">Movies</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionTrailer1">
     <a href="#sectionTrailer3" class="arrow__btn">‹</a>
@@ -317,7 +317,7 @@ if($background==0){
 </div>
 
 <!-- CAROUSEL 5 LARGE SCREEN-->
-<h4 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Gaming</a></h4>
+<h3 class="title1" id="games"><a href="./shows/movies.php?id=<?php echo $youtubePL5; ?>">Gaming</a></h3>
 <div id="large" class="wrapper">
   <section id="sectionGames1">
     <a href="#sectionGames3" class="arrow__btn">‹</a>
