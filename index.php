@@ -90,7 +90,7 @@ function insertImage($list, $x, $y){
   <div class="search-container">
     <form action="" method="post">
 
-      <input type="text"  name="search" style="width: 300px;" placeholder="Search..." name="search">
+      <input type="text" name="search" placeholder="Search..." name="search">
       <button name="submitSearch" type="submit"><i class="fa fa-search"></i></button>
 
     </form>

@@ -60,6 +60,7 @@ ul{
   margin-right: 16px;
   border: none;
   border-radius: 6px;
+  width: 300px;
 }
 .topnav .search-container button{
   float: right;
@@ -383,9 +384,9 @@ ul{
     position: relative;
   }
 }
-@media screen and (min-width: 700px) and (max-width:910px){
+@media screen and (min-width: 700px) and (max-width:975px){
   .topnav input[type=text]{
-    width: 50%;
+    width: 70%;
   }
   .topnav .search-container button{
     /* padding: 5px 5px; */
@@ -494,5 +495,3 @@ h4 >a:hover{
     display: none;
   }
 }
-
-
