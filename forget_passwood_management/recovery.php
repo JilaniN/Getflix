@@ -1,5 +1,4 @@
 <?php
-include_once('forget.php');
 if(isset($_POST['forget-btn'])){
 
     //print_r($_POST);

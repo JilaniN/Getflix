@@ -1,3 +1,6 @@
+<?php
+include_once('recovery.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
