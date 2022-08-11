@@ -35,6 +35,8 @@ body{
 }
 h2{
   margin-top: 2px;
+  font-size: larger;
+  white-space: nowrap;
 }
 ul{
   list-style-type:none;
