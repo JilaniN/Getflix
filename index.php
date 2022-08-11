@@ -107,7 +107,7 @@ if($background==0){
   ?>
 <div class="container1">
 <img src="./assets/background.png" class="main img-fluid" alt="Responsive image">
-<div class="justify-content-center carousel-caption" style="top:40%" ><h2>Watch our selection of the best videos on Youtube</h2></div>
+<div class="justify-content-center carousel-caption" style="top:35%" ><h2>Watch our selection of the best videos on Youtube</h2></div>
 </div>
 <?php
 }
