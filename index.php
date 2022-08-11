@@ -73,6 +73,7 @@ function insertImage($list, $x, $y){
   <div class="dropdown">
     <button class="dropbtn">Categories</button>
     <div class="dropdown-content">
+      <a href="#sport">Originals</a>
       <a href="#sport">Sport</a>
       <a href="#music">Music</a>
       <a href="#cooking">Cooking</a>
