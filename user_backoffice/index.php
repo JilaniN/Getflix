@@ -50,7 +50,7 @@ require 'dbcon.php';
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>password</th>
+                            <th>Password</th>
                             <th>Action</th>
                         </tr>
                     </thead>
