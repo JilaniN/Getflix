@@ -484,7 +484,7 @@ h4 >a:hover{
 }
 
 @media only screen and (max-width:900px) {
-  #admin {
+  #puzzle {
     display: none;
   }
 }

@@ -10,7 +10,7 @@ if(!empty($_SESSION['id'])){
     header("Location: ./signin/sign.php");
 }
 
-$backgraound = 0;
+$background = 0;
 
 ?>
 
@@ -382,7 +382,7 @@ if($background==0){
     <ul>
     <li>2022 BesTube <i class="fa-regular fa-copyright"></i>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button" class="btn btn-dark ms-5" data-bs-toggle="modal" data-bs-target="#admin"><i class="fa fa-puzzle-piece"></i></button></li>
+    <button type="button" class="btn btn-dark ms-5" data-bs-toggle="modal" data-bs-target="#admin" id="puzzle"><i class="fa fa-puzzle-piece"></i></button></li>
   </ul>
   </div>
  <!-- Modal -->

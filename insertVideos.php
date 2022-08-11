@@ -25,7 +25,7 @@ function insertDB($list, $category){
                 
              if (mysqli_query($conn, $sql)) {
                
-            echo "New record has been added successfully !";
+            header("location: backoffice.php");
                       
              } else {
              echo "Error: " . $sql . ":-" . mysqli_error($conn);
