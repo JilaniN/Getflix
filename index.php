@@ -10,7 +10,7 @@ if(!empty($_SESSION['id'])){
     header("Location: ./signin/sign.php");
 }
 
-$backgraound = 0;
+$background = 0;
 
 ?>
 
