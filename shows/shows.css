@@ -106,7 +106,13 @@ body {
 }
 .footer li {
 	line-height: 1.9;
+  list-style-type: none;
 }
+.footer a:hover{
+  text-decoration: underline;
+  color: #d42d3d;
+}
+
 .footer .lang-select {
 	margin-top: 2rem;
 	color: #999;

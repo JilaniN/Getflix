@@ -118,6 +118,5 @@
             </div>
         </footer>
 <!-- link script js -->
-<script src="myscript.js"></script>
 </body>
 </html>
