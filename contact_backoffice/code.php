@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require 'dbcon.php';
 
 if(isset($_POST['delete_message']))
@@ -64,17 +64,15 @@ if(isset($_POST['save_message']))
     if($query_run)
     {
         $_SESSION['message'] = "Message Created Successfully";
-                header("Location: message-create.php");
-        // header("Location: ../contact.php");
-        // echo '<script> location.replace("../contact.php"); </script>';
+                //  header("Location: message-create.php");
+        header("Location: ../contact.php");
         exit(0);
     }
     else
     {
         $_SESSION['message'] = "Message Not Created";
-        header("Location: message-create.php");
-        // header("Location:../contact.php");
-        // echo '<script> location.replace("../contact.php"); </script>';
+        // header("Location: message-create.php");
+        header("Location:../contact.php");
         exit(0);
     }
 }

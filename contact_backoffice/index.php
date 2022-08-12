@@ -19,16 +19,18 @@ require 'dbcon.php';
     <!-- link font awesome icons -->
     <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
     <!-- link css -->
-    <link rel="stylesheet" href="../home.css?v=<?php echo time(); ?>">
-    <!-- <link rel="stylesheet" href="sign.css?v=<?php echo time(); ?>"> -->
+    <link rel="stylesheet" href="../signin/home.css?v=<?php echo time(); ?>">
+    <!-- <link rel="stylesheet" href="sign.css?v=; ?>"> -->
     <!-- link icon in head -->
     <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ventilateur.png">
-
 </head>
+
 <body>
 <div class="topnav container-fluid p-2">
-    <a class="logo"  href="index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a class="logo"  href="../index.php"><img src="../assets/ventilateur.png" width="30" alt="logo"> <b>BesTube</b></a>
+    <a href="../backoffice.php" class="split">Videos</a>  
+    <a href="../user_backoffice/index.php" class="split">Users</a>
   </div>
 
 <div class="my-5 conatiner">
@@ -36,24 +38,24 @@ require 'dbcon.php';
             <div class=" d-flex align-items-center justify-content-center">
                 <div class="bg-white col-md-6 rounded-5">
                     <div class="p-4 rounded shadow-md ">
-                    <div class="text-center-danger">
-            <h4> Details
-                    <!-- <a href="message-create.php" class="btn btn-primary float-end">Add Messages</a> -->
-                </h4>
-            </div>
-
-                    <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
+                        <div class="text-center-danger">
+                        <h4> Details
+                        <!-- <a href="message-create.php" class="btn btn-primary float-end">Add Messages</a> -->
+                        </h4>
+                        </div>
+                        <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Subject</th>
                             <th>Message</th>
                             <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                            </tr>
+                            </thead>
+                            <tbody>
                         <?php 
                             $query = "SELECT * FROM messages";
                             $query_run = mysqli_query($con, $query);
@@ -85,27 +87,32 @@ require 'dbcon.php';
                             }
                         ?>
                         
-                    </tbody>
-                </table>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
+</div>
 
-</form>
+     
 
-
-
-
-
-
-
-
-
-
-
-
-
+<footer class="footer p-2">
+  <div class="footer-cols ">
+    <ul>
+      <li><a href="../faq.php">FAQ</a></li>
+    </ul>
+    <ul>
+      <li><a href="../contact.php">Contact Us</a></li>
+    </ul>
+    <ul>
+    <li><a href="../auth/home.php">BesTube Originals</a></li>
+    </ul>
+    <ul>
+    <li>2022 BesTube <i class="fa-regular fa-copyright"></i></li>
+   </ul>
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
