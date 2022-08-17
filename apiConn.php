@@ -12,15 +12,15 @@ $youtubePL5 = 'PLriZt3RmcI30iIudgKFINROyCK2Jmo4Z_';
 $category5 = "movies";
 $youtubePL6 = 'PLW_c2xKfxEIoV9Udl7Q9wzikc3P28d1X7';
 $category6 = "videogame";
-$maxResults = '15';
+$maxResults = '50';
 
 $apiError = 'Video not found';
 
 //api connection playlist 0
 try{
-  $apiDataOriginals = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL1.'&maxResults='.$maxResults.'&key='.$API_key.'');
-  if($apiDataOriginals){
-    $videolistOriginals = json_decode($apiDataOriginals);
+  $apiData = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2C+id&playlistId='.$youtubePL1.'&maxResults='.$maxResults.'&key='.$API_key.'');
+  if($apiData){
+    $videolistOriginals = json_decode($apiData);
   } else {
     throw new Exception('Invalid API key or channel ID.');
   }

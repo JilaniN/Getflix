@@ -45,11 +45,12 @@ function insertDB($list, $category){
 
 
 if (isset($_POST['update'])){
-   insertDB($videolist, $category1);
-   insertDB($videolistMusic, $category2);
-   insertDB($videolistCooking, $category3);
-   insertDB($videolistTrailer, $category4);
-   insertDB($videolistVideoGames, $category5);
+   insertDB($videolistOrignals, $category1);
+   insertDB($videolistSport, $category2);
+   insertDB($videolistMusic, $category3);
+   insertDB($videolistCooking, $category4);
+   insertDB($videolistTrailer, $category5);
+   insertDB($videolistVideoGames, $category6);
 }
 
 ?>

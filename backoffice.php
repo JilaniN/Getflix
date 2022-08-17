@@ -88,7 +88,8 @@
         </thead>
         <tbody>
            <?php
-           insertTable($videolist, $category1);
+           insertTable($videolistOriginals, $category1);
+           insertTable($videolistSport, $category1);
            insertTable($videolistMusic, $category2);
            insertTable($videolistCooking, $category3);
            insertTable($videolistTrailer, $category4);
